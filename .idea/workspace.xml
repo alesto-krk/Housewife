@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
+    <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="Dziala funkcja usunWszystko,funkcja usuń dziala bez odswiezania">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/listaZakupowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listaZakupowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/listaZakupow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/listaZakupow.fxml" afterDir="false" />
@@ -84,35 +84,47 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Dziala funkcja usunWszystko,funkcja usuń dziala bez odswiezania" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dziala funkcja usunWszystko,funkcja usuń dziala bez odswiezania" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Project_Structure" timestamp="1625315506554">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1625315506554" />
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1628339422730">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1628339422730" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1628180252314">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1628180252314" />
-    <state width="1323" height="143" key="GridCell.Tab.0.bottom" timestamp="1628185665332">
+    <state width="1323" height="143" key="GridCell.Tab.0.bottom" timestamp="1628339608152">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="143" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1628185665332" />
-    <state width="1323" height="143" key="GridCell.Tab.0.center" timestamp="1628185665331">
+    <state width="1323" height="143" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1628339608152" />
+    <state width="1323" height="143" key="GridCell.Tab.0.center" timestamp="1628339608136">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="143" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1628185665331" />
-    <state width="1323" height="143" key="GridCell.Tab.0.left" timestamp="1628185665331">
+    <state width="1323" height="143" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1628339608136" />
+    <state width="1323" height="143" key="GridCell.Tab.0.left" timestamp="1628339608136">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="143" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1628185665331" />
-    <state width="1323" height="143" key="GridCell.Tab.0.right" timestamp="1628185665331">
+    <state width="1323" height="143" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1628339608136" />
+    <state width="1323" height="143" key="GridCell.Tab.0.right" timestamp="1628339608152">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="143" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1628185665331" />
+    <state width="1323" height="143" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1628339608152" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1625315409403">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1625315409403" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1628339519727">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1628339519727" />
     <state x="65" y="66" key="new project wizard" timestamp="1625317456810">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

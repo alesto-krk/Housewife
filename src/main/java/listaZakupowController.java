@@ -5,6 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -57,12 +58,33 @@ public class listaZakupowController {
     public void showList(LinkedList<String> lista){
         this.listaZakupow.addAll(lista);
         int rowIndex = 0;
-        for (String e : listaZakupow) {
-            Label listaLabela = new Label(rowIndex+1 + ". " + e);
+        for (String l : listaZakupow) {
+            Label listaLabela = new Label(rowIndex+1 + ". " + l);
             siatka.getChildren().add(listaLabela);
+            Button usunElement = new Button("Usuń");
+            usunElement.setOnAction(e ->
+                    listaZakupow.remove(l));
+          // usunElement.setOnAction(e -> usunElementButton(l));
+            siatka.getChildren().add(usunElement);
             siatka.setConstraints(listaLabela, 0, rowIndex);
+            siatka.setConstraints(usunElement, 1, rowIndex);
+
             rowIndex++;
         }
+    }
+
+    public void usunElementButton(String v){
+        listaZakupow.remove(v);
+    }
+
+    public void usunWszystkoButton(ActionEvent event) throws IOException{
+        listaZakupow.clear();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("listaZakupow.fxml"));
+        root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
