@@ -28,6 +28,10 @@ public class listaZakupowController {
 
     public void dodajButton(ActionEvent event) throws IOException {
         addElementToList();
+        refreshList(event);
+    }
+
+    public void refreshList(ActionEvent event) throws IOException{
         LinkedList<String> username = listaZakupow;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("listaZakupow.fxml"));
         root = loader.load();
@@ -55,26 +59,23 @@ public class listaZakupowController {
         }
     }
 
-    public void showList(LinkedList<String> lista){
+    public void showList(LinkedList<String> lista) {
         this.listaZakupow.addAll(lista);
         int rowIndex = 0;
         for (String l : listaZakupow) {
             Label listaLabela = new Label(rowIndex+1 + ". " + l);
-            siatka.getChildren().add(listaLabela);
             Button usunElement = new Button("Usuń");
-            usunElement.setOnAction(e ->
-                    listaZakupow.remove(l));
-          // usunElement.setOnAction(e -> usunElementButton(l));
+            usunElement.setOnAction(e -> {
+                listaZakupow.remove(l);
+                //listaLabela.setOpacity(0.3);
+                listaLabela.setVisible(false);
+            });
+            siatka.getChildren().add(listaLabela);
             siatka.getChildren().add(usunElement);
             siatka.setConstraints(listaLabela, 0, rowIndex);
             siatka.setConstraints(usunElement, 1, rowIndex);
-
             rowIndex++;
         }
-    }
-
-    public void usunElementButton(String v){
-        listaZakupow.remove(v);
     }
 
     public void usunWszystkoButton(ActionEvent event) throws IOException{
