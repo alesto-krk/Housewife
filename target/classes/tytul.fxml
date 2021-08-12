@@ -10,7 +10,7 @@
    <children>
       <ImageView fitHeight="394.0" fitWidth="300.0" layoutX="39.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@kura-image.png" />
+            <Image url="@images/kura-image.png" />
          </image>
       </ImageView>
       <Button fx:id="startButton" layoutX="71.0" layoutY="315.0" mnemonicParsing="false" onAction="#startApp" text="START">

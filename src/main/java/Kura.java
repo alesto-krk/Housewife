@@ -11,7 +11,7 @@ public class Kura extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("tytul.fxml"));
         primaryStage.setTitle("Kura Domowa");
-        Image icon = new Image(getClass().getResourceAsStream("kura-image.png"));
+        Image icon = new Image(getClass().getResourceAsStream("images/kura-image.png"));
         primaryStage.getIcons().add(icon);
         primaryStage.setScene(new Scene(root, 355, 400));
         primaryStage.show();

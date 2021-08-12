@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.LinkedList;
 
 public class listaZakupowController {
@@ -88,4 +88,24 @@ public class listaZakupowController {
         stage.show();
     }
 
+    public void saveTheListButton(ActionEvent event) throws IOException {
+        File file = new File("C:\\Users\\Ola\\IdeaProjects\\moja-lista-zakupow.txt");
+        if(file.exists()){
+            System.out.println("hurra");
+            /*FileWriter writer = new FileWriter(file);
+            writer.write("joł ziom");
+            writer.close();*/
+            try {
+                ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream("C:\\Users\\Ola\\IdeaProjects\\moja-lista-zakupow.txt"));
+                out.writeObject(listaZakupow);
+                out.close();
+            }
+            catch(IOException ioe)
+            {
+                System.out.println("Error!");
+            }
+        }
+        else
+            System.out.println("like it doesnt existes, doesnt exiiiiiiiiists");
+    }
 }

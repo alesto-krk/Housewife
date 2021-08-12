@@ -42,6 +42,34 @@
       </Label>
       <TextField fx:id="dodajField" layoutX="27.0" layoutY="76.0" />
       <Button layoutX="75.0" layoutY="116.0" mnemonicParsing="false" onAction="#dodajButton" prefHeight="36.0" prefWidth="54.0" text="Dodaj" />
-      <Button layoutX="464.0" layoutY="76.0" mnemonicParsing="false" onAction="#usunWszystkoButton" text="Usuń wszystko" />
+      <Button layoutX="464.0" layoutY="76.0" mnemonicParsing="false" onAction="#usunWszystkoButton" prefHeight="25.0" prefWidth="117.0" text="Usuń wszystko" />
+      <Button layoutX="464.0" layoutY="122.0" mnemonicParsing="false" onAction="#refreshList" text="Odśwież listę">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@refresh-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="258.0" layoutY="356.0" mnemonicParsing="false" onAction="#saveTheListButton" prefHeight="36.0" prefWidth="125.0" text="Zapisz listę">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="191.0" fitWidth="136.0" layoutX="38.0" layoutY="165.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@torba-z-zakupami.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="12.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" text="&lt; Menu">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="460.0" layoutY="356.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="125.0" text="Pokaż listę">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
