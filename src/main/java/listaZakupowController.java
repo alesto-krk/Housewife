@@ -12,7 +12,9 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class listaZakupowController {
 
@@ -96,8 +98,9 @@ public class listaZakupowController {
             writer.write("joł ziom");
             writer.close();*/
             try {
-                ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream("C:\\Users\\Ola\\IdeaProjects\\moja-lista-zakupow.txt"));
-                out.writeObject(listaZakupow);
+               DataOutputStream out=new DataOutputStream(new FileOutputStream("C:\\Users\\Ola\\IdeaProjects\\moja-lista-zakupow.txt"));
+                //out.writeBytes(new listaZakupowController().toString());
+                out.writeBytes(listaZakupow.toString());
                 out.close();
             }
             catch(IOException ioe)

@@ -42,8 +42,8 @@
       </Label>
       <TextField fx:id="dodajField" layoutX="27.0" layoutY="76.0" />
       <Button layoutX="75.0" layoutY="116.0" mnemonicParsing="false" onAction="#dodajButton" prefHeight="36.0" prefWidth="54.0" text="Dodaj" />
-      <Button layoutX="464.0" layoutY="76.0" mnemonicParsing="false" onAction="#usunWszystkoButton" prefHeight="25.0" prefWidth="117.0" text="Usuń wszystko" />
-      <Button layoutX="464.0" layoutY="122.0" mnemonicParsing="false" onAction="#refreshList" text="Odśwież listę">
+      <Button layoutX="464.0" layoutY="116.0" mnemonicParsing="false" onAction="#usunWszystkoButton" prefHeight="25.0" prefWidth="117.0" text="Usuń wszystko" />
+      <Button layoutX="464.0" layoutY="148.0" mnemonicParsing="false" onAction="#refreshList" text="Odśwież listę">
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -66,9 +66,14 @@
             <Font size="11.0" />
          </font>
       </Button>
-      <Button layoutX="460.0" layoutY="356.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="125.0" text="Pokaż listę">
+      <Button layoutX="460.0" layoutY="18.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="125.0" text="Pokaż listę">
          <font>
             <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="525.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" text="Zakończ">
+         <font>
+            <Font size="11.0" />
          </font>
       </Button>
    </children>
