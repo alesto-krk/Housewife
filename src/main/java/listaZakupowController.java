@@ -91,24 +91,28 @@ public class listaZakupowController {
     }
 
     public void saveTheListButton(ActionEvent event) throws IOException {
-        File file = new File("C:\\Users\\Ola\\IdeaProjects\\moja-lista-zakupow.txt");
-        if(file.exists()){
-            System.out.println("hurra");
-            /*FileWriter writer = new FileWriter(file);
-            writer.write("joł ziom");
-            writer.close();*/
-            try {
-               DataOutputStream out=new DataOutputStream(new FileOutputStream("C:\\Users\\Ola\\IdeaProjects\\moja-lista-zakupow.txt"));
-                //out.writeBytes(new listaZakupowController().toString());
-                out.writeBytes(listaZakupow.toString());
-                out.close();
-            }
-            catch(IOException ioe)
-            {
+       checkIfFileExists();
+       try {
+               DataOutputStream out=new DataOutputStream(new FileOutputStream("moja-lista-zakupow.txt"));
+               out.writeBytes(listaZakupow.toString());
+               out.close();
+           Alert alert = new Alert(Alert.AlertType.INFORMATION);
+           alert.setTitle("Lista");
+           alert.setHeaderText("Zapisano listę zakupów");
+           alert.setContentText("");
+           alert.show();
+       }
+       catch(IOException ioe) {
                 System.out.println("Error!");
-            }
+       }
+    }
+
+    public void checkIfFileExists() throws IOException{
+        File f = new File("moja-lista-zakupow.txt");
+        if(f.exists()) {
+            System.out.println("hurra");
         }
         else
-            System.out.println("like it doesnt existes, doesnt exiiiiiiiiists");
+            System.out.println("Nie ma takiego pliku");
     }
 }

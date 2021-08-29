@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="199.0" fitWidth="322.0" layoutX="224.0" layoutY="80.0" opacity="0.23" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@rysunek-listy.jpg" />
+            <Image url="@images/rysunek-listy.jpg" />
          </image>
       </ImageView>
       <Label layoutX="51.0" layoutY="34.0" text="Co chcesz kupić:">
@@ -47,7 +47,7 @@
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@refresh-icon.png" />
+                  <Image url="@images/refresh-icon.png" />
                </image>
             </ImageView>
          </graphic></Button>
@@ -58,7 +58,7 @@
       </Button>
       <ImageView fitHeight="191.0" fitWidth="136.0" layoutX="38.0" layoutY="165.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@torba-z-zakupami.jpg" />
+            <Image url="@images/torba-z-zakupami.jpg" />
          </image>
       </ImageView>
       <Button layoutX="12.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" text="&lt; Menu">
