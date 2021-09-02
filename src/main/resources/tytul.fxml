@@ -13,7 +13,7 @@
             <Image url="@images/kura-image.png" />
          </image>
       </ImageView>
-      <Button fx:id="startButton" layoutX="71.0" layoutY="315.0" mnemonicParsing="false" onAction="#startApp" text="START">
+      <Button fx:id="startButton" layoutX="71.0" layoutY="315.0" mnemonicParsing="false" onAction="#goToMenu" text="START">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

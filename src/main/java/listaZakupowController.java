@@ -1,3 +1,4 @@
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +13,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -52,15 +52,19 @@ public class listaZakupowController {
             dodajField.clear();
         }
         else {
-            System.out.println("nic nie jest wpisane");
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Coś poszło nie tak");
-            alert.setHeaderText("Trzeba coś wpisać :)");
-            alert.setContentText("");
-            alert.show();
+            showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Trzeba coś wpisać :)");
         }
     }
 
+    public void showAlert(Alert.AlertType typAlertu, String tytulAlertu, String alertMsg){
+        Alert alert = new Alert(typAlertu);
+        alert.setTitle(tytulAlertu);
+        alert.setHeaderText(alertMsg);
+        alert.setContentText("");
+        alert.show();
+    }
+
+    //for refreshList() method
     public void showList(LinkedList<String> lista) {
         this.listaZakupow.addAll(lista);
         int rowIndex = 0;
@@ -93,14 +97,14 @@ public class listaZakupowController {
     public void saveTheListButton(ActionEvent event) throws IOException {
        checkIfFileExists();
        try {
-               DataOutputStream out=new DataOutputStream(new FileOutputStream("moja-lista-zakupow.txt"));
+           if (!listaZakupow.isEmpty()) {
+               DataOutputStream out = new DataOutputStream(new FileOutputStream("moja-lista-zakupow.txt"));
                out.writeBytes(listaZakupow.toString());
                out.close();
-           Alert alert = new Alert(Alert.AlertType.INFORMATION);
-           alert.setTitle("Lista");
-           alert.setHeaderText("Zapisano listę zakupów");
-           alert.setContentText("");
-           alert.show();
+               showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zakupów");
+           }
+           else
+               System.out.println("pusta lista");
        }
        catch(IOException ioe) {
                 System.out.println("Error!");
@@ -115,4 +119,16 @@ public class listaZakupowController {
         else
             System.out.println("Nie ma takiego pliku");
     }
+
+    public void goToMenu(ActionEvent event) throws IOException {
+        tytulController t = new tytulController();
+        t.goToMenu(event);
+    }
+
+    public void exitButton(){
+        Platform.exit();
+    }
+
+
+
 }

@@ -12,7 +12,7 @@ public class tytulController {
     private Scene scene;
     private Parent root;
 
-    public void startApp(ActionEvent event) throws IOException {
+    public void goToMenu (ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("menu.fxml"));
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

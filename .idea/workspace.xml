@@ -5,12 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moja-lista-zakupow.txt" beforeDir="false" afterPath="$PROJECT_DIR$/moja-lista-zakupow.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/listaZakupowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listaZakupowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tytulController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tytulController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/listaZakupow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/listaZakupow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/refresh-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rysunek-listy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/thinking-face.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/torba-z-zakupami.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tytul.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tytul.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/listaZakupow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/listaZakupow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/listaZakupowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/listaZakupowController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tytul.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tytul.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tytulController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tytulController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,22 +130,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1628180252314" />
-    <state width="1323" height="143" key="GridCell.Tab.0.bottom" timestamp="1630242583130">
+    <state width="1323" height="143" key="GridCell.Tab.0.bottom" timestamp="1630584524297">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="143" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1630242583130" />
-    <state width="1323" height="143" key="GridCell.Tab.0.center" timestamp="1630242583126">
+    <state width="1323" height="143" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1630584524297" />
+    <state width="1323" height="143" key="GridCell.Tab.0.center" timestamp="1630584524297">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="143" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1630242583126" />
-    <state width="1323" height="143" key="GridCell.Tab.0.left" timestamp="1630242583126">
+    <state width="1323" height="143" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1630584524297" />
+    <state width="1323" height="143" key="GridCell.Tab.0.left" timestamp="1630584524297">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="143" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1630242583126" />
-    <state width="1323" height="143" key="GridCell.Tab.0.right" timestamp="1630242583126">
+    <state width="1323" height="143" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1630584524297" />
+    <state width="1323" height="143" key="GridCell.Tab.0.right" timestamp="1630584524297">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="143" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1630242583126" />
+    <state width="1323" height="143" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1630584524297" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1625315409403">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
