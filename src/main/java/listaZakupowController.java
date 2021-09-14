@@ -1,5 +1,6 @@
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,7 +10,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -33,7 +40,7 @@ public class listaZakupowController {
         refreshList(event);
     }
 
-    public void refreshList(ActionEvent event) throws IOException{
+    public void refreshList(ActionEvent event) throws IOException {
         LinkedList<String> username = listaZakupow;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("listaZakupow.fxml"));
         root = loader.load();
@@ -45,18 +52,17 @@ public class listaZakupowController {
         stage.show();
     }
 
-    public void addElementToList(){
-        if (!dodajField.getText().isEmpty()){
+    public void addElementToList() {
+        if (!dodajField.getText().isEmpty()) {
             listaZakupow.add(dodajField.getText());
             System.out.println("lista " + listaZakupow);
             dodajField.clear();
-        }
-        else {
+        } else {
             showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Trzeba coś wpisać :)");
         }
     }
 
-    public void showAlert(Alert.AlertType typAlertu, String tytulAlertu, String alertMsg){
+    public void showAlert(Alert.AlertType typAlertu, String tytulAlertu, String alertMsg) {
         Alert alert = new Alert(typAlertu);
         alert.setTitle(tytulAlertu);
         alert.setHeaderText(alertMsg);
@@ -69,7 +75,7 @@ public class listaZakupowController {
         this.listaZakupow.addAll(lista);
         int rowIndex = 0;
         for (String l : listaZakupow) {
-            Label listaLabela = new Label(rowIndex+1 + ". " + l);
+            Label listaLabela = new Label(rowIndex + 1 + ". " + l);
             Button usunElement = new Button("Usuń");
             usunElement.setOnAction(e -> {
                 listaZakupow.remove(l);
@@ -84,41 +90,72 @@ public class listaZakupowController {
         }
     }
 
-    public void usunWszystkoButton(ActionEvent event) throws IOException{
+    public void usunWszystkoButton(ActionEvent event) throws IOException {
         listaZakupow.clear();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("listaZakupow.fxml"));
         root = loader.load();
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
     public void saveTheListButton(ActionEvent event) throws IOException {
-       checkIfFileExists();
-       try {
-           if (!listaZakupow.isEmpty()) {
-               DataOutputStream out = new DataOutputStream(new FileOutputStream("moja-lista-zakupow.txt"));
-               out.writeBytes(listaZakupow.toString());
-               out.close();
-               showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zakupów");
-           }
-           else
-               System.out.println("pusta lista");
-       }
-       catch(IOException ioe) {
-                System.out.println("Error!");
-       }
+        checkIfFileExists();
+        try {
+            if (!listaZakupow.isEmpty()) {
+                PrintWriter zapis = new PrintWriter("moja-lista-zakupow.txt");
+                for (String e : listaZakupow) {
+                    zapis.println(e);
+                }
+                zapis.close();
+               /* DataOutputStream out = new DataOutputStream(new FileOutputStream("moja-lista-zakupow.txt"));
+                out.writeBytes(listaZakupow.toString());
+                out.close();*/ //ale wtedy lista zapisuje sie w jednej linii
+                showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zakupów");
+            } else
+                System.out.println("pusta lista");
+        } catch (IOException ioe) {
+            System.out.println("Error!");
+        }
     }
 
-    public void checkIfFileExists() throws IOException{
+    public void checkIfFileExists() throws IOException {
         File f = new File("moja-lista-zakupow.txt");
-        if(f.exists()) {
+        if (f.exists()) {
             System.out.println("hurra");
-        }
+        } else if (f.createNewFile())
+            System.out.println("Mamy nowy plik");
         else
             System.out.println("Nie ma takiego pliku");
     }
+
+    public void showTheListButton(ActionEvent event) throws IOException {
+        checkIfFileExists();
+        try{ //wszystko ok tylko lista otwiera sie tyle razy ile wcisniesz
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("savedList.fxml"));
+            Parent root2 = (Parent) loader.load();
+            Stage stage2 = new Stage();
+            stage2.setTitle("Twoja lista zakupów");
+            Image icon = new Image(getClass().getResourceAsStream("images/rysunek-listy.jpg"));
+            stage2.getIcons().add(icon);
+            stage2.setScene(new Scene(root2, 300, 300));
+            stage2.show();
+        }
+        catch (Exception e){
+            System.out.println("error!");
+        }
+    }
+
+
+        /*FXMLLoader loader = new FXMLLoader(getClass().getResource("savedList.fxml"));
+        root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();*/
+
+
 
     public void goToMenu(ActionEvent event) throws IOException {
         tytulController t = new tytulController();
@@ -128,7 +165,6 @@ public class listaZakupowController {
     public void exitButton(){
         Platform.exit();
     }
-
 
 
 }

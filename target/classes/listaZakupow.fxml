@@ -66,11 +66,7 @@
             <Font size="11.0" />
          </font>
       </Button>
-      <Button layoutX="460.0" layoutY="18.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="125.0" text="Pokaż listę">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
+      <Button layoutX="448.0" layoutY="18.0" mnemonicParsing="false" onAction="#showTheListButton" prefHeight="36.0" prefWidth="137.0" text="Otwórz zapisaną listę" />
       <Button layoutX="525.0" layoutY="367.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="25.0" prefWidth="61.0" text="Zakończ">
          <font>
             <Font size="11.0" />
