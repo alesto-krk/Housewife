@@ -137,25 +137,17 @@ public class listaZakupowController {
             Parent root2 = (Parent) loader.load();
             Stage stage2 = new Stage();
             stage2.setTitle("Twoja lista zakupów");
+            SavedListController savedListController = loader.getController();
+            savedListController.checkboxes();
             Image icon = new Image(getClass().getResourceAsStream("images/rysunek-listy.jpg"));
             stage2.getIcons().add(icon);
-            stage2.setScene(new Scene(root2, 300, 300));
+            stage2.setScene(new Scene(root2, 300, 500));
             stage2.show();
         }
         catch (Exception e){
             System.out.println("error!");
         }
     }
-
-
-        /*FXMLLoader loader = new FXMLLoader(getClass().getResource("savedList.fxml"));
-        root = loader.load();
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();*/
-
-
 
     public void goToMenu(ActionEvent event) throws IOException {
         tytulController t = new tytulController();
@@ -165,6 +157,5 @@ public class listaZakupowController {
     public void exitButton(){
         Platform.exit();
     }
-
 
 }
