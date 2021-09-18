@@ -6,10 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -34,6 +31,8 @@ public class listaZakupowController {
     TextField dodajField;
     @FXML
     GridPane siatka;
+    @FXML
+    Button showTheList, add, menu, saveTheList, deleteAll, refreshAll, exit;
 
     public void dodajButton(ActionEvent event) throws IOException {
         addElementToList();
@@ -41,11 +40,11 @@ public class listaZakupowController {
     }
 
     public void refreshList(ActionEvent event) throws IOException {
-        LinkedList<String> username = listaZakupow;
+        LinkedList<String> shoppingList = listaZakupow;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("listaZakupow.fxml"));
         root = loader.load();
         listaZakupowController odswiez = loader.getController();
-        odswiez.showList(username);
+        odswiez.showList(shoppingList);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -53,12 +52,15 @@ public class listaZakupowController {
     }
 
     public void addElementToList() {
-        if (!dodajField.getText().isEmpty()) {
+        if (!dodajField.getText().isEmpty() && listaZakupow.size() < 10) {
             listaZakupow.add(dodajField.getText());
             System.out.println("lista " + listaZakupow);
             dodajField.clear();
         } else {
+            if(dodajField.getText().isEmpty())
             showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Trzeba coś wpisać :)");
+            else
+            showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Więcej się nie zmieści :)");
         }
     }
 
@@ -66,7 +68,7 @@ public class listaZakupowController {
         Alert alert = new Alert(typAlertu);
         alert.setTitle(tytulAlertu);
         alert.setHeaderText(alertMsg);
-        alert.setContentText("");
+        alert.setContentText(null);
         alert.show();
     }
 
@@ -81,6 +83,7 @@ public class listaZakupowController {
                 listaZakupow.remove(l);
                 //listaLabela.setOpacity(0.3);
                 listaLabela.setVisible(false);
+                usunElement.setVisible(false);
             });
             siatka.getChildren().add(listaLabela);
             siatka.getChildren().add(usunElement);
@@ -132,7 +135,7 @@ public class listaZakupowController {
 
     public void showTheListButton(ActionEvent event) throws IOException {
         checkIfFileExists();
-        try{ //wszystko ok tylko lista otwiera sie tyle razy ile wcisniesz
+        try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("savedList.fxml"));
             Parent root2 = (Parent) loader.load();
             Stage stage2 = new Stage();
@@ -141,12 +144,25 @@ public class listaZakupowController {
             savedListController.checkboxes();
             Image icon = new Image(getClass().getResourceAsStream("images/rysunek-listy.jpg"));
             stage2.getIcons().add(icon);
-            stage2.setScene(new Scene(root2, 300, 500));
+            stage2.setScene(new Scene(root2, 300, 450));
             stage2.show();
+            disableButtons(true);
+            stage2.setOnCloseRequest(e -> {
+                disableButtons(false);
+            });
         }
         catch (Exception e){
             System.out.println("error!");
         }
+    }
+
+    public void disableButtons(boolean t){
+        add.setDisable(t);
+        menu.setDisable(t);
+        saveTheList.setDisable(t);
+        showTheList.setDisable(t);
+        deleteAll.setDisable(t);
+        refreshAll.setDisable(t);
     }
 
     public void goToMenu(ActionEvent event) throws IOException {
