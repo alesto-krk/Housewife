@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CoNaObiadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DanieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/coNaObiad.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/danie.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Danie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/mainDish1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/mainDish2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/mainDish3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/mainDish4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Kura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Kura.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/listaZakupowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/listaZakupowController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CoNaObiadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CoNaObiadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DanieController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/coNaObiad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/coNaObiad.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/danie.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dish.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CoNaObiadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CoNaObiadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DanieController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/coNaObiad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/coNaObiad.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/danie.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,22 +162,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1628180252314" />
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1632420162856">
+    <state width="1323" height="143" key="GridCell.Tab.0.bottom" timestamp="1632657090062">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1632420162856" />
-    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1632420162856">
+    <state width="1323" height="143" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1632657090062" />
+    <state width="1323" height="143" key="GridCell.Tab.0.center" timestamp="1632657090061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1632420162856" />
-    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1632420162856">
+    <state width="1323" height="143" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1632657090061" />
+    <state width="1323" height="143" key="GridCell.Tab.0.left" timestamp="1632657090061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1632420162856" />
-    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1632420162856">
+    <state width="1323" height="143" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1632657090061" />
+    <state width="1323" height="143" key="GridCell.Tab.0.right" timestamp="1632657090062">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1632420162856" />
+    <state width="1323" height="143" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1632657090062" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1632420162860">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
