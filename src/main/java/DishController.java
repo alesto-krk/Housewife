@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -18,6 +19,14 @@ public class DishController {
 
     public void showGeneratedImage(Danie image){
         myImage.setImage(image.getDishPicture());
+    }
+
+    public void showChosenImage(ChoiceBox<String> choicebox, Danie[] danie){
+        String chosenDish = choicebox.getValue();
+        for(int i=0; i<danie.length; i++) {                     //O(n)
+            if (chosenDish.equals(danie[i].getDishName()))
+                myImage.setImage(danie[i].getDishPicture());
+        }
     }
 
     public void backButton (ActionEvent event) throws IOException {

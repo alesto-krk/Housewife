@@ -7,7 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,12 +14,12 @@ import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-public class CoNaObiadController    implements Initializable {
+public class CoNaObiadController implements Initializable {
 
     private Stage stage;
     private Scene scene;
     private Parent root;
-    public Danie soup1 = new Danie("zupa pieczarkowa", new Image("images/thinking-face.png"));     //nauczyc sie w koncu mySQL zeby obrazki trzymac w bazie danych
+    public Danie soup1 = new Danie("zupa pieczarkowa", new Image("images/thinking-face.png"));   //nauczyc sie w koncu mySQL zeby obrazki trzymac w bazie danych
     public Danie soup2 = new Danie ("zupa pomidorowa", new Image("images/refresh-icon.png"));
     public Danie soup3 = new Danie ("zupa koperkowa", new Image("images/kura-image.png"));
     public Danie soups[] = {soup1, soup2, soup3};
@@ -31,23 +30,27 @@ public class CoNaObiadController    implements Initializable {
     public Danie mainDishes[] = {mainDish1, mainDish2, mainDish3, mainDish4};
     @FXML
     ChoiceBox<String> soupChoiceBox;
+    @FXML
+    ChoiceBox<String> mainDishChoiceBox;
 
     public void generateSoupButton(ActionEvent event) throws IOException {
-        refreshScene(event, soups);
+        actionForGenerated(event, soups);
     }
 
     public void generateMainDishButton(ActionEvent event) throws IOException {
-        refreshScene(event, mainDishes);
+        actionForGenerated(event, mainDishes);
+    }
+
+    public void chooseSoupButton(ActionEvent event) throws IOException {
+        actionForChosen(event, soups, soupChoiceBox);
     }
 
     @FXML
-    public void initialize(URL arg0, ResourceBundle arg1) {
+    public void initialize(URL arg0, ResourceBundle arg1)  {
         for (int i=0; i<soups.length; i++) {
-        soupChoiceBox.getItems().add(soups[i].getDishName());}
-
-        /*soupChoiceBox.getItems().add(soup1.getDishName());
-        soupChoiceBox.getItems().add(soup2.getDishName());
-        soupChoiceBox.getItems().add(soup3.getDishName());*/ //pobiera kod obrazka a nie nazwe zupy, trzeba dodatkowo zrobic opisy zup
+            soupChoiceBox.getItems().add(soups[i].getDishName());}          //O(n)
+        for (int i=0; i<mainDishes.length; i++) {
+            mainDishChoiceBox.getItems().add(mainDishes[i].getDishName());}         //O(n)
     }
 
     public int generate(Danie generatedDish[]) {
@@ -57,7 +60,7 @@ public class CoNaObiadController    implements Initializable {
         return dishNumber;
     }
 
-    public void refreshScene(ActionEvent event, Danie generatedDish[]) throws IOException {
+    public void actionForGenerated(ActionEvent event, Danie generatedDish[]) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("dish.fxml"));
         root = loader.load();
         DishController dish = loader.getController();
@@ -68,18 +71,17 @@ public class CoNaObiadController    implements Initializable {
         stage.show();
     }
 
-    /*public void showGeneratedImage(Danie image){
-        myImage.setImage(image.getDishPicture());
-    }*/
-
-   /* public void backButton (ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("coNaObiad.fxml"));
+    public void actionForChosen(ActionEvent event, Danie generatedDish[], ChoiceBox<String> choicebox) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("dish.fxml"));
         root = loader.load();
+        DishController dish = loader.getController();
+        dish.showChosenImage(choicebox, generatedDish);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }*/
+    }
+
 }
 
 

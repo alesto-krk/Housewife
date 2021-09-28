@@ -41,8 +41,13 @@
          </font>
       </Button>
       <ChoiceBox fx:id="soupChoiceBox" layoutX="90.0" layoutY="317.0" prefWidth="150.0" />
-      <Label layoutX="14.0" layoutY="321.0" text="albo wybierz" />
+      <Label layoutX="56.0" layoutY="321.0" text="albo" />
       <ChoiceBox fx:id="mainDishChoiceBox" layoutX="353.0" layoutY="317.0" prefWidth="150.0" />
       <Label layoutX="280.0" layoutY="321.0" text="albo wybierz" />
+      <Button layoutX="128.0" layoutY="356.0" mnemonicParsing="false" onAction="#chooseSoupButton" text="Wybierz">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
