@@ -1,3 +1,4 @@
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,9 +15,9 @@ import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-public class CoNaObiadController implements Initializable {
+public class CoNaObiadController /*implements Initializable*/ {
 
-    private Stage stage;
+    /*private Stage stage;
     private Scene scene;
     private Parent root;
     public Danie soup1 = new Danie("zupa pieczarkowa", new Image("images/thinking-face.png"));   //nauczyc sie w koncu mySQL zeby obrazki trzymac w bazie danych
@@ -43,6 +44,10 @@ public class CoNaObiadController implements Initializable {
 
     public void chooseSoupButton(ActionEvent event) throws IOException {
         actionForChosen(event, soups, soupChoiceBox);
+    }
+
+    public void chooseMainDishButton(ActionEvent event) throws IOException {
+        actionForChosen(event, mainDishes, mainDishChoiceBox);
     }
 
     @FXML
@@ -82,6 +87,15 @@ public class CoNaObiadController implements Initializable {
         stage.show();
     }
 
+    public void goToMenu(ActionEvent event) throws IOException {
+        tytulController t = new tytulController();
+        t.goToMenu(event);
+    }
+
+    public void exitButton(){
+        Platform.exit();
+    }
+*/
 }
 
 

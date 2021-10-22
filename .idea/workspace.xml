@@ -3,14 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CoNaObiadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CoNaObiadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DishController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/coNaObiad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/coNaObiad.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CoNaObiadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CoNaObiadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/coNaObiad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/coNaObiad.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideInfoMessages" value="true" />
+    <option name="HIDE_INFO_MESSAGES" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,9 +46,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Ola/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -152,10 +159,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Dodano ChoiceBox.&#10;Dziala rozwijanie listy, event jeszcze nie" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="22" key="#Project_Structure" timestamp="1625315506554">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="22" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1625315506554" />
     <state x="453" y="65" key="#com.intellij.ide.util.MemberChooser" timestamp="1629834152771">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -164,26 +167,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="175" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1632748790584" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1628180252314">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1634841185035">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1628180252314" />
-    <state width="1323" height="78" key="GridCell.Tab.0.bottom" timestamp="1632854886441">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1634841185035" />
+    <state width="1323" height="95" key="GridCell.Tab.0.bottom" timestamp="1634908380324">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="78" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1632854886441" />
-    <state width="1323" height="78" key="GridCell.Tab.0.center" timestamp="1632854886441">
+    <state width="1323" height="95" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1634908380324" />
+    <state width="1323" height="95" key="GridCell.Tab.0.center" timestamp="1634908380323">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="78" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1632854886441" />
-    <state width="1323" height="78" key="GridCell.Tab.0.left" timestamp="1632854886441">
+    <state width="1323" height="95" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1634908380323" />
+    <state width="1323" height="95" key="GridCell.Tab.0.left" timestamp="1634908380323">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="78" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1632854886441" />
-    <state width="1323" height="78" key="GridCell.Tab.0.right" timestamp="1632854886441">
+    <state width="1323" height="95" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1634908380323" />
+    <state width="1323" height="95" key="GridCell.Tab.0.right" timestamp="1634908380323">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="78" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1632854886441" />
+    <state width="1323" height="95" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1634908380323" />
     <state width="661" height="223" key="GridCell.Tab.1.bottom" timestamp="1632748893300">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -200,17 +203,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="661" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1632748893299" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1625315409403">
+    <state x="163" y="0" key="SettingsEditor" timestamp="1634841199068">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1625315409403" />
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1634841199068" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1632748800984">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1632748800984" />
-    <state x="65" y="0" key="new project wizard" timestamp="1631454373523">
+    <state x="65" y="0" key="new project wizard" timestamp="1633712593504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1631454373523" />
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1633712593504" />
   </component>
 </project>

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CoNaObiadController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CoNaObiadControllerRev1">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="90.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -30,12 +30,12 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <Button layoutX="138.0" layoutY="261.0" mnemonicParsing="false" onAction="#generateSoupButton" text="Losuj">
+      <Button layoutX="138.0" layoutY="261.0" mnemonicParsing="false" text="Losuj">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="387.0" layoutY="261.0" mnemonicParsing="false" onAction="#generateMainDishButton" text="Losuj">
+      <Button layoutX="387.0" layoutY="261.0" mnemonicParsing="false" text="Losuj">
          <font>
             <Font size="14.0" />
          </font>
@@ -43,10 +43,25 @@
       <ChoiceBox fx:id="soupChoiceBox" layoutX="90.0" layoutY="317.0" prefWidth="150.0" />
       <Label layoutX="56.0" layoutY="321.0" text="albo" />
       <ChoiceBox fx:id="mainDishChoiceBox" layoutX="353.0" layoutY="317.0" prefWidth="150.0" />
-      <Label layoutX="280.0" layoutY="321.0" text="albo wybierz" />
-      <Button layoutX="128.0" layoutY="356.0" mnemonicParsing="false" onAction="#chooseSoupButton" text="Wybierz">
+      <Label layoutX="319.0" layoutY="321.0" text="albo" />
+      <Button layoutX="128.0" layoutY="356.0" mnemonicParsing="false" text="Wybierz">
          <font>
             <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="393.0" layoutY="356.0" mnemonicParsing="false" text="Wybierz">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="3.0" layoutY="374.0" mnemonicParsing="false" text="&lt; Wróć">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="537.0" layoutY="374.0" mnemonicParsing="false" onAction="#exitButton" text="Zakończ">
+         <font>
+            <Font size="11.0" />
          </font>
       </Button>
    </children>
