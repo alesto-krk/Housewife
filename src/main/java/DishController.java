@@ -5,10 +5,15 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class DishController {
     private Stage stage;
@@ -17,15 +22,32 @@ public class DishController {
     @FXML
     ImageView myImage;
 
-    public void showGeneratedImage(Danie image){
-        myImage.setImage(image.getDishPicture());
+    public void showGeneratedImage(int dishNumber, String statement, String result){
+        try {
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/nazwy_dan", "root", "MYSQLmonica3#");
+            Statement stat = conn.createStatement();
+            ResultSet resultSet = stat.executeQuery(statement + dishNumber);
+            while (resultSet.next()) {
+                Image img = new Image(getClass().getResourceAsStream(resultSet.getString(result)));
+                myImage.setImage(img);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    public void showChosenImage(ChoiceBox<String> choicebox, Danie[] danie){
+    public void showChosenImage(ChoiceBox<String> choicebox, String statement, String result){
         String chosenDish = choicebox.getValue();
-        for(int i=0; i<danie.length; i++) {                     //O(n)
-            if (chosenDish.equals(danie[i].getDishName()))
-                myImage.setImage(danie[i].getDishPicture());
+        try {
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/nazwy_dan", "root", "MYSQLmonica3#");
+            Statement stat = conn.createStatement();
+            ResultSet resultSet = stat.executeQuery(statement + chosenDish + "'");
+            while (resultSet.next()) {
+                Image img = new Image(getClass().getResourceAsStream(resultSet.getString(result)));
+                myImage.setImage(img);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

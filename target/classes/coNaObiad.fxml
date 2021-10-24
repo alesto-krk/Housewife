@@ -30,12 +30,12 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <Button layoutX="138.0" layoutY="261.0" mnemonicParsing="false" text="Losuj">
+      <Button layoutX="138.0" layoutY="261.0" mnemonicParsing="false" onAction="#generateSoupButton" text="Losuj">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="387.0" layoutY="261.0" mnemonicParsing="false" text="Losuj">
+      <Button layoutX="387.0" layoutY="261.0" mnemonicParsing="false" onAction="#generateMainDishButton" text="Losuj">
          <font>
             <Font size="14.0" />
          </font>
@@ -44,17 +44,17 @@
       <Label layoutX="56.0" layoutY="321.0" text="albo" />
       <ChoiceBox fx:id="mainDishChoiceBox" layoutX="353.0" layoutY="317.0" prefWidth="150.0" />
       <Label layoutX="319.0" layoutY="321.0" text="albo" />
-      <Button layoutX="128.0" layoutY="356.0" mnemonicParsing="false" text="Wybierz">
+      <Button layoutX="128.0" layoutY="356.0" mnemonicParsing="false" onAction="#chooseSoupButton" text="Wybierz">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="393.0" layoutY="356.0" mnemonicParsing="false" text="Wybierz">
+      <Button layoutX="393.0" layoutY="356.0" mnemonicParsing="false" onAction="#chooseMainDishButton" text="Wybierz">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="3.0" layoutY="374.0" mnemonicParsing="false" text="&lt; Wróć">
+      <Button layoutX="3.0" layoutY="374.0" mnemonicParsing="false" onAction="#goToMenu" text="&lt; Wróć">
          <font>
             <Font size="11.0" />
          </font>
