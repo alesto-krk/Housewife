@@ -60,7 +60,7 @@ public class listaZakupowController {
             if(dodajField.getText().isEmpty())
             showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Trzeba coś wpisać :)");
             else
-            showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Więcej się nie zmieści :)");
+            showAlert(Alert.AlertType.ERROR, "Niestety...", "Więcej się nie zmieści :)");
         }
     }
 
@@ -126,7 +126,7 @@ public class listaZakupowController {
     public void checkIfFileExists() throws IOException {
         File f = new File("moja-lista-zakupow.txt");
         if (f.exists()) {
-            System.out.println("hurra");
+            System.out.println("File exists. Go on.");
         } else if (f.createNewFile())
             System.out.println("Mamy nowy plik");
         else
