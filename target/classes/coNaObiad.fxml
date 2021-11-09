@@ -54,7 +54,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="3.0" layoutY="374.0" mnemonicParsing="false" onAction="#goToMenu" text="&lt; Wróć">
+      <Button layoutX="3.0" layoutY="374.0" mnemonicParsing="false" onAction="#goToMenuButton" text="&lt; Menu">
          <font>
             <Font size="11.0" />
          </font>

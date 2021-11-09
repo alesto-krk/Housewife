@@ -106,9 +106,9 @@ public class CoNaObiadControllerRev1 implements Initializable {
         actionForGenerated(event, generate("drugie_dania"), mainDishStatementForGenerated, mainDishResult);
     }
 
-    public void goToMenu(ActionEvent event) throws IOException {
-        tytulController t = new tytulController();
-        t.goToMenu(event);
+    public void goToMenuButton(ActionEvent event) throws IOException {
+        CommonMethods menu = new CommonMethods();
+        menu.goToMenu(event);
     }
 
     public void exitButton(){

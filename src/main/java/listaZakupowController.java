@@ -58,18 +58,10 @@ public class listaZakupowController {
             dodajField.clear();
         } else {
             if(dodajField.getText().isEmpty())
-            showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Trzeba coś wpisać :)");
+            CommonMethods.showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Trzeba coś wpisać :)");
             else
-            showAlert(Alert.AlertType.ERROR, "Niestety...", "Więcej się nie zmieści :)");
+            CommonMethods.showAlert(Alert.AlertType.ERROR, "Niestety...", "Więcej się nie zmieści :)");
         }
-    }
-
-    public void showAlert(Alert.AlertType typAlertu, String tytulAlertu, String alertMsg) {
-        Alert alert = new Alert(typAlertu);
-        alert.setTitle(tytulAlertu);
-        alert.setHeaderText(alertMsg);
-        alert.setContentText(null);
-        alert.show();
     }
 
     //for refreshList() method
@@ -115,7 +107,7 @@ public class listaZakupowController {
                /* DataOutputStream out = new DataOutputStream(new FileOutputStream("moja-lista-zakupow.txt"));
                 out.writeBytes(listaZakupow.toString());
                 out.close();*/ //ale wtedy lista zapisuje sie w jednej linii
-                showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zakupów");
+                CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zakupów");
             } else
                 System.out.println("pusta lista");
         } catch (IOException ioe) {
@@ -165,9 +157,9 @@ public class listaZakupowController {
         refreshAll.setDisable(t);
     }
 
-    public void goToMenu(ActionEvent event) throws IOException {
-        tytulController t = new tytulController();
-        t.goToMenu(event);
+    public void goToMenuButton(ActionEvent event) throws IOException {
+        CommonMethods menu = new CommonMethods();
+        menu.goToMenu(event);
     }
 
     public void exitButton(){
