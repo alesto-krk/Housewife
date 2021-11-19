@@ -32,7 +32,7 @@
             <Image url="@images/zadanie-na-dzis.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="261.0" layoutY="72.0" text="Lista zadań na" />
+      <Label layoutX="261.0" layoutY="72.0" text="Lista zadań na:" />
       <Label fx:id="chosenDate" layoutX="261.0" layoutY="90.0" text="&lt;nie wybrałeś/aś daty&gt;" />
       <GridPane fx:id="siatka2" layoutX="252.0" layoutY="118.0" prefHeight="241.0" prefWidth="287.0">
         <columnConstraints>
@@ -61,5 +61,6 @@
             <Font size="11.0" />
          </font>
       </Button>
+      <Button layoutX="451.0" layoutY="86.0" mnemonicParsing="false" text="Ustaw inną datę" />
    </children>
 </AnchorPane>

@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CoNaObiadControllerRev1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CoNaObiadControllerRev1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CommonMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommonMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ListaZadanNaDzisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ListaZadanNaDzisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/listaZakupowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listaZakupowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tytulController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tytulController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/coNaObiad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/coNaObiad.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/listaZadanNaDzis.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/listaZadanNaDzis.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/listaZakupow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/listaZakupow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tytul.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tytul.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ListaZadanNaDzisController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ListaZadanNaDzisController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/listaZadanNaDzis.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/listaZadanNaDzis.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,22 +168,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1634841185035" />
-    <state width="1323" height="129" key="GridCell.Tab.0.bottom" timestamp="1636465420700">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1361" height="126" key="GridCell.Tab.0.bottom" timestamp="1637348789847">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1323" height="129" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1636465420700" />
-    <state width="1323" height="129" key="GridCell.Tab.0.center" timestamp="1636465420700">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1361" height="126" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1637348789847" />
+    <state width="1367" height="134" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
+    <state width="1361" height="126" key="GridCell.Tab.0.center" timestamp="1637348789847">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1323" height="129" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1636465420700" />
-    <state width="1323" height="129" key="GridCell.Tab.0.left" timestamp="1636465420700">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1361" height="126" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1637348789847" />
+    <state width="1367" height="134" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
+    <state width="1361" height="126" key="GridCell.Tab.0.left" timestamp="1637348789847">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1323" height="129" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1636465420700" />
-    <state width="1323" height="129" key="GridCell.Tab.0.right" timestamp="1636465420700">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1361" height="126" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1637348789847" />
+    <state width="1367" height="134" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
+    <state width="1361" height="126" key="GridCell.Tab.0.right" timestamp="1637348789847">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1323" height="129" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1636465420700" />
+    <state width="1361" height="126" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1637348789847" />
+    <state width="1367" height="134" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
     <state width="661" height="223" key="GridCell.Tab.1.bottom" timestamp="1632748893300">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
