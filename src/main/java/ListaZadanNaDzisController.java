@@ -17,8 +17,8 @@ import java.util.LinkedList;
 
 public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wykonania opcja done i zostaw na potem + zapisz
 
-    @FXML
-    Label date;
+    @FXML                                       //ustaw przypominajke moze po kliknieciu w zapisz dopiero. ustaw na dzien przed godz.20, ten sam dzien godz.8, nie ustawiaj wogole
+    Label date;                                 //pokaz zadania button w miejsce ustaw przypominajke
     @FXML
     Label chosenDate;
     @FXML
@@ -41,7 +41,7 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
        date.setText(df);
     }
 
-    public void chosenDatePicker(ActionEvent event){            //moze wygasic datepickera po wyborze daty? + alert, ze ustaw date spowoduje usuniecie listy
+    public void chosenDatePicker(ActionEvent event){
         if(!datePicker.getValue().isBefore(todaysDate)) {
             LocalDate dateForLabel = datePicker.getValue();
             String dfl = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(dateForLabel).toString();
@@ -63,8 +63,8 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
             listaZadan.add(dodajField2.getText());
             chosenDateForRefreshing = chosenDate.getText();
             todaysDateForRefreshing = date.getText();
-            System.out.println("------lista po add " + listaZadan);
-            System.out.println("lista po add (dates) " + chosenDateForRefreshing);
+            System.out.println("------lista zadan " + listaZadan);
+            System.out.println("lista daty " + chosenDateForRefreshing);
             dodajField2.clear();
         } else {
             if(dodajField2.getText().isEmpty())
@@ -96,6 +96,7 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
         }
         chosenDate.setText(chosenDateForRefreshing);
         date.setText(todaysDateForRefreshing);
+        datePicker.setDisable(true);
     }
 
     public void refreshList2(ActionEvent event) throws IOException {
@@ -110,6 +111,27 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void setAnotherDate(ActionEvent event) throws IOException{
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation");
+        alert.setHeaderText("Czy skasować obecną listę?");
+        alert.setContentText(null);
+        ButtonType yesButton = new ButtonType("Yes", ButtonBar.ButtonData.YES);
+        ButtonType noButton = new ButtonType("No", ButtonBar.ButtonData.NO);
+        ButtonType cancelButton = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alert.getButtonTypes().setAll(yesButton, noButton, cancelButton);
+        alert.showAndWait().ifPresent(type -> {
+            if (type == yesButton) {
+                listaZadan.clear();
+                siatka2.setVisible(false);
+                datePicker.setDisable(false);
+            }
+            else if (type == noButton) {
+                datePicker.setDisable(false);
+            }
+        });
     }
 
     public void goToMenuButton(ActionEvent event) throws IOException {

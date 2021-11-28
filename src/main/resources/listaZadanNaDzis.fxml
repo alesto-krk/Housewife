@@ -61,6 +61,6 @@
             <Font size="11.0" />
          </font>
       </Button>
-      <Button layoutX="451.0" layoutY="86.0" mnemonicParsing="false" text="Ustaw inną datę" />
+      <Button layoutX="449.0" layoutY="69.0" mnemonicParsing="false" onAction="#setAnotherDate" prefHeight="46.0" prefWidth="114.0" text="Ustaw nową datę/ nowe zadania" wrapText="true" />
    </children>
 </AnchorPane>
