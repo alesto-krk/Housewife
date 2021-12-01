@@ -26,6 +26,7 @@ public class listaZakupowController {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private  CommonMethods file = new CommonMethods();
 
     @FXML
     TextField dodajField;
@@ -96,7 +97,7 @@ public class listaZakupowController {
     }
 
     public void saveTheListButton(ActionEvent event) throws IOException {
-        checkIfFileExists();
+        file.checkIfFileExists("moja-lista-zakupow.txt");
         try {
             if (!listaZakupow.isEmpty()) {
                 PrintWriter zapis = new PrintWriter("moja-lista-zakupow.txt");
@@ -115,18 +116,18 @@ public class listaZakupowController {
         }
     }
 
-    public void checkIfFileExists() throws IOException {
-        File f = new File("moja-lista-zakupow.txt");
+   /* public void checkIfFileExists(String pathname) throws IOException {
+        File f = new File(pathname);
         if (f.exists()) {
             System.out.println("File exists. Go on.");
         } else if (f.createNewFile())
             System.out.println("Mamy nowy plik");
         else
             System.out.println("Nie ma takiego pliku");
-    }
+    }*/
 
     public void showTheListButton(ActionEvent event) throws IOException {
-        checkIfFileExists();
+        file.checkIfFileExists("moja-lista-zakupow.txt");
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("savedList.fxml"));
             Parent root2 = (Parent) loader.load();

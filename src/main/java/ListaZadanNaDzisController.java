@@ -10,6 +10,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -22,6 +23,8 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     @FXML
     Label chosenDate;
     @FXML
+    Label chosenDateFormatForTxt;
+    @FXML
     DatePicker datePicker;
     @FXML
     TextField dodajField2;
@@ -31,9 +34,11 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     private LinkedList<String> listaZadan = new LinkedList<>();
     private String todaysDateForRefreshing;
     private String chosenDateForRefreshing;
+    private String chosenDateForRefreshingForTxt;
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private  CommonMethods file = new CommonMethods();
     LocalDate todaysDate = LocalDate.now();
 
     public void setTodaysDate(){
@@ -46,6 +51,8 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
             LocalDate dateForLabel = datePicker.getValue();
             String dfl = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(dateForLabel).toString();
             chosenDate.setText(dfl);
+            chosenDateFormatForTxt.setText(dateForLabel.toString());
+            chosenDateFormatForTxt.setVisible(false);
         }
         else {
             CommonMethods.showAlert(Alert.AlertType.WARNING, "Warning", "Nie da się ustawić zadań na minione dni :)");
@@ -62,6 +69,7 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
         if (!dodajField2.getText().isEmpty() && listaZadan.size() < 10) {
             listaZadan.add(dodajField2.getText());
             chosenDateForRefreshing = chosenDate.getText();
+            chosenDateForRefreshingForTxt = chosenDateFormatForTxt.getText();
             todaysDateForRefreshing = date.getText();
             System.out.println("------lista zadan " + listaZadan);
             System.out.println("lista daty " + chosenDateForRefreshing);
@@ -73,10 +81,12 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
                 CommonMethods.showAlert(Alert.AlertType.ERROR, "Niestety...", "Więcej się nie zmieści :)");
         }
     }
-    public void showList2(LinkedList<String> lista, String z, String y) {
+
+    public void showList2(LinkedList<String> lista, String z, String y, String x) {
         this.listaZadan.addAll(lista);
         this.todaysDateForRefreshing = y;
         this.chosenDateForRefreshing = z;
+        this.chosenDateForRefreshingForTxt = x;
         int rowIndex = 0;
         for (String l : listaZadan) {
             Label listaLabela = new Label(rowIndex + 1 + ". " + l);
@@ -95,6 +105,8 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
             rowIndex++;
         }
         chosenDate.setText(chosenDateForRefreshing);
+        chosenDateFormatForTxt.setText(chosenDateForRefreshingForTxt);
+        chosenDateFormatForTxt.setVisible(false);
         date.setText(todaysDateForRefreshing);
         datePicker.setDisable(true);
     }
@@ -102,11 +114,12 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     public void refreshList2(ActionEvent event) throws IOException {
         LinkedList<String> taskList = listaZadan;
         String z = chosenDateForRefreshing;
+        String x = chosenDateForRefreshingForTxt;
         String y = todaysDateForRefreshing;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("listaZadanNaDzis.fxml"));
         root = loader.load();
         ListaZadanNaDzisController odswiez = loader.getController();
-        odswiez.showList2(taskList, z, y);
+        odswiez.showList2(taskList, z, y,x);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -132,6 +145,31 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
                 datePicker.setDisable(false);
             }
         });
+    }
+
+    public void saveTheListButton2(ActionEvent event) throws IOException {
+        String pathname = "lista-zadan-na-" + chosenDateFormatForTxt.getText() + ".txt";
+        if (pathname.equals("lista-zadan-na-<nie wybrałeś/aś daty>.txt") || pathname.equals("lista-zadan-na-.txt"))
+            CommonMethods.showAlert(Alert.AlertType.WARNING, "Nieustawiona data", "Kliknij -Ustaw nową datę-");
+        else
+        file.checkIfFileExists(pathname);
+        /*
+        try {
+            if (!listaZakupow.isEmpty()) {
+                PrintWriter zapis = new PrintWriter("moja-lista-zakupow.txt");
+                for (String e : listaZakupow) {
+                    zapis.println(e);
+                }
+                zapis.close();*/
+               /* DataOutputStream out = new DataOutputStream(new FileOutputStream("moja-lista-zakupow.txt"));
+                out.writeBytes(listaZakupow.toString());
+                out.close();*/ //ale wtedy lista zapisuje sie w jednej linii
+                /*CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zakupów");
+            } else
+                System.out.println("pusta lista");
+        } catch (IOException ioe) {
+            System.out.println("Error!");
+        }*/
     }
 
     public void goToMenuButton(ActionEvent event) throws IOException {

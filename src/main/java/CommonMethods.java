@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 public class CommonMethods {
@@ -29,6 +30,16 @@ public class CommonMethods {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void checkIfFileExists(String pathname) throws IOException {
+        File f = new File(pathname);
+        if (f.exists()) {
+            System.out.println("File exists. Go on.");
+        } else if (f.createNewFile())
+            System.out.println("Mamy nowy plik");
+        else
+            System.out.println("Nie ma takiego pliku");
+    }
     //backTo(String np lista zadan na dzis)
-    //checkIfFileExists ?
+
 }
