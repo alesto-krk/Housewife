@@ -1,3 +1,4 @@
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
@@ -30,6 +32,8 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     TextField dodajField2;
     @FXML
     GridPane siatka2;
+    @FXML
+    ChoiceBox<String> datesChoiceBox;
 
     private LinkedList<String> listaZadan = new LinkedList<>();
     private String todaysDateForRefreshing;
@@ -38,7 +42,7 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     private Stage stage;
     private Scene scene;
     private Parent root;
-    private  CommonMethods file = new CommonMethods();
+    private  CommonMethods commonMethods = new CommonMethods();
     LocalDate todaysDate = LocalDate.now();
 
     public void setTodaysDate(){
@@ -148,32 +152,46 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     }
 
     public void saveTheListButton2(ActionEvent event) throws IOException {
-        String pathname = "lista-zadan-na-" + chosenDateFormatForTxt.getText() + ".txt";
+        String pathname = "Listy-zadan/lista-zadan-na-" + chosenDate.getText() + ".txt";
         if (pathname.equals("lista-zadan-na-<nie wybrałeś/aś daty>.txt") || pathname.equals("lista-zadan-na-.txt"))
             CommonMethods.showAlert(Alert.AlertType.WARNING, "Nieustawiona data", "Kliknij -Ustaw nową datę-");
         else
-        file.checkIfFileExists(pathname);
-        /*
+            commonMethods.checkIfFileExists(pathname);
         try {
-            if (!listaZakupow.isEmpty()) {
-                PrintWriter zapis = new PrintWriter("moja-lista-zakupow.txt");
-                for (String e : listaZakupow) {
+            if (!listaZadan.isEmpty()) {
+                PrintWriter zapis = new PrintWriter(pathname);
+                for (String e : listaZadan) {
                     zapis.println(e);
                 }
-                zapis.close();*/
-               /* DataOutputStream out = new DataOutputStream(new FileOutputStream("moja-lista-zakupow.txt"));
-                out.writeBytes(listaZakupow.toString());
-                out.close();*/ //ale wtedy lista zapisuje sie w jednej linii
-                /*CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zakupów");
+                zapis.close();
+                CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zadań");
             } else
                 System.out.println("pusta lista");
         } catch (IOException ioe) {
             System.out.println("Error!");
-        }*/
+        }
+        setDatesChoiceBox();
     }
 
+    public void setDatesChoiceBox() {
+        LinkedList<File> listOfSavedDates = new LinkedList<>();
+        String directory = "C:\\Users\\Ola\\IdeaProjects\\KuraDomowa\\Listy-zadan";     //jak u kogos na kompie to sprawdzic, u kazdego ta sciezka bedzie inna
+        File file = new File(directory);
+        File[] files = file.listFiles();
+        for (File e : files) {
+            listOfSavedDates.add(e);
+            System.out.println(e);}
+        for (int i = 0; i < listOfSavedDates.size(); i++) {
+                String fileItem = listOfSavedDates.get(i).toString();
+                datesChoiceBox.getItems().add(fileItem.substring(64,fileItem.length()-4)); //posortowac to po dacie
+            }
+        }
+
     public void goToMenuButton(ActionEvent event) throws IOException {
-        CommonMethods menu = new CommonMethods();
-        menu.goToMenu(event);
+        commonMethods.goToMenu(event);
+    }
+
+    public void exitButton(){
+        Platform.exit();
     }
 }

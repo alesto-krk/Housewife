@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 
 public class CommonMethods {
     private Stage stage;
@@ -39,7 +40,9 @@ public class CommonMethods {
             System.out.println("Mamy nowy plik");
         else
             System.out.println("Nie ma takiego pliku");
+        //System.out.println(f.getName());
     }
+
     //backTo(String np lista zadan na dzis)
 
 }

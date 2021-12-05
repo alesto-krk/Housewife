@@ -27,6 +27,7 @@ public class MenuController {
         loadFxml("listaZadanNaDzis.fxml");
         ListaZadanNaDzisController date = loader.getController();
         date.setTodaysDate();
+        date.setDatesChoiceBox();
         loadStage(event);
     }
     
