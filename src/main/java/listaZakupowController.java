@@ -129,7 +129,7 @@ public class listaZakupowController {
     public void showTheListButton(ActionEvent event) throws IOException {
         file.checkIfFileExists("moja-lista-zakupow.txt");
         try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("savedList.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("savedShoppingList.fxml"));
             Parent root2 = (Parent) loader.load();
             Stage stage2 = new Stage();
             stage2.setTitle("Twoja lista zakupów");

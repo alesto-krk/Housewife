@@ -16,6 +16,7 @@ import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wykonania opcja done i zostaw na potem + zapisz
@@ -152,7 +153,7 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     }
 
     public void saveTheListButton2(ActionEvent event) throws IOException {
-        String pathname = "Listy-zadan/lista-zadan-na-" + chosenDate.getText() + ".txt";
+        String pathname = "Listy-zadan/lista-zadan-na-" + chosenDateFormatForTxt.getText() + "-" + chosenDate.getText() + ".txt";
         if (pathname.equals("lista-zadan-na-<nie wybrałeś/aś daty>.txt") || pathname.equals("lista-zadan-na-.txt"))
             CommonMethods.showAlert(Alert.AlertType.WARNING, "Nieustawiona data", "Kliknij -Ustaw nową datę-");
         else
@@ -174,18 +175,28 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     }
 
     public void setDatesChoiceBox() {
-        LinkedList<File> listOfSavedDates = new LinkedList<>();
+        LinkedList<File> listOfSavedTaskLists = new LinkedList<>();
+        String fileItemForChoiceBox = "-";
         String directory = "C:\\Users\\Ola\\IdeaProjects\\KuraDomowa\\Listy-zadan";     //jak u kogos na kompie to sprawdzic, u kazdego ta sciezka bedzie inna
         File file = new File(directory);
         File[] files = file.listFiles();
         for (File e : files) {
-            listOfSavedDates.add(e);
-            System.out.println(e);}
-        for (int i = 0; i < listOfSavedDates.size(); i++) {
-                String fileItem = listOfSavedDates.get(i).toString();
-                datesChoiceBox.getItems().add(fileItem.substring(64,fileItem.length()-4)); //posortowac to po dacie
+            listOfSavedTaskLists.add(e);
+            System.out.println(e);
+        }
+        Collections.sort(listOfSavedTaskLists);
+        for (int i = 0; i < listOfSavedTaskLists.size(); i++) {
+            String fileItem = listOfSavedTaskLists.get(i).toString();
+            LocalDate txtDate = LocalDate.parse(fileItem.substring(64, 74));
+            if (!txtDate.isBefore(todaysDate)) {
+                String fileItemShortened = fileItem.substring(75, fileItem.length() - 4); //to co w choiceboxie
+                if (fileItemShortened.equals(date.getText())) {
+                    fileItemForChoiceBox = "dziś";
+                } else fileItemForChoiceBox = fileItemShortened;
+                datesChoiceBox.getItems().add(fileItemForChoiceBox);
             }
         }
+    }
 
     public void goToMenuButton(ActionEvent event) throws IOException {
         commonMethods.goToMenu(event);
