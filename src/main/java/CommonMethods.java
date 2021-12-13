@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.LinkedList;
 
 public class CommonMethods {
     private Stage stage;
@@ -41,6 +42,18 @@ public class CommonMethods {
         else
             System.out.println("Nie ma takiego pliku");
         //System.out.println(f.getName());
+    }
+
+    public static LinkedList<File> dolistOfSavedTaskLists(){       //sciezka u kogos na komputerze?
+        LinkedList<File> listOfSavedTaskLists = new LinkedList<>();
+        String directory = "C:\\Users\\Ola\\IdeaProjects\\KuraDomowa\\Listy-zadan";
+        File file = new File(directory);
+        File[] files = file.listFiles();
+        for (File e : files) {
+            listOfSavedTaskLists.add(e);
+            System.out.println(e);
+        }
+        return listOfSavedTaskLists;
     }
 
     //backTo(String np lista zadan na dzis)

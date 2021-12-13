@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -7,18 +8,17 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="359.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SavedTaskListController">
    <children>
-      <Label layoutX="119.0" layoutY="24.0" text="Twoja lista zadań">
+      <Label layoutX="119.0" layoutY="24.0" text="Wiesz co Cię dzisiaj czeka?">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <GridPane fx:id="siatka3" gridLinesVisible="true" layoutX="80.0" layoutY="76.0">
+      <GridPane fx:id="siatka3" gridLinesVisible="true" layoutX="69.0" layoutY="67.0" prefHeight="321.0" prefWidth="284.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="157.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="43.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="173.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="115.0" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -33,5 +33,11 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
+      <Label layoutX="64.0" layoutY="41.0" text="(po kliknięciu Kiedy Indziej zadanie przechodzi do Zaległych)">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Button layoutX="187.0" layoutY="404.0" mnemonicParsing="false" onAction="#showPostponed" text="Zaległe" textFill="#dd2e2e" />
    </children>
 </AnchorPane>

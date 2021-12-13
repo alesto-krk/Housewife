@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
@@ -175,15 +176,17 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     }
 
     public void setDatesChoiceBox() {
-        LinkedList<File> listOfSavedTaskLists = new LinkedList<>();
-        String fileItemForChoiceBox = "-";
+        /*LinkedList<File> listOfSavedTaskLists = new LinkedList<>();
+
         String directory = "C:\\Users\\Ola\\IdeaProjects\\KuraDomowa\\Listy-zadan";     //jak u kogos na kompie to sprawdzic, u kazdego ta sciezka bedzie inna
         File file = new File(directory);
         File[] files = file.listFiles();
         for (File e : files) {
             listOfSavedTaskLists.add(e);
             System.out.println(e);
-        }
+        }*/
+        String fileItemForChoiceBox;
+        LinkedList<File> listOfSavedTaskLists = CommonMethods.dolistOfSavedTaskLists();
         Collections.sort(listOfSavedTaskLists);
         for (int i = 0; i < listOfSavedTaskLists.size(); i++) {
             String fileItem = listOfSavedTaskLists.get(i).toString();
@@ -195,6 +198,29 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
                 } else fileItemForChoiceBox = fileItemShortened;
                 datesChoiceBox.getItems().add(fileItemForChoiceBox);
             }
+        }
+    }
+
+    public void showTaskList(ActionEvent event) throws IOException {
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("savedTaskList.fxml"));
+            Parent root2 = (Parent) loader.load();
+            Stage stage2 = new Stage();
+            stage2.setTitle("Twoja lista zadań");
+            SavedTaskListController savedTaskListController = loader.getController();
+            savedTaskListController.addTocheckbox(datesChoiceBox);
+            Image icon = new Image(getClass().getResourceAsStream("images/zadanie-na-dzis.jpg"));
+            stage2.getIcons().add(icon);
+            stage2.setScene(new Scene(root2, 450, 450));
+            stage2.show();
+            /*disableButtons(true);
+            stage2.setOnCloseRequest(e -> {
+                disableButtons(false);
+            });*/
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            //System.out.println("error!");
         }
     }
 
