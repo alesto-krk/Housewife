@@ -1,6 +1,5 @@
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,17 +7,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.LinkedList;
-import java.util.List;
 
 public class listaZakupowController {
 
@@ -126,7 +119,7 @@ public class listaZakupowController {
             System.out.println("Nie ma takiego pliku");
     }*/
 
-    public void showTheListButton(ActionEvent event) throws IOException {
+    public void showTheListButton(ActionEvent event) throws IOException {       //nie dziala!!!!!
         file.checkIfFileExists("moja-lista-zakupow.txt");
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("savedShoppingList.fxml"));
@@ -134,6 +127,7 @@ public class listaZakupowController {
             Stage stage2 = new Stage();
             stage2.setTitle("Twoja lista zakupów");
             SavedListController savedListController = loader.getController();
+            //System.out.println("co teraz");
             savedListController.checkboxes();
             Image icon = new Image(getClass().getResourceAsStream("images/rysunek-listy.jpg"));
             stage2.getIcons().add(icon);
@@ -146,6 +140,7 @@ public class listaZakupowController {
         }
         catch (Exception e){
             System.out.println("error!");
+            e.printStackTrace();
         }
     }
 

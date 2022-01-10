@@ -88,12 +88,33 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
         }
     }
 
+    public void addListToGridPane(LinkedList<String> createdList){
+        int rowIndex = 0;
+        for (String l : createdList) {
+            Label listaLabela = new Label(rowIndex + 1 + ". " + l);
+            Button usunElement = new Button("Usuń");
+            usunElement.setFont(Font.font(9));
+            usunElement.setOnAction(e -> {
+                createdList.remove(l);
+                //listaLabela.setOpacity(0.3);
+                listaLabela.setVisible(false);
+                usunElement.setVisible(false);
+            });
+            siatka2.getChildren().add(listaLabela);
+            siatka2.getChildren().add(usunElement);
+            siatka2.setConstraints(listaLabela, 0, rowIndex);
+            siatka2.setConstraints(usunElement, 1, rowIndex);
+            rowIndex++;
+        }
+    }
+
     public void showList2(LinkedList<String> lista, String z, String y, String x) {
         this.listaZadan.addAll(lista);
         this.todaysDateForRefreshing = y;
         this.chosenDateForRefreshing = z;
         this.chosenDateForRefreshingForTxt = x;
-        int rowIndex = 0;
+        addListToGridPane(listaZadan);
+       /* int rowIndex = 0;
         for (String l : listaZadan) {
             Label listaLabela = new Label(rowIndex + 1 + ". " + l);
             Button usunElement = new Button("Usuń");
@@ -109,7 +130,7 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
             siatka2.setConstraints(listaLabela, 0, rowIndex);
             siatka2.setConstraints(usunElement, 1, rowIndex);
             rowIndex++;
-        }
+        }*/
         chosenDate.setText(chosenDateForRefreshing);
         chosenDateFormatForTxt.setText(chosenDateForRefreshingForTxt);
         chosenDateFormatForTxt.setVisible(false);
@@ -201,18 +222,18 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
         }
     }
 
-    public void showTaskList(ActionEvent event) throws IOException {
+    public void showTaskList(ActionEvent event) throws IOException { //zeby sie tez pokazala lista z pliku na glownej stronie..?
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("savedTaskList.fxml"));
-            Parent root2 = (Parent) loader.load();
-            Stage stage2 = new Stage();
-            stage2.setTitle("Twoja lista zadań");
-            SavedTaskListController savedTaskListController = loader.getController();
-            savedTaskListController.addTocheckbox(datesChoiceBox);
+            Parent root3 = (Parent) loader.load();
+            Stage stage3 = new Stage();
+            stage3.setTitle("Twoja lista zadań");
+            //SavedTaskListController savedTaskListController = loader.getController();
+            //savedTaskListController.addTocheckbox(datesChoiceBox);
             Image icon = new Image(getClass().getResourceAsStream("images/zadanie-na-dzis.jpg"));
-            stage2.getIcons().add(icon);
-            stage2.setScene(new Scene(root2, 450, 450));
-            stage2.show();
+            stage3.getIcons().add(icon);
+            stage3.setScene(new Scene(root3, 450, 450));
+            stage3.show();
             /*disableButtons(true);
             stage2.setOnCloseRequest(e -> {
                 disableButtons(false);

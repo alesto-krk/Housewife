@@ -17,8 +17,8 @@
       </Label>
       <GridPane fx:id="siatka3" gridLinesVisible="true" layoutX="69.0" layoutY="67.0" prefHeight="321.0" prefWidth="284.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="173.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="115.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="54.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="230.0" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -33,11 +33,6 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
-      <Label layoutX="64.0" layoutY="41.0" text="(po kliknięciu Kiedy Indziej zadanie przechodzi do Zaległych)">
-         <font>
-            <Font size="11.0" />
-         </font>
-      </Label>
-      <Button layoutX="187.0" layoutY="404.0" mnemonicParsing="false" onAction="#showPostponed" text="Zaległe" textFill="#dd2e2e" />
+      <Button fx:id="saveForNowButton" layoutX="159.0" layoutY="401.0" mnemonicParsing="false" onAction="#saveForNow" text="Zapisz na później" textFill="#dd2e2e" />
    </children>
 </AnchorPane>

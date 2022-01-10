@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moja-lista-zakupow.txt" beforeDir="false" afterPath="$PROJECT_DIR$/moja-lista-zakupow.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CommonMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommonMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ListaZadanNaDzisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ListaZadanNaDzisController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SavedTaskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SavedTaskListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/listaZadanNaDzis.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/listaZadanNaDzis.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/savedShoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/savedShoppingList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/listaZakupowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listaZakupowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/savedTaskList.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CommonMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommonMethods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ListaZadanNaDzisController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ListaZadanNaDzisController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SavedTaskListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SavedTaskListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/listaZadanNaDzis.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/listaZadanNaDzis.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/savedShoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/savedShoppingList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SavedTaskListController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/listaZakupowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/listaZakupowController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/savedTaskList.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,62 +166,54 @@
     <option name="LAST_COMMIT_MESSAGE" value="Dodano ChoiceBox.&#10;Dziala rozwijanie listy, event jeszcze nie" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="175" y="0" key="CommitChangelistDialog2" timestamp="1632748790584">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="252" y="131" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1641832082608">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="175" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1632748790584" />
+    <state x="252" y="131" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1360.728@0.0.1360.728" timestamp="1641832082608" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1634841185035">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1634841185035" />
-    <state width="1361" height="127" key="GridCell.Tab.0.bottom" timestamp="1639427134639">
+    <state width="1361" height="231" key="GridCell.Tab.0.bottom" timestamp="1641833275541">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="127" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1639427134639" />
+    <state width="1361" height="231" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1641833275541" />
     <state width="1367" height="134" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
-    <state width="1361" height="127" key="GridCell.Tab.0.center" timestamp="1639427134639">
+    <state width="1361" height="231" key="GridCell.Tab.0.center" timestamp="1641833275541">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="127" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1639427134639" />
+    <state width="1361" height="231" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1641833275541" />
     <state width="1367" height="134" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
-    <state width="1361" height="127" key="GridCell.Tab.0.left" timestamp="1639427134639">
+    <state width="1361" height="231" key="GridCell.Tab.0.left" timestamp="1641833275541">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="127" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1639427134639" />
+    <state width="1361" height="231" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1641833275541" />
     <state width="1367" height="134" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
-    <state width="1361" height="127" key="GridCell.Tab.0.right" timestamp="1639427134639">
+    <state width="1361" height="231" key="GridCell.Tab.0.right" timestamp="1641833275541">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="127" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1639427134639" />
+    <state width="1361" height="231" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1641833275541" />
     <state width="1367" height="134" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
-    <state width="1361" height="231" key="GridCell.Tab.1.bottom" timestamp="1639413280918">
+    <state width="1361" height="231" key="GridCell.Tab.1.bottom" timestamp="1641833275541">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="231" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1639413280918" />
-    <state width="661" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1632748893300" />
-    <state width="1361" height="231" key="GridCell.Tab.1.center" timestamp="1639413280918">
+    <state width="1361" height="231" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1641833275541" />
+    <state width="1361" height="231" key="GridCell.Tab.1.center" timestamp="1641833275541">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="231" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1639413280918" />
-    <state width="661" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1632748893299" />
-    <state width="1361" height="231" key="GridCell.Tab.1.left" timestamp="1639413280918">
+    <state width="1361" height="231" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1641833275541" />
+    <state width="1361" height="231" key="GridCell.Tab.1.left" timestamp="1641833275541">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="231" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1639413280918" />
-    <state width="661" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1632748893299" />
-    <state width="1361" height="231" key="GridCell.Tab.1.right" timestamp="1639413280918">
+    <state width="1361" height="231" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1641833275541" />
+    <state width="1361" height="231" key="GridCell.Tab.1.right" timestamp="1641833275541">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="231" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1639413280918" />
-    <state width="661" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1632748893299" />
+    <state width="1361" height="231" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1641833275541" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1634841199068">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1634841199068" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1632748800984">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1632748800984" />
     <state x="65" y="0" key="new project wizard" timestamp="1638706404082">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

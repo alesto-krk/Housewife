@@ -1,12 +1,11 @@
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
@@ -15,26 +14,37 @@ import javafx.stage.Stage;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class SavedTaskListController {
     List<String> fileList = new LinkedList<>();
-    LinkedList<String> postponedTasks = new LinkedList<>();
+    LinkedList<String> selected = new LinkedList<>();
+    Set<String> notselected = new HashSet<>();
+    int i;
+    int j=0;
+    String pathname;
 
     @FXML
     GridPane siatka3;
+    @FXML
+    Button saveForNowButton;
 
-    public void addTocheckbox(ChoiceBox<String> choicebox){
-        int rowIndex = 0;
+    public void addTocheckbox(ChoiceBox<String> choicebox) {
+       int rowIndex = 0;
         LinkedList<File> listOfSavedTaskLists = CommonMethods.dolistOfSavedTaskLists();
         String choiceboxDate = choicebox.getValue();
 
-        for (int i = 0; i < listOfSavedTaskLists.size(); i++) {
+        for (i = 0; i < listOfSavedTaskLists.size(); i++) {
             String fileItem = listOfSavedTaskLists.get(i).toString();
+            pathname = fileItem;
+            //System.out.println(pathname);
             String fileItemShortened = fileItem.substring(75, fileItem.length() - 4); //to co w choiceboxie
 
             if (choiceboxDate.equals(fileItemShortened)) {
@@ -45,51 +55,60 @@ public class SavedTaskListController {
                 }
                 for (String l : fileList) {
                     CheckBox checkb = new CheckBox(l);
-                    Button postpone = new Button("Kiedy indziej");
-                    postpone.setDisable(false);
-                    postpone.setOnAction(e -> {
-                        postponedTasks.add(l);
-                        checkb.setTextFill(Color.RED);
-                    });
+                    Label label = new Label("-");
+                    label.setVisible(false);
                     checkb.setOnAction(e -> {
                                 if (checkb.isSelected()) {
                                     checkb.setOpacity(0.3);
-                                    postpone.setDisable(true);
-                                }
-                                else {
+                                    label.setText("done");
+                                    label.setVisible(true);
+                                    j++;
+                                    selected.add(l);
+
+                                } else {
                                     checkb.setOpacity(1);
-                                    postpone.setDisable(false);
+                                   // label.setText("--");
+                                    label.setVisible(false);
+                                    j--;
+                                    selected.remove(l);
                                 }
-                            }
-                    );
-                    siatka3.getChildren().addAll(checkb, postpone);
-                    siatka3.setConstraints(checkb, 0, rowIndex);
-                    siatka3.setConstraints(postpone, 1, rowIndex);
+                            });
+
+                    siatka3.getChildren().addAll(checkb, label);
+                    siatka3.setConstraints(checkb, 1, rowIndex);
+                    siatka3.setConstraints(label, 0, rowIndex);
                     rowIndex++;
                 }
             }
         }
+       /* saveForNowButton.setOnAction(e-> {
+
+        });*/
+
     }
 
-    public void showPostponed(ActionEvent event) throws IOException {
-        try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("savedTaskList.fxml"));
-            Parent root2 = (Parent) loader.load();
-            Stage stage2 = new Stage();
-            for (String e : postponedTasks){
-                Label label = new Label(e);
-                siatka3.getChildren().add(label); //zrobic nowy porzadny refresh sceny!!!!!!!!!!!!!!!!
+    public void saveForNow(ActionEvent event) throws IOException {
+        System.out.println(j + "------");
+        System.out.println(selected);
+        System.out.println(fileList);
+        for (int k = 0; k < selected.size(); k++) {
+            for (int m = 0; m < fileList.size(); m++){
+                if(fileList.get(m).equals(selected.get(k)))
+                    fileList.remove(m);
             }
+        }
 
-            //stage2.setTitle("Twoja lista zadań");
-            //Image icon = new Image(getClass().getResourceAsStream("images/zadanie-na-dzis.jpg"));
-            //stage2.getIcons().add(icon);
-            stage2.setScene(new Scene(root2, 450, 450));
-            stage2.show();
-        }
-        catch (Exception e){
-            e.printStackTrace();
-            //System.out.println("error!");
-        }
+        System.out.println(fileList); //ta liste chcemy przeniesc
+        System.out.println("---**----" + pathname);         //nie dziala pathname!!!!!!!!
+        PrintWriter zapis = new PrintWriter(pathname);
+
+            for (String e : fileList) {
+                zapis.println(e);
+            }
+            zapis.close();
+            CommonMethods.showAlert(Alert.AlertType.CONFIRMATION, "Lista", "Odhaczone zadania będą trwale usunięte z listy. Czy na pewno je zrobiłeś? :)");
+
+
     }
 }
+    //jeszcze wroc do glownej sceny i zakoncz
