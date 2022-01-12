@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class SavedTaskListController {
     int i;
     int j=0;
     String pathname;
+    LocalDate todaysDate = LocalDate.now();
 
     @FXML
     GridPane siatka3;
@@ -45,11 +47,15 @@ public class SavedTaskListController {
             String fileItem = listOfSavedTaskLists.get(i).toString();
             pathname = fileItem;
             //System.out.println(pathname);
+            //System.out.println(todaysDate);
             String fileItemShortened = fileItem.substring(75, fileItem.length() - 4); //to co w choiceboxie
+            String fileItemShortenedToday = fileItem.substring(64, 74);
+            System.out.println(fileItemShortened + "  **  " + fileItemShortenedToday + "*****" + choiceboxDate + "  -  " + todaysDate.toString());
 
-            if (choiceboxDate.equals(fileItemShortened)) {
+            if (choiceboxDate.equals(fileItemShortened) || fileItemShortenedToday.equals(todaysDate.toString())) { //źle! pokazuje zadania z obydwu dni, wybranego i todays daty!!!!!!
                 try (BufferedReader br = Files.newBufferedReader(Paths.get(fileItem))) {
                     fileList = br.lines().collect(Collectors.toList());
+                    System.out.println(fileList);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

@@ -61,7 +61,7 @@
             <Font size="11.0" />
          </font>
       </Button>
-      <Button layoutX="449.0" layoutY="69.0" mnemonicParsing="false" onAction="#setAnotherDate" prefHeight="46.0" prefWidth="114.0" text="Ustaw nową datę/ nowe zadania" wrapText="true" />
+      <Button layoutX="449.0" layoutY="69.0" mnemonicParsing="false" onAction="#setAnotherDateOrTask" prefHeight="46.0" prefWidth="114.0" text="Ustaw nową datę/ nowe zadania" wrapText="true" />
       <Label fx:id="chosenDateFormatForTxt" layoutX="261.0" layoutY="107.0" />
       <Button layoutX="237.0" layoutY="365.0" mnemonicParsing="false" onAction="#refreshList2" prefHeight="17.0" prefWidth="31.0" />
       <Button layoutX="524.0" layoutY="367.0" mnemonicParsing="false" onAction="#exitButton" text="Zakończ">
@@ -72,6 +72,11 @@
       <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="240.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/refresh-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="532.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/document_add.png" />
          </image>
       </ImageView>
    </children>

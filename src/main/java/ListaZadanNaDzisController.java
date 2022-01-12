@@ -153,7 +153,7 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
         stage.show();
     }
 
-    public void setAnotherDate(ActionEvent event) throws IOException{
+    public void setAnotherDateOrTask(ActionEvent event) throws IOException{
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
         alert.setHeaderText("Czy skasować obecną listę?");
@@ -182,7 +182,7 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
             commonMethods.checkIfFileExists(pathname);
         try {
             if (!listaZadan.isEmpty()) {
-                PrintWriter zapis = new PrintWriter(pathname);
+                PrintWriter zapis = new PrintWriter(pathname); //zrobic tak zeby dodawal do pliku, nie robil go od nowa
                 for (String e : listaZadan) {
                     zapis.println(e);
                 }
@@ -228,8 +228,8 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
             Parent root3 = (Parent) loader.load();
             Stage stage3 = new Stage();
             stage3.setTitle("Twoja lista zadań");
-            //SavedTaskListController savedTaskListController = loader.getController();
-            //savedTaskListController.addTocheckbox(datesChoiceBox);
+            SavedTaskListController savedTaskListController = loader.getController();
+            savedTaskListController.addTocheckbox(datesChoiceBox);
             Image icon = new Image(getClass().getResourceAsStream("images/zadanie-na-dzis.jpg"));
             stage3.getIcons().add(icon);
             stage3.setScene(new Scene(root3, 450, 450));
