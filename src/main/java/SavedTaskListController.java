@@ -28,6 +28,7 @@ public class SavedTaskListController {
     List<String> fileList = new LinkedList<>();
     LinkedList<String> selected = new LinkedList<>();
     Set<String> notselected = new HashSet<>();
+    int rowIndex = 0;
     int i;
     int j=0;
     String pathname;
@@ -38,59 +39,72 @@ public class SavedTaskListController {
     @FXML
     Button saveForNowButton;
 
-    public void addTocheckbox(ChoiceBox<String> choicebox) {
-       int rowIndex = 0;
+    public LinkedList<File> doListOfCurrentSavedFiles(){
+        LinkedList<File> listOfCurrentSavedFiles = new LinkedList<>();
         LinkedList<File> listOfSavedTaskLists = CommonMethods.dolistOfSavedTaskLists();
-        String choiceboxDate = choicebox.getValue();
-
         for (i = 0; i < listOfSavedTaskLists.size(); i++) {
             String fileItem = listOfSavedTaskLists.get(i).toString();
-            pathname = fileItem;
-            //System.out.println(pathname);
-            //System.out.println(todaysDate);
-            String fileItemShortened = fileItem.substring(75, fileItem.length() - 4); //to co w choiceboxie
-            String fileItemShortenedToday = fileItem.substring(64, 74);
-            System.out.println(fileItemShortened + "  **  " + fileItemShortenedToday + "*****" + choiceboxDate + "  -  " + todaysDate.toString());
-
-            if (choiceboxDate.equals(fileItemShortened) || fileItemShortenedToday.equals(todaysDate.toString())) { //źle! pokazuje zadania z obydwu dni, wybranego i todays daty!!!!!!
-                try (BufferedReader br = Files.newBufferedReader(Paths.get(fileItem))) {
-                    fileList = br.lines().collect(Collectors.toList());
-                    System.out.println(fileList);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                for (String l : fileList) {
-                    CheckBox checkb = new CheckBox(l);
-                    Label label = new Label("-");
-                    label.setVisible(false);
-                    checkb.setOnAction(e -> {
-                                if (checkb.isSelected()) {
-                                    checkb.setOpacity(0.3);
-                                    label.setText("done");
-                                    label.setVisible(true);
-                                    j++;
-                                    selected.add(l);
-
-                                } else {
-                                    checkb.setOpacity(1);
-                                   // label.setText("--");
-                                    label.setVisible(false);
-                                    j--;
-                                    selected.remove(l);
-                                }
-                            });
-
-                    siatka3.getChildren().addAll(checkb, label);
-                    siatka3.setConstraints(checkb, 1, rowIndex);
-                    siatka3.setConstraints(label, 0, rowIndex);
-                    rowIndex++;
-                }
+            LocalDate txtDate = LocalDate.parse(fileItem.substring(64, 74));
+            if (!txtDate.isBefore(todaysDate)) {
+                listOfCurrentSavedFiles.add(listOfSavedTaskLists.get(i));
             }
         }
-       /* saveForNowButton.setOnAction(e-> {
+        return listOfCurrentSavedFiles;
+    }
 
-        });*/
+    public void readTheFile(String fileItem){
+        try (BufferedReader br = Files.newBufferedReader(Paths.get(fileItem))) {
+            fileList = br.lines().collect(Collectors.toList());
+            System.out.println(fileList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        for (String l : fileList) {
+            CheckBox checkb = new CheckBox(l);
+            Label label = new Label("-");
+            label.setVisible(false);
+            checkb.setOnAction(e -> {
+                if (checkb.isSelected()) {
+                    checkb.setOpacity(0.3);
+                    label.setText("done");
+                    label.setVisible(true);
+                    j++;
+                    selected.add(l);
 
+                } else {
+                    checkb.setOpacity(1);
+                    // label.setText("--");
+                    label.setVisible(false);
+                    j--;
+                    selected.remove(l);
+                }
+            });
+
+            siatka3.getChildren().addAll(checkb, label);
+            siatka3.setConstraints(checkb, 1, rowIndex);
+            siatka3.setConstraints(label, 0, rowIndex);
+            rowIndex++;
+        }
+    }
+
+
+    public void addTocheckbox(ChoiceBox<String> choicebox) {
+        LinkedList<File> listOfCurrentSavedFiles = doListOfCurrentSavedFiles();
+        String choiceboxDate = choicebox.getValue();
+        if (!choiceboxDate.equals("dziś")) {
+            for (i = 0; i < listOfCurrentSavedFiles.size(); i++) {
+             String fileItem = listOfCurrentSavedFiles.get(i).toString();
+             pathname = fileItem;
+              String fileItemShortened = fileItem.substring(75, fileItem.length() - 4); //to co w choiceboxie
+            // System.out.println(fileItemShortened + "  **  " + fileItemShortenedToday + "*****" + choiceboxDate + "  -  " + todaysDate.toString());
+             if (choiceboxDate.equals(fileItemShortened)) {
+               readTheFile(fileItem);
+             }
+            }
+        } else {
+       String fileItem0 = listOfCurrentSavedFiles.get(0).toString();
+       readTheFile(fileItem0);
+        }
     }
 
     public void saveForNow(ActionEvent event) throws IOException {
