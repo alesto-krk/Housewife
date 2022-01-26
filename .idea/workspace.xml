@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-01-07-piątek, 7 stycznia 2022.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-01-09-niedziela, 9 stycznia 2022.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-01-11-wtorek, 11 stycznia 2022.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-01-12-środa, 12 stycznia 2022.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-02-02-środa, 2 lutego 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-02-05-sobota, 5 lutego 2022.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-02-05-sobota, 5 lutego 2022.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ListaZadanNaDzisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ListaZadanNaDzisController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SavedTaskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SavedTaskListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/savedTaskList.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SavedTaskListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SavedTaskListController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/savedTaskList.fxml" afterDir="false" />
     </list>
@@ -170,25 +168,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1634841185035" />
-    <state width="1361" height="102" key="GridCell.Tab.0.bottom" timestamp="1643128329098">
+    <state width="1361" height="241" key="GridCell.Tab.0.bottom" timestamp="1643225495012">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="102" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1643128329098" />
+    <state width="1361" height="241" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1643225495012" />
     <state width="1367" height="134" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
-    <state width="1361" height="102" key="GridCell.Tab.0.center" timestamp="1643128329098">
+    <state width="1361" height="241" key="GridCell.Tab.0.center" timestamp="1643225495012">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="102" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1643128329098" />
+    <state width="1361" height="241" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1643225495012" />
     <state width="1367" height="134" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
-    <state width="1361" height="102" key="GridCell.Tab.0.left" timestamp="1643128329098">
+    <state width="1361" height="241" key="GridCell.Tab.0.left" timestamp="1643225495005">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="102" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1643128329098" />
+    <state width="1361" height="241" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1643225495005" />
     <state width="1367" height="134" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
-    <state width="1361" height="102" key="GridCell.Tab.0.right" timestamp="1643128329098">
+    <state width="1361" height="241" key="GridCell.Tab.0.right" timestamp="1643225495012">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="102" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1643128329098" />
+    <state width="1361" height="241" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1643225495012" />
     <state width="1367" height="134" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
     <state width="1361" height="231" key="GridCell.Tab.1.bottom" timestamp="1641833275541">
       <screen x="0" y="0" width="1360" height="728" />
@@ -206,9 +204,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state width="1361" height="231" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1641833275541" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1634841199068">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="162" y="0" key="SettingsEditor" timestamp="1643204787889">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
+    <state x="162" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1643204787889" />
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1634841199068" />
     <state x="65" y="0" key="new project wizard" timestamp="1638706404082">
       <screen x="0" y="0" width="1360" height="728" />

@@ -11,9 +11,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -182,9 +180,13 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
             commonMethods.checkIfFileExists(pathname);
         try {
             if (!listaZadan.isEmpty()) {
-                PrintWriter zapis = new PrintWriter(pathname); //zrobic tak zeby dodawal do pliku, nie robil go od nowa
+                FileWriter fw = new FileWriter(pathname, true);
+                BufferedWriter zapis = new BufferedWriter(fw);
+                //PrintWriter zapis = new PrintWriter(pathname); //zrobic tak zeby dodawal do pliku, nie robil go od nowa
                 for (String e : listaZadan) {
-                    zapis.println(e);
+                    zapis.write(e);
+                    zapis.newLine();
+                   // zapis.println(e);
                 }
                 zapis.close();
                 CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zadań");

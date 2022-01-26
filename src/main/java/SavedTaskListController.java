@@ -38,21 +38,25 @@ public class SavedTaskListController {
     GridPane siatka3;
     @FXML
     Button saveForNowButton;
+    @FXML
+    Label labelDate;
 
     public LinkedList<File> doListOfCurrentSavedFiles(){
-        LinkedList<File> listOfCurrentSavedFiles = new LinkedList<>();
-        LinkedList<File> listOfSavedTaskLists = CommonMethods.dolistOfSavedTaskLists();
-        for (i = 0; i < listOfSavedTaskLists.size(); i++) {
-            String fileItem = listOfSavedTaskLists.get(i).toString();
+        LinkedList<File> listOfCurrentSavedLists = new LinkedList<>();
+        LinkedList<File> listOfAllSavedTaskLists = CommonMethods.dolistOfSavedTaskLists();
+        for (i = 0; i < listOfAllSavedTaskLists.size(); i++) {
+            String fileItem = listOfAllSavedTaskLists.get(i).toString();
             LocalDate txtDate = LocalDate.parse(fileItem.substring(64, 74));
             if (!txtDate.isBefore(todaysDate)) {
-                listOfCurrentSavedFiles.add(listOfSavedTaskLists.get(i));
+                listOfCurrentSavedLists.add(listOfAllSavedTaskLists.get(i));
             }
         }
-        return listOfCurrentSavedFiles;
+        return listOfCurrentSavedLists;
     }
 
     public void readTheFile(String fileItem){
+        System.out.println(pathname);
+        labelDate.setText(pathname);
         try (BufferedReader br = Files.newBufferedReader(Paths.get(fileItem))) {
             fileList = br.lines().collect(Collectors.toList());
             System.out.println(fileList);
@@ -102,8 +106,8 @@ public class SavedTaskListController {
              }
             }
         } else {
-       String fileItem0 = listOfCurrentSavedFiles.get(0).toString();
-       readTheFile(fileItem0);
+       String fileItem = listOfCurrentSavedFiles.get(0).toString();
+       readTheFile(fileItem);
         }
     }
 
@@ -128,7 +132,6 @@ public class SavedTaskListController {
             zapis.close();
             CommonMethods.showAlert(Alert.AlertType.CONFIRMATION, "Lista", "Odhaczone zadania będą trwale usunięte z listy. Czy na pewno je zrobiłeś? :)");
 
-
     }
+
 }
-    //jeszcze wroc do glownej sceny i zakoncz
