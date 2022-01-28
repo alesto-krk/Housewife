@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 public class SavedTaskListController {
     List<String> fileList = new LinkedList<>();
     LinkedList<String> selected = new LinkedList<>();
-    Set<String> notselected = new HashSet<>();
+    LinkedList<String> notselected = new LinkedList<>();
     int rowIndex = 0;
     int i;
     int j=0;
@@ -57,6 +57,7 @@ public class SavedTaskListController {
     public void readTheFile(String fileItem){
         System.out.println(pathname);
         labelDate.setText(pathname);
+        //labelDate.setVisible(false);
         try (BufferedReader br = Files.newBufferedReader(Paths.get(fileItem))) {
             fileList = br.lines().collect(Collectors.toList());
             System.out.println(fileList);
@@ -74,13 +75,15 @@ public class SavedTaskListController {
                     label.setVisible(true);
                     j++;
                     selected.add(l);
+                    notselected.remove(l);
 
                 } else {
                     checkb.setOpacity(1);
                     // label.setText("--");
                     label.setVisible(false);
                     j--;
-                    selected.remove(l);
+                    //selected.remove(l);
+                    notselected.add(l);
                 }
             });
 
@@ -112,20 +115,24 @@ public class SavedTaskListController {
     }
 
     public void saveForNow(ActionEvent event) throws IOException {
-        System.out.println(j + "------");
-        System.out.println(selected);
-        System.out.println(fileList);
+        System.out.println(j + "(ilosc usunietych elementow)");
+        System.out.println("filelist " + fileList);
+        System.out.println(selected + "___" + notselected);
+        fileList.removeAll(selected);
+        fileList.addAll(notselected);
+        /*selected.addAll(notselected);
         for (int k = 0; k < selected.size(); k++) {
             for (int m = 0; m < fileList.size(); m++){
                 if(fileList.get(m).equals(selected.get(k)))
                     fileList.remove(m);
             }
-        }
+        }*/
 
-        System.out.println(fileList); //ta liste chcemy przeniesc
-        System.out.println("---**----" + pathname);         //nie dziala pathname!!!!!!!!
-        PrintWriter zapis = new PrintWriter(pathname);
+        System.out.println("ta liste chcemy przeniesc  " + fileList); //ta liste chcemy przeniesc
+        //System.out.println("---**----" + pathname);         //nie dziala pathname!!!!!!!!
+        System.out.println("0o0o0o0o0" + labelDate.getText());
 
+        PrintWriter zapis = new PrintWriter(labelDate.getText());
             for (String e : fileList) {
                 zapis.println(e);
             }

@@ -1,6 +1,2 @@
-zzz
-ddd
-vvv
-xxxx
-ooo
-lll
+bbb
+ccc

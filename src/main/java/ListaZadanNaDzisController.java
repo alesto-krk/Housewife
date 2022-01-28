@@ -152,7 +152,10 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     }
 
     public void setAnotherDateOrTask(ActionEvent event) throws IOException{
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        listaZadan.clear();
+        siatka2.setVisible(false);
+        datePicker.setDisable(false);
+        /*Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
         alert.setHeaderText("Czy skasować obecną listę?");
         alert.setContentText(null);
@@ -169,12 +172,12 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
             else if (type == noButton) {
                 datePicker.setDisable(false);
             }
-        });
+        });*/
     }
 
     public void saveTheListButton2(ActionEvent event) throws IOException {
         String pathname = "Listy-zadan/lista-zadan-na-" + chosenDateFormatForTxt.getText() + "-" + chosenDate.getText() + ".txt";
-        if (pathname.equals("lista-zadan-na-<nie wybrałeś/aś daty>.txt") || pathname.equals("lista-zadan-na-.txt"))
+        if (pathname.equals("lista-zadan-na-<nie wybrałeś/aś daty>.txt") || pathname.equals("lista-zadan-na-.txt") || pathname.equals(null))
             CommonMethods.showAlert(Alert.AlertType.WARNING, "Nieustawiona data", "Kliknij -Ustaw nową datę-");
         else
             commonMethods.checkIfFileExists(pathname);
@@ -186,9 +189,12 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
                 for (String e : listaZadan) {
                     zapis.write(e);
                     zapis.newLine();
+                    System.out.println(pathname);
                    // zapis.println(e);
                 }
                 zapis.close();
+                listaZadan.clear();
+                siatka2.setVisible(false);
                 CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zadań");
             } else
                 System.out.println("pusta lista");
@@ -220,31 +226,31 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
                     fileItemForChoiceBox = "dziś";
                 } else fileItemForChoiceBox = fileItemShortened;
                 datesChoiceBox.getItems().add(fileItemForChoiceBox);
+                datesChoiceBox.getSelectionModel().select(0);
             }
         }
     }
 
     public void showTaskList(ActionEvent event) throws IOException { //zeby sie tez pokazala lista z pliku na glownej stronie..?
-        try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("savedTaskList.fxml"));
-            Parent root3 = (Parent) loader.load();
-            Stage stage3 = new Stage();
-            stage3.setTitle("Twoja lista zadań");
-            SavedTaskListController savedTaskListController = loader.getController();
-            savedTaskListController.addTocheckbox(datesChoiceBox);
-            Image icon = new Image(getClass().getResourceAsStream("images/zadanie-na-dzis.jpg"));
-            stage3.getIcons().add(icon);
-            stage3.setScene(new Scene(root3, 450, 450));
-            stage3.show();
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("savedTaskList.fxml"));
+                Parent root3 = (Parent) loader.load();
+                Stage stage3 = new Stage();
+                stage3.setTitle("Twoja lista zadań");
+                SavedTaskListController savedTaskListController = loader.getController();
+                savedTaskListController.addTocheckbox(datesChoiceBox);
+                Image icon = new Image(getClass().getResourceAsStream("images/zadanie-na-dzis.jpg"));
+                stage3.getIcons().add(icon);
+                stage3.setScene(new Scene(root3, 450, 450));
+                stage3.show();
             /*disableButtons(true);
             stage2.setOnCloseRequest(e -> {
                 disableButtons(false);
             });*/
-        }
-        catch (Exception e){
-            e.printStackTrace();
-            //System.out.println("error!");
-        }
+            } catch (Exception e) {
+                e.printStackTrace();
+                //System.out.println("error!");
+            }
     }
 
     public void goToMenuButton(ActionEvent event) throws IOException {
