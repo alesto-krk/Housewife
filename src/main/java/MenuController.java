@@ -26,6 +26,7 @@ public class MenuController {
     public void menuListaZadanNaDzis(ActionEvent event) throws IOException {
         loadFxml("listaZadanNaDzis.fxml");
         ListaZadanNaDzisController date = loader.getController();
+        date.saveTheListButton3.setDisable(true);
         date.setTodaysDate();
         date.setDatesChoiceBox();
         loadStage(event);

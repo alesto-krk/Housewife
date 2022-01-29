@@ -53,9 +53,9 @@
             <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
-      <Button layoutX="287.0" layoutY="365.0" mnemonicParsing="false" onAction="#saveTheListButton2" text="Zapisz listę" />
+      <Button fx:id="saveTheListButton3" layoutX="287.0" layoutY="365.0" mnemonicParsing="false" onAction="#saveTheListButton2" text="Zapisz listę" />
       <Button layoutX="80.0" layoutY="240.0" mnemonicParsing="false" onAction="#dodajButton2" text="Dodaj" />
-      <Button layoutX="80.0" layoutY="325.0" mnemonicParsing="false" onAction="#showTaskList" text="Pokaż" />
+      <Button fx:id="showTaskListButton" layoutX="80.0" layoutY="325.0" mnemonicParsing="false" onAction="#showTaskList" text="Pokaż" />
       <Button layoutX="5.0" layoutY="370.0" mnemonicParsing="false" onAction="#goToMenuButton" text="&lt; Menu">
          <font>
             <Font size="11.0" />

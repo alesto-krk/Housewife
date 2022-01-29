@@ -18,10 +18,10 @@ import java.time.format.FormatStyle;
 import java.util.Collections;
 import java.util.LinkedList;
 
-public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wykonania opcja done i zostaw na potem + zapisz
+public class ListaZadanNaDzisController {
 
-    @FXML                                       //ustaw przypominajke moze po kliknieciu w zapisz dopiero. ustaw na dzien przed godz.20, ten sam dzien godz.8, nie ustawiaj wogole
-    Label date;                                 //pokaz zadania button w miejsce ustaw przypominajke
+    @FXML
+    Label date;
     @FXML
     Label chosenDate;
     @FXML
@@ -34,6 +34,10 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     GridPane siatka2;
     @FXML
     ChoiceBox<String> datesChoiceBox;
+    @FXML
+    Button saveTheListButton3;
+    @FXML
+    Button showTaskListButton;
 
     private LinkedList<String> listaZadan = new LinkedList<>();
     private String todaysDateForRefreshing;
@@ -79,10 +83,15 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
             System.out.println("lista daty " + chosenDateForRefreshing);
             dodajField2.clear();
         } else {
-            if(dodajField2.getText().isEmpty())
+            if(dodajField2.getText().isEmpty()) {
                 CommonMethods.showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Trzeba coś wpisać :)");
+                chosenDateForRefreshing = chosenDate.getText();
+                chosenDateForRefreshingForTxt = chosenDateFormatForTxt.getText();
+                todaysDateForRefreshing = date.getText();
+            }
             else
-                CommonMethods.showAlert(Alert.AlertType.ERROR, "Niestety...", "Więcej się nie zmieści :)");
+            { CommonMethods.showAlert(Alert.AlertType.ERROR, "Niestety...", "Więcej się nie zmieści :)");
+                }
         }
     }
 
@@ -112,28 +121,16 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
         this.chosenDateForRefreshing = z;
         this.chosenDateForRefreshingForTxt = x;
         addListToGridPane(listaZadan);
-       /* int rowIndex = 0;
-        for (String l : listaZadan) {
-            Label listaLabela = new Label(rowIndex + 1 + ". " + l);
-            Button usunElement = new Button("Usuń");
-            usunElement.setFont(Font.font(9));
-            usunElement.setOnAction(e -> {
-                listaZadan.remove(l);
-                //listaLabela.setOpacity(0.3);
-                listaLabela.setVisible(false);
-                usunElement.setVisible(false);
-            });
-            siatka2.getChildren().add(listaLabela);
-            siatka2.getChildren().add(usunElement);
-            siatka2.setConstraints(listaLabela, 0, rowIndex);
-            siatka2.setConstraints(usunElement, 1, rowIndex);
-            rowIndex++;
-        }*/
         chosenDate.setText(chosenDateForRefreshing);
         chosenDateFormatForTxt.setText(chosenDateForRefreshingForTxt);
         chosenDateFormatForTxt.setVisible(false);
         date.setText(todaysDateForRefreshing);
         datePicker.setDisable(true);
+        if (listaZadan.isEmpty())
+        saveTheListButton3.setDisable(true);
+        else saveTheListButton3.setDisable(false);
+        setDatesChoiceBox();
+
     }
 
     public void refreshList2(ActionEvent event) throws IOException {
@@ -152,8 +149,8 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
     }
 
     public void setAnotherDateOrTask(ActionEvent event) throws IOException{
-        listaZadan.clear();
-        siatka2.setVisible(false);
+        //listaZadan.clear();
+        //siatka2.setVisible(false);
         datePicker.setDisable(false);
         /*Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
@@ -177,15 +174,15 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
 
     public void saveTheListButton2(ActionEvent event) throws IOException {
         String pathname = "Listy-zadan/lista-zadan-na-" + chosenDateFormatForTxt.getText() + "-" + chosenDate.getText() + ".txt";
-        if (pathname.equals("lista-zadan-na-<nie wybrałeś/aś daty>.txt") || pathname.equals("lista-zadan-na-.txt") || pathname.equals(null))
-            CommonMethods.showAlert(Alert.AlertType.WARNING, "Nieustawiona data", "Kliknij -Ustaw nową datę-");
+        System.out.println("^^^^^^^^^" + pathname);
+        if (pathname.equals("Listy-zadan/lista-zadan-na--<nie wybrałeś/aś daty>.txt") || pathname.equals("Listy-zadan/lista-zadan-na-.txt") || pathname.equals("") || chosenDate.equals(null) || chosenDate.equals("<nie wybrałeś/aś daty>"))
+            CommonMethods.showAlert(Alert.AlertType.WARNING, "Nieustawiona data", "Kliknij -Ustaw nową datę- ");
         else
             commonMethods.checkIfFileExists(pathname);
         try {
             if (!listaZadan.isEmpty()) {
                 FileWriter fw = new FileWriter(pathname, true);
                 BufferedWriter zapis = new BufferedWriter(fw);
-                //PrintWriter zapis = new PrintWriter(pathname); //zrobic tak zeby dodawal do pliku, nie robil go od nowa
                 for (String e : listaZadan) {
                     zapis.write(e);
                     zapis.newLine();
@@ -231,7 +228,7 @@ public class ListaZadanNaDzisController {       //jak wyskoczy lista zadan do wy
         }
     }
 
-    public void showTaskList(ActionEvent event) throws IOException { //zeby sie tez pokazala lista z pliku na glownej stronie..?
+    public void showTaskList(ActionEvent event) throws IOException {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("savedTaskList.fxml"));
                 Parent root3 = (Parent) loader.load();

@@ -18,6 +18,8 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -54,10 +56,14 @@ public class SavedTaskListController {
         return listOfCurrentSavedLists;
     }
 
-    public void readTheFile(String fileItem){
+    public void readTheFile(String fileItem, ChoiceBox<String> choicebox){
         System.out.println(pathname);
+        String dfl = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(todaysDate).toString();
+        if (choicebox.getValue().equals("dziś"))
+            labelDate.setText("C:\\Users\\Ola\\IdeaProjects\\KuraDomowa\\Listy-zadan\\lista-zadan-na-"+ todaysDate + "-" + dfl + ".txt");
+        else
         labelDate.setText(pathname);
-        //labelDate.setVisible(false);
+        labelDate.setVisible(false);
         try (BufferedReader br = Files.newBufferedReader(Paths.get(fileItem))) {
             fileList = br.lines().collect(Collectors.toList());
             System.out.println(fileList);
@@ -105,12 +111,12 @@ public class SavedTaskListController {
               String fileItemShortened = fileItem.substring(75, fileItem.length() - 4); //to co w choiceboxie
             // System.out.println(fileItemShortened + "  **  " + fileItemShortenedToday + "*****" + choiceboxDate + "  -  " + todaysDate.toString());
              if (choiceboxDate.equals(fileItemShortened)) {
-               readTheFile(fileItem);
+               readTheFile(fileItem, choicebox);
              }
             }
         } else {
        String fileItem = listOfCurrentSavedFiles.get(0).toString();
-       readTheFile(fileItem);
+       readTheFile(fileItem, choicebox);
         }
     }
 
