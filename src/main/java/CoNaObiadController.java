@@ -88,7 +88,7 @@ public class CoNaObiadController /*implements Initializable*/ {
     }
 
     public void goToMenu(ActionEvent event) throws IOException {
-        tytulController t = new tytulController();
+        titleController t = new titleController();
         t.goToMenu(event);
     }
 

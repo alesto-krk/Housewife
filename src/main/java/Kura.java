@@ -9,11 +9,13 @@ public class Kura extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("tytul.fxml"));
-        primaryStage.setTitle("Kura Domowa");
+        Parent root = FXMLLoader.load(getClass().getResource("s01_title.fxml"));
+        primaryStage.setTitle("Housewife");
         Image icon = new Image(getClass().getResourceAsStream("images/kura-image.png"));
         primaryStage.getIcons().add(icon);
-        primaryStage.setScene(new Scene(root, 355, 400));
+        Scene scene = new Scene(root, 400, 400);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 

@@ -19,7 +19,7 @@ public class listaZakupowController {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    private  CommonMethods file = new CommonMethods();
+    private CommonMethods file = new CommonMethods();
 
     @FXML
     TextField dodajField;

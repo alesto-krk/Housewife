@@ -1,0 +1,7 @@
+//s01
+#titleContainer{
+-fx-background-image: url("images/title.jpg");
+-fx-background-attachment: fixed;
+-fx-background-size: cover;
+-fx-background-position: center;
+}

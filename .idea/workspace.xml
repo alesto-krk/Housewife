@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-02-05-sobota, 5 lutego 2022.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-02-05-sobota, 5 lutego 2022.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ListaZadanNaDzisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ListaZadanNaDzisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SavedTaskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SavedTaskListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/listaZadanNaDzis.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/listaZadanNaDzis.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SavedTaskListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SavedTaskListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-01-21-piątek, 21 stycznia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-01-25-wtorek, 25 stycznia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-01-26-środa, 26 stycznia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-01-28-piątek, 28 stycznia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CoNaObiadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CoNaObiadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CommonMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommonMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Kura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S02_menuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/listaZakupowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listaZakupowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tytulController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S01_titleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s02_menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/savedTaskList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tytul.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s01_title.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CommonMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommonMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Kura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Kura.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/menu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/savedTaskList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tytul.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tytulController.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +60,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Ola/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23" />
@@ -164,29 +180,25 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="252" y="131" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1360.728@0.0.1360.728" timestamp="1641832082608" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1634841185035">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1634841185035" />
-    <state width="1361" height="231" key="GridCell.Tab.0.bottom" timestamp="1643465021419">
+    <state width="1361" height="92" key="GridCell.Tab.0.bottom" timestamp="1645362707138">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="231" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1643465021419" />
+    <state width="1361" height="92" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1645362707138" />
     <state width="1367" height="134" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
-    <state width="1361" height="231" key="GridCell.Tab.0.center" timestamp="1643465021419">
+    <state width="1361" height="92" key="GridCell.Tab.0.center" timestamp="1645362707136">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="231" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1643465021419" />
+    <state width="1361" height="92" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1645362707136" />
     <state width="1367" height="134" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
-    <state width="1361" height="231" key="GridCell.Tab.0.left" timestamp="1643465021419">
+    <state width="1361" height="92" key="GridCell.Tab.0.left" timestamp="1645362707136">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="231" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1643465021419" />
+    <state width="1361" height="92" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1645362707136" />
     <state width="1367" height="134" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
-    <state width="1361" height="231" key="GridCell.Tab.0.right" timestamp="1643465021419">
+    <state width="1361" height="92" key="GridCell.Tab.0.right" timestamp="1645362707137">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="231" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1643465021419" />
+    <state width="1361" height="92" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1645362707137" />
     <state width="1367" height="134" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1637014261539" />
     <state width="1361" height="231" key="GridCell.Tab.1.bottom" timestamp="1643465021419">
       <screen x="0" y="0" width="1360" height="728" />
@@ -208,12 +220,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="162" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1643204787889" />
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1634841199068" />
-    <state x="65" y="0" key="new project wizard" timestamp="1638706404082">
+    <state x="65" y="0" key="new project wizard" timestamp="1645104055970">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="65" y="0" key="new project wizard/0.0.1360.728@0.0.1360.728" timestamp="1638706404082" />
-    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1636204047071" />
+    <state x="65" y="0" key="new project wizard/0.0.1360.728@0.0.1360.728" timestamp="1645104055970" />
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1638824657502">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
