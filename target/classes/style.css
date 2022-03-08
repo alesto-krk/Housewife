@@ -1,4 +1,7 @@
 //all scenes
+.root{
+   -fx-background-color: radial-gradient(radius 55%, darkseagreen, black);
+}
 .button{
   -fx-background-color: linear-gradient(darkolivegreen, darkseagreen);
   -fx-background-radius: 35;
