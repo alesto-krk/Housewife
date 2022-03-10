@@ -88,53 +88,40 @@ public class S03_shoppingListController {
     }
 
     public void saveTheList(ActionEvent event) throws IOException {
-        file.checkIfFileExists("moja-lista-zakupow.txt");
+        file.checkIfFileExists("Listy-zadan/my-shopping-list.txt");
         try {
             if (!shoppingList.isEmpty()) {
-                PrintWriter zapis = new PrintWriter("moja-lista-zakupow.txt");
+                PrintWriter savedList = new PrintWriter("Listy-zadan/my-shopping-list.txt");
                 for (String e : shoppingList) {
-                    zapis.println(e);
+                    savedList.println(e);
                 }
-                zapis.close();
-               /* DataOutputStream out = new DataOutputStream(new FileOutputStream("moja-lista-zakupow.txt"));
-                out.writeBytes(listaZakupow.toString());
-                out.close();*/ //ale wtedy lista zapisuje sie w jednej linii
+                savedList.close();
                 CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zakupów");
             } else
-                System.out.println("pusta lista");
+                CommonMethods.showAlert(Alert.AlertType.WARNING, "Lista", "Lista jest pusta");
+                //System.out.println("empty list");
         } catch (IOException ioe) {
             System.out.println("Error!");
         }
     }
 
-   /* public void checkIfFileExists(String pathname) throws IOException {
-        File f = new File(pathname);
-        if (f.exists()) {
-            System.out.println("File exists. Go on.");
-        } else if (f.createNewFile())
-            System.out.println("Mamy nowy plik");
-        else
-            System.out.println("Nie ma takiego pliku");
-    }*/
-
-    public void showTheListButton(ActionEvent event) throws IOException {       //nie dziala!!!!!
-        file.checkIfFileExists("moja-lista-zakupow.txt");
+    public void showTheList(ActionEvent event) throws IOException {       //nie dziala!!!!!
+        file.checkIfFileExists("Listy-zadan/my-shopping-list.txt");
         try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("savedShoppingList.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("s03a_savedShoppingList.fxml"));
             Parent root2 = (Parent) loader.load();
             Stage stage2 = new Stage();
             stage2.setTitle("Twoja lista zakupów");
-            SavedListController savedListController = loader.getController();
-            //System.out.println("co teraz");
-            savedListController.checkboxes();
-            Image icon = new Image(getClass().getResourceAsStream("images/rysunek-listy.jpg"));
+            S03a_savedShoppingListController savedShoppingListController = loader.getController();
+            savedShoppingListController.checkboxes();
+            Image icon = new Image(getClass().getResourceAsStream("images/sh-list2.jpg"));
             stage2.getIcons().add(icon);
             stage2.setScene(new Scene(root2, 300, 450));
             stage2.show();
-            disableButtons(true);
+            /*disableButtons(true);
             stage2.setOnCloseRequest(e -> {
                 disableButtons(false);
-            });
+            });*/
         }
         catch (Exception e){
             System.out.println("error!");

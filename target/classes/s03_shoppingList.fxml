@@ -62,7 +62,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="saveTheList" layoutX="238.0" layoutY="358.0" mnemonicParsing="false" onAction="#saveTheListButton" prefHeight="36.0" prefWidth="125.0" text="Zapisz listę">
+      <Button fx:id="saveTheListButton" layoutX="238.0" layoutY="358.0" mnemonicParsing="false" onAction="#saveTheList" prefHeight="36.0" prefWidth="125.0" text="Zapisz listę">
          <font>
             <Font size="14.0" />
          </font>
@@ -72,7 +72,7 @@
             <Font size="11.0" />
          </font>
       </Button>
-      <Button fx:id="showTheList" layoutX="448.0" layoutY="18.0" mnemonicParsing="false" onAction="#showTheListButton" prefHeight="42.0" prefWidth="137.0" text="Otwórz zapisaną listę" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="showTheListButton" layoutX="448.0" layoutY="18.0" mnemonicParsing="false" onAction="#showTheList" prefHeight="42.0" prefWidth="137.0" text="Otwórz zapisaną listę" textAlignment="CENTER" wrapText="true" />
       <Button fx:id="exitButtonSL" layoutX="516.0" layoutY="367.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="25.0" prefWidth="70.0" text="Zakończ">
          <font>
             <Font size="11.0" />
