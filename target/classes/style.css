@@ -6,12 +6,16 @@
   -fx-background-color: linear-gradient(darkolivegreen, darkseagreen);
   -fx-background-radius: 35;
   -fx-font-family: "Bookman Old Style", Arial;
-  -fx-font-size: 16;
+  -fx-font-size: 12;
   -fx-font-weight: bold;
  }
  .button:hover{
   -fx-background-color: ivory;
  }
+.label{
+ -fx-font-family: "Bookman Old Style", Arial;
+ -fx-font-weight: bold;
+}
 //s01
 #titleBackground{
 -fx-background-image: url("images/title.jpg");
@@ -23,7 +27,17 @@
  -fx-font-family: "Broadway";
  -fx-effect: dropshadow(gaussian, grey, 10, 0.1, 4, 4);
 }
-.label{
- -fx-font-family: "Bookman Old Style", Arial;
- -fx-font-weight: bold;
+#titleButton{
+  -fx-font-size: 16;
+}
+//s02
+#menuButton1,#menuButton2,#menuButton3{
+  -fx-font-size: 16;
+}
+//s03
+#shoppingListBackground{
+   -fx-background-color: radial-gradient(radius 70%, darkseagreen, black);
+}
+#menuButtonSL,#exitButtonSL{
+  -fx-font-size: 11;
 }

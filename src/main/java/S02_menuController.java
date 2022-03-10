@@ -14,7 +14,7 @@ public class S02_menuController {
     private FXMLLoader loader;
 
     public void menuShoppingList(ActionEvent event) throws IOException {
-        loadFxml("listaZakupow.fxml");
+        loadFxml("s03_shoppingList.fxml");
         loadStage(event);
     }
 

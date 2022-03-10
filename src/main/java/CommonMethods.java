@@ -16,9 +16,9 @@ public class CommonMethods {
     private Scene scene;
     private Parent root;
 
-    public static void showAlert(Alert.AlertType typAlertu, String tytulAlertu, String alertMsg) {
-        Alert alert = new Alert(typAlertu);
-        alert.setTitle(tytulAlertu);
+    public static void showAlert(Alert.AlertType alertType, String alertTitle, String alertMsg) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(alertTitle);
         alert.setHeaderText(alertMsg);
         alert.setContentText(null);
         alert.show();
@@ -38,9 +38,9 @@ public class CommonMethods {
         if (f.exists()) {
             System.out.println("File exists. Go on.");
         } else if (f.createNewFile())
-            System.out.println("Mamy nowy plik");
+            System.out.println("New file is created");
         else
-            System.out.println("Nie ma takiego pliku");
+            System.out.println("There is no file");
         //System.out.println(f.getName());
     }
 

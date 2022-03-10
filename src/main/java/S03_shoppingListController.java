@@ -13,75 +13,73 @@ import javafx.stage.Stage;
 import java.io.*;
 import java.util.LinkedList;
 
-public class listaZakupowController {
+public class S03_shoppingListController {
 
-    private LinkedList<String> listaZakupow = new LinkedList<>();
+    private LinkedList<String> shoppingList = new LinkedList<>();
     private Stage stage;
     private Scene scene;
     private Parent root;
     private CommonMethods file = new CommonMethods();
-
     @FXML
-    TextField dodajField;
+    TextField addField;
     @FXML
-    GridPane siatka;
+    GridPane gridPaneForList;
     @FXML
     Button showTheList, add, menu, saveTheList, deleteAll, refreshAll, exit;
 
-    public void dodajButton(ActionEvent event) throws IOException {
+    public void addArticle(ActionEvent event) throws IOException {
         addElementToList();
         refreshList(event);
     }
 
+    public void addElementToList() {
+        if (!addField.getText().isEmpty() && shoppingList.size() < 10) {
+            shoppingList.add(addField.getText());
+            addField.clear();
+            System.out.println("current list: " + shoppingList);
+        } else {
+            if(addField.getText().isEmpty())
+                CommonMethods.showAlert(Alert.AlertType.ERROR, "Puste pole", "Trzeba coś wpisać :)");
+            else
+                CommonMethods.showAlert(Alert.AlertType.ERROR, "Niestety...", "Więcej się nie zmieści :)");
+        }
+    }
+
     public void refreshList(ActionEvent event) throws IOException {
-        LinkedList<String> shoppingList = listaZakupow;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("listaZakupow.fxml"));
+        LinkedList<String> shoppingListForRefreshing = this.shoppingList;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("s03_shoppingList.fxml"));
         root = loader.load();
-        listaZakupowController odswiez = loader.getController();
-        odswiez.showList(shoppingList);
+        S03_shoppingListController refresh = loader.getController();
+        refresh.showList(shoppingListForRefreshing);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void addElementToList() {
-        if (!dodajField.getText().isEmpty() && listaZakupow.size() < 10) {
-            listaZakupow.add(dodajField.getText());
-            System.out.println("lista " + listaZakupow);
-            dodajField.clear();
-        } else {
-            if(dodajField.getText().isEmpty())
-            CommonMethods.showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Trzeba coś wpisać :)");
-            else
-            CommonMethods.showAlert(Alert.AlertType.ERROR, "Niestety...", "Więcej się nie zmieści :)");
-        }
-    }
-
     //for refreshList() method
-    public void showList(LinkedList<String> lista) {
-        this.listaZakupow.addAll(lista);
+    public void showList(LinkedList<String> list) {
+        this.shoppingList.addAll(list);
         int rowIndex = 0;
-        for (String l : listaZakupow) {
-            Label listaLabela = new Label(rowIndex + 1 + ". " + l);
-            Button usunElement = new Button("Usuń");
-            usunElement.setOnAction(e -> {
-                listaZakupow.remove(l);
-                //listaLabela.setOpacity(0.3);
-                listaLabela.setVisible(false);
-                usunElement.setVisible(false);
+        for (String s : shoppingList) {
+            Label article = new Label(rowIndex + 1 + ". " + s);
+            article.setStyle("-fx-text-fill: white;");
+            Button deleteArticleButton = new Button("Usuń");
+            deleteArticleButton.setOnAction(e -> {
+                shoppingList.remove(s);
+                article.setVisible(false);
+                deleteArticleButton.setVisible(false);
             });
-            siatka.getChildren().add(listaLabela);
-            siatka.getChildren().add(usunElement);
-            siatka.setConstraints(listaLabela, 0, rowIndex);
-            siatka.setConstraints(usunElement, 1, rowIndex);
+            gridPaneForList.getChildren().addAll(article,deleteArticleButton);
+            gridPaneForList.setConstraints(article, 0, rowIndex);
+            gridPaneForList.setConstraints(deleteArticleButton, 1, rowIndex);
             rowIndex++;
         }
     }
 
-    public void usunWszystkoButton(ActionEvent event) throws IOException {
-        listaZakupow.clear();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("listaZakupow.fxml"));
+    public void deleteAll(ActionEvent event) throws IOException {
+        shoppingList.clear();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("s03_shoppingList.fxml"));
         root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -89,12 +87,12 @@ public class listaZakupowController {
         stage.show();
     }
 
-    public void saveTheListButton(ActionEvent event) throws IOException {
+    public void saveTheList(ActionEvent event) throws IOException {
         file.checkIfFileExists("moja-lista-zakupow.txt");
         try {
-            if (!listaZakupow.isEmpty()) {
+            if (!shoppingList.isEmpty()) {
                 PrintWriter zapis = new PrintWriter("moja-lista-zakupow.txt");
-                for (String e : listaZakupow) {
+                for (String e : shoppingList) {
                     zapis.println(e);
                 }
                 zapis.close();
