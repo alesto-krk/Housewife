@@ -1,18 +1,10 @@
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.stage.Stage;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -21,32 +13,46 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class S03a_savedShoppingListController {
-    List<String> listaZPliku = new LinkedList<>();
-
+    private List<String> savedList = new LinkedList<>();
     @FXML
-    GridPane siatka2;
+    GridPane gridPaneForSavedList;
 
-    public void checkboxes(){
-        int rowIndex = 0;
-        try (BufferedReader br = Files.newBufferedReader(Paths.get("Listy-zadan/my-shopping-list.txt"))) {
-            listaZPliku = br.lines().collect(Collectors.toList());
+    public void checkboxes() throws IOException{
+        readFromFile();
+        addToCheckBox();
+    }
+
+    public void readFromFile() throws IOException {
+        /*try (BufferedReader br = Files.newBufferedReader(Paths.get("Lista-zakupow/my-shopping-list.txt"))) {
+            savedList = br.lines().collect(Collectors.toList());
+        }*/
+        try (BufferedReader br = new BufferedReader(new FileReader("Lista-zakupow/my-shopping-list.txt"))){
+            String line;
+            while ((line = br.readLine()) != null)
+                savedList.add(line);
         }
         catch (Exception e){
             e.printStackTrace();
         }
+    }
 
-        for (String l : listaZPliku) {
-            CheckBox checkb = new CheckBox(l);
+    public void addToCheckBox(){
+        int rowIndex = 0;
+        for (String s : savedList) {
+            CheckBox checkb = new CheckBox(s);
+            checkb.setStyle("-fx-text-fill: white; -fx-font-family: \"Bookman Old Style\", Arial;");
             checkb.setOnAction(e -> {
-                if(checkb.isSelected())
-                    checkb.setTextFill(Color.GREEN);
-                else
-                    checkb.setTextFill(Color.BLACK);
+                        if(checkb.isSelected()){
+                            checkb.setTextFill(Color.GREEN);
+                            checkb.setOpacity(0.4);}
+                        else
+                            checkb.setTextFill(Color.BLACK);
                     }
             );
-            siatka2.getChildren().add(checkb);
-            siatka2.setConstraints(checkb, 0, rowIndex);
+            gridPaneForSavedList.getChildren().add(checkb);
+            gridPaneForSavedList.setConstraints(checkb, 0, rowIndex);
             rowIndex++;
         }
     }
+
 }

@@ -13,27 +13,27 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListaZadanNaDzisController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="S04_taskListController">
    <children>
-      <Label layoutX="78.0" layoutY="28.0" text="Dzisiaj jest" />
-      <Label fx:id="date" layoutX="153.0" layoutY="23.0" prefHeight="27.0" prefWidth="410.0" text="date">
+      <Label layoutX="78.0" layoutY="28.0" text="Dzisiaj jest" textFill="#eeeeee" />
+      <Label fx:id="date" layoutX="163.0" layoutY="23.0" prefHeight="27.0" prefWidth="410.0" text="date" textFill="#fcfafa">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="67.0" layoutY="72.0" text="Wybierz dzień:" />
+      <Label layoutX="60.0" layoutY="72.0" text="Wybierz dzień:" textFill="#fcfcfc" />
       <DatePicker fx:id="datePicker" layoutX="19.0" layoutY="92.0" onAction="#chosenDatePicker" />
-      <Label layoutX="30.0" layoutY="164.0" text="Dodaj zadanie do wykonania" />
+      <Label layoutX="17.0" layoutY="167.0" text="Dodaj zadanie do wykonania" textFill="#fcfcfc" />
       <TextField fx:id="dodajField2" layoutX="19.0" layoutY="183.0" prefHeight="53.0" prefWidth="174.0" />
-      <Label layoutX="51.0" layoutY="278.0" text="Pokaż listę zadań na" />
+      <Label layoutX="42.0" layoutY="279.0" text="Pokaż listę zadań na" textFill="#f5f4f4" />
       <ChoiceBox fx:id="datesChoiceBox" layoutX="31.0" layoutY="295.0" prefWidth="150.0" />
       <ImageView fitHeight="245.0" fitWidth="226.0" layoutX="218.0" layoutY="117.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/zadanie-na-dzis.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="261.0" layoutY="72.0" text="Lista zadań na:" />
-      <Label fx:id="chosenDate" layoutX="261.0" layoutY="90.0" text="&lt;nie wybrałeś/aś daty&gt;" />
+      <Label layoutX="261.0" layoutY="72.0" text="Lista zadań na:" textFill="#f8f8f8" />
+      <Label fx:id="chosenDate" layoutX="261.0" layoutY="90.0" text="&lt;nie wybrałeś/aś daty&gt;" textFill="#fcfcfc" />
       <GridPane fx:id="siatka2" layoutX="252.0" layoutY="118.0" prefHeight="241.0" prefWidth="287.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="233.0" />
@@ -56,15 +56,15 @@
       <Button fx:id="saveTheListButton3" layoutX="287.0" layoutY="365.0" mnemonicParsing="false" onAction="#saveTheListButton2" text="Zapisz listę" />
       <Button layoutX="80.0" layoutY="240.0" mnemonicParsing="false" onAction="#dodajButton2" text="Dodaj" />
       <Button fx:id="showTaskListButton" layoutX="80.0" layoutY="325.0" mnemonicParsing="false" onAction="#showTaskList" text="Pokaż" />
-      <Button layoutX="5.0" layoutY="370.0" mnemonicParsing="false" onAction="#goToMenuButton" text="&lt; Menu">
+      <Button fx:id="menuButtonTL" layoutX="5.0" layoutY="370.0" mnemonicParsing="false" onAction="#goToMenuButton" text="&lt; Menu">
          <font>
             <Font size="11.0" />
          </font>
       </Button>
-      <Button layoutX="449.0" layoutY="69.0" mnemonicParsing="false" onAction="#setAnotherDateOrTask" prefHeight="46.0" prefWidth="114.0" text="Ustaw nową datę/ nowe zadania" wrapText="true" />
+      <Button layoutX="449.0" layoutY="69.0" mnemonicParsing="false" onAction="#setAnotherDateOrTask" prefHeight="46.0" prefWidth="128.0" text="Ustaw nową datę/ nowe zadania" wrapText="true" />
       <Label fx:id="chosenDateFormatForTxt" layoutX="261.0" layoutY="107.0" />
       <Button layoutX="237.0" layoutY="365.0" mnemonicParsing="false" onAction="#refreshList2" prefHeight="17.0" prefWidth="31.0" />
-      <Button layoutX="524.0" layoutY="367.0" mnemonicParsing="false" onAction="#exitButton" text="Zakończ">
+      <Button fx:id="exitButtonTL" layoutX="524.0" layoutY="367.0" mnemonicParsing="false" onAction="#exitButton" text="Zakończ">
          <font>
             <Font size="11.0" />
          </font>
@@ -74,7 +74,7 @@
             <Image url="@images/refresh-icon.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="532.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="545.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/document_add.png" />
          </image>

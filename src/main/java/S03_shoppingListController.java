@@ -25,7 +25,7 @@ public class S03_shoppingListController {
     @FXML
     GridPane gridPaneForList;
     @FXML
-    Button showTheList, add, menu, saveTheList, deleteAll, refreshAll, exit;
+    Button showTheListButton, addButton, saveTheListButton, deleteAllButton, refreshAllButton;
 
     public void addArticle(ActionEvent event) throws IOException {
         addElementToList();
@@ -88,10 +88,10 @@ public class S03_shoppingListController {
     }
 
     public void saveTheList(ActionEvent event) throws IOException {
-        file.checkIfFileExists("Listy-zadan/my-shopping-list.txt");
+        file.checkIfFileExists("Lista-zakupow/my-shopping-list.txt");
         try {
             if (!shoppingList.isEmpty()) {
-                PrintWriter savedList = new PrintWriter("Listy-zadan/my-shopping-list.txt");
+                PrintWriter savedList = new PrintWriter("Lista-zakupow/my-shopping-list.txt");
                 for (String e : shoppingList) {
                     savedList.println(e);
                 }
@@ -99,29 +99,28 @@ public class S03_shoppingListController {
                 CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zakupów");
             } else
                 CommonMethods.showAlert(Alert.AlertType.WARNING, "Lista", "Lista jest pusta");
-                //System.out.println("empty list");
         } catch (IOException ioe) {
             System.out.println("Error!");
         }
     }
 
-    public void showTheList(ActionEvent event) throws IOException {       //nie dziala!!!!!
-        file.checkIfFileExists("Listy-zadan/my-shopping-list.txt");
+    public void showTheList(ActionEvent event) throws IOException {
+        file.checkIfFileExists("Lista-zakupow/my-shopping-list.txt");
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("s03a_savedShoppingList.fxml"));
-            Parent root2 = (Parent) loader.load();
-            Stage stage2 = new Stage();
-            stage2.setTitle("Twoja lista zakupów");
+            Parent rootForShList = (Parent) loader.load();
+            Stage stageForShList = new Stage();
+            stageForShList.setTitle("Twoje zakupy");
             S03a_savedShoppingListController savedShoppingListController = loader.getController();
             savedShoppingListController.checkboxes();
             Image icon = new Image(getClass().getResourceAsStream("images/sh-list2.jpg"));
-            stage2.getIcons().add(icon);
-            stage2.setScene(new Scene(root2, 300, 450));
-            stage2.show();
-            /*disableButtons(true);
-            stage2.setOnCloseRequest(e -> {
+            stageForShList.getIcons().add(icon);
+            stageForShList.setScene(new Scene(rootForShList, 250, 400));
+            stageForShList.show();
+            disableButtons(true);
+            stageForShList.setOnCloseRequest(e -> {
                 disableButtons(false);
-            });*/
+            });
         }
         catch (Exception e){
             System.out.println("error!");
@@ -130,12 +129,11 @@ public class S03_shoppingListController {
     }
 
     public void disableButtons(boolean t){
-        add.setDisable(t);
-        menu.setDisable(t);
-        saveTheList.setDisable(t);
-        showTheList.setDisable(t);
-        deleteAll.setDisable(t);
-        refreshAll.setDisable(t);
+        addButton.setDisable(t);
+        saveTheListButton.setDisable(t);
+        showTheListButton.setDisable(t);
+        deleteAllButton.setDisable(t);
+        refreshAllButton.setDisable(t);
     }
 
     public void goToMenuButton(ActionEvent event) throws IOException {

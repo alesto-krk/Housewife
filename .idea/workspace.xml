@@ -3,14 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/my-shopping-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ListaZadanNaDzisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S04_taskListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/S02_menuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S02_menuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SavedListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03a_savedShoppingListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/housewife.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/S03a_savedShoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03a_savedShoppingListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SavedTaskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SavedTaskListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/sh-list2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/sh-list2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/listaZadanNaDzis.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s04_taskList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/s02_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s02_menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/s03_shoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s03_shoppingList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/savedShoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s03a_savedShoppingList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CommonMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommonMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/s03a_savedShoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s03a_savedShoppingList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ListaZadanNaDzisController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/S02_menuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S02_menuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/S03a_savedShoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03a_savedShoppingListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SavedTaskListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SavedTaskListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/listaZadanNaDzis.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/s02_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s02_menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/s03_shoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s03_shoppingList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/s03a_savedShoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s03a_savedShoppingList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,22 +181,22 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="252" y="131" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1360.728@0.0.1360.728" timestamp="1646942894373" />
-    <state width="1361" height="98" key="GridCell.Tab.0.bottom" timestamp="1646947237310">
+    <state width="1361" height="118" key="GridCell.Tab.0.bottom" timestamp="1647205702278">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="98" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1646947237310" />
-    <state width="1361" height="98" key="GridCell.Tab.0.center" timestamp="1646947237310">
+    <state width="1361" height="118" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1647205702278" />
+    <state width="1361" height="118" key="GridCell.Tab.0.center" timestamp="1647205702278">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="98" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1646947237310" />
-    <state width="1361" height="98" key="GridCell.Tab.0.left" timestamp="1646947237310">
+    <state width="1361" height="118" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1647205702278" />
+    <state width="1361" height="118" key="GridCell.Tab.0.left" timestamp="1647205702278">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="98" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1646947237310" />
-    <state width="1361" height="98" key="GridCell.Tab.0.right" timestamp="1646947237310">
+    <state width="1361" height="118" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1647205702278" />
+    <state width="1361" height="118" key="GridCell.Tab.0.right" timestamp="1647205702278">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="98" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1646947237310" />
+    <state width="1361" height="118" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1647205702278" />
     <state width="1361" height="231" key="GridCell.Tab.1.bottom" timestamp="1643465021419">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

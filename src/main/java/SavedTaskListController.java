@@ -35,7 +35,6 @@ public class SavedTaskListController {
     int j=0;
     String pathname;
     LocalDate todaysDate = LocalDate.now();
-
     @FXML
     GridPane siatka3;
     @FXML
@@ -133,7 +132,6 @@ public class SavedTaskListController {
                     fileList.remove(m);
             }
         }*/
-
         System.out.println("ta liste chcemy przeniesc  " + fileList); //ta liste chcemy przeniesc
         //System.out.println("---**----" + pathname);         //nie dziala pathname!!!!!!!!
         System.out.println("0o0o0o0o0" + labelDate.getText());

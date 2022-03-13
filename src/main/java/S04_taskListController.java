@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import org.w3c.dom.ls.LSOutput;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -18,7 +19,7 @@ import java.time.format.FormatStyle;
 import java.util.Collections;
 import java.util.LinkedList;
 
-public class ListaZadanNaDzisController {
+public class S04_taskListController {
 
     @FXML
     Label date;
@@ -138,9 +139,9 @@ public class ListaZadanNaDzisController {
         String z = chosenDateForRefreshing;
         String x = chosenDateForRefreshingForTxt;
         String y = todaysDateForRefreshing;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("listaZadanNaDzis.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("s04_taskList.fxml"));
         root = loader.load();
-        ListaZadanNaDzisController odswiez = loader.getController();
+        S04_taskListController odswiez = loader.getController();
         odswiez.showList2(taskList, z, y,x);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -203,7 +204,6 @@ public class ListaZadanNaDzisController {
 
     public void setDatesChoiceBox() {
         /*LinkedList<File> listOfSavedTaskLists = new LinkedList<>();
-
         String directory = "C:\\Users\\Ola\\IdeaProjects\\KuraDomowa\\Listy-zadan";     //jak u kogos na kompie to sprawdzic, u kazdego ta sciezka bedzie inna
         File file = new File(directory);
         File[] files = file.listFiles();
@@ -211,24 +211,28 @@ public class ListaZadanNaDzisController {
             listOfSavedTaskLists.add(e);
             System.out.println(e);
         }*/
+
         String fileItemForChoiceBox;
         LinkedList<File> listOfSavedTaskLists = CommonMethods.dolistOfSavedTaskLists();
-        Collections.sort(listOfSavedTaskLists);
-        for (int i = 0; i < listOfSavedTaskLists.size(); i++) {
-            String fileItem = listOfSavedTaskLists.get(i).toString();
-            LocalDate txtDate = LocalDate.parse(fileItem.substring(64, 74));
-            if (!txtDate.isBefore(todaysDate)) {
-                String fileItemShortened = fileItem.substring(75, fileItem.length() - 4); //to co w choiceboxie
-                if (fileItemShortened.equals(date.getText())) {
-                    fileItemForChoiceBox = "dziś";
-                } else fileItemForChoiceBox = fileItemShortened;
-                datesChoiceBox.getItems().add(fileItemForChoiceBox);
-                datesChoiceBox.getSelectionModel().select(0);
+        if (!listOfSavedTaskLists.isEmpty()) {
+            Collections.sort(listOfSavedTaskLists);
+            for (int i = 0; i < listOfSavedTaskLists.size(); i++) {
+                String fileItem = listOfSavedTaskLists.get(i).toString();
+                LocalDate txtDate = LocalDate.parse(fileItem.substring(64, 74));
+                if (!txtDate.isBefore(todaysDate)) {
+                    String fileItemShortened = fileItem.substring(75, fileItem.length() - 4); //to co w choiceboxie
+                    if (fileItemShortened.equals(date.getText())) {
+                        fileItemForChoiceBox = "dziś";
+                    } else fileItemForChoiceBox = fileItemShortened;
+                    datesChoiceBox.getItems().add(fileItemForChoiceBox);
+                    datesChoiceBox.getSelectionModel().select(0);
+                }
             }
-        }
+        } else System.out.println("ppp888");
     }
 
-    public void showTaskList(ActionEvent event) throws IOException {
+    public void showTaskList(ActionEvent event) throws IOException {    
+        if(!(datesChoiceBox.getValue()==null)) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("savedTaskList.fxml"));
                 Parent root3 = (Parent) loader.load();
@@ -246,8 +250,9 @@ public class ListaZadanNaDzisController {
             });*/
             } catch (Exception e) {
                 e.printStackTrace();
-                //System.out.println("error!");
+                System.out.println("error!");
             }
+        } else System.out.println("nic nie wybrane");
     }
 
     public void goToMenuButton(ActionEvent event) throws IOException {

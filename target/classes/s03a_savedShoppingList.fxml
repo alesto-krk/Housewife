@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="zapisanaLista" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="258.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="S03a_savedShoppingListController">
+<AnchorPane fx:id="savedListBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="250.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="S03a_savedShoppingListController">
    <children>
-      <Label layoutX="42.0" layoutY="14.0" text="Twoja zapisana lista:" textFill="#fcfafa">
+      <Label layoutX="38.0" layoutY="14.0" text="Twoja zapisana lista:" textFill="#fcfafa">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <GridPane fx:id="siatka2" layoutX="29.0" layoutY="47.0">
+      <ImageView fitHeight="332.0" fitWidth="174.0" layoutX="43.0" layoutY="43.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/rysunek-listy.jpg" />
+         </image>
+      </ImageView>
+      <GridPane fx:id="gridPaneForSavedList" layoutX="25.0" layoutY="50.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="175.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="25.0" />

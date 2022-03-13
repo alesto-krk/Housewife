@@ -24,8 +24,8 @@ public class S02_menuController {
     }
 
     public void menuTaskList(ActionEvent event) throws IOException {
-        loadFxml("listaZadanNaDzis.fxml");
-        ListaZadanNaDzisController date = loader.getController();
+        loadFxml("s04_taskList.fxml");
+        S04_taskListController date = loader.getController();
         date.setTodaysDate();
         date.setDatesChoiceBox();
         date.saveTheListButton3.setDisable(true);

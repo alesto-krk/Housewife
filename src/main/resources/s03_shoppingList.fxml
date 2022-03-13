@@ -47,8 +47,8 @@
          </font>
       </Label>
       <TextField fx:id="addField" layoutX="27.0" layoutY="76.0" />
-      <Button fx:id="add" layoutX="75.0" layoutY="116.0" mnemonicParsing="false" onAction="#addArticle" prefHeight="36.0" prefWidth="54.0" text="Dodaj" />
-      <ImageView fitHeight="117.0" fitWidth="109.0" layoutX="47.0" layoutY="211.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="addButton" layoutX="75.0" layoutY="116.0" mnemonicParsing="false" onAction="#addArticle" prefHeight="36.0" prefWidth="54.0" text="Dodaj" />
+      <ImageView fitHeight="94.0" fitWidth="103.0" layoutX="51.0" layoutY="251.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/sh-list2.jpg" />
          </image>

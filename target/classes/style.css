@@ -41,3 +41,15 @@
 #menuButtonSL,#exitButtonSL{
   -fx-font-size: 11;
 }
+//s03a
+#savedListBackground{
+  -fx-border-color: darkolivegreen;
+  -fx-border-style: ridge;
+}
+//s04
+#menuButtonTL,#exitButtonTL{
+  -fx-font-size: 11;
+}
+#date{
+  -fx-effect: dropshadow(gaussian, lightpink, 10, 0.07, 2, 2);
+}
