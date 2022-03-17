@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SavedTaskListController">
    <children>
-      <Label layoutX="119.0" layoutY="14.0" text="Wiesz co Cię dzisiaj czeka?">
+      <Label layoutX="144.0" layoutY="14.0" text="Wiesz co Cię czeka?">
          <font>
             <Font size="16.0" />
          </font>
@@ -46,6 +46,6 @@
             <Image url="@images/document_add.png" />
          </image>
       </ImageView>
-      <Label fx:id="labelDate" layoutX="4.0" prefHeight="34.0" prefWidth="415.0" text="Label" textFill="#276dc9" wrapText="true" />
+      <Label fx:id="labelDate" layoutX="7.0" layoutY="-3.0" prefHeight="34.0" prefWidth="415.0" text="Label" textFill="#276dc9" wrapText="true" />
    </children>
 </AnchorPane>

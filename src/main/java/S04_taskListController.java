@@ -10,7 +10,6 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import org.w3c.dom.ls.LSOutput;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -21,14 +20,23 @@ import java.util.LinkedList;
 
 public class S04_taskListController {
 
+    private LinkedList<String> taskList = new LinkedList<>();
+    private String todaysDateForRefreshing;
+    private String chosenDateForRefreshing;
+    private String chosenDateForRefreshingForTxt;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    private  CommonMethods commonMethods = new CommonMethods();
+    LocalDate todaysDate = LocalDate.now();
     @FXML
     Label date;
     @FXML
+    DatePicker datePicker;
+    @FXML
     Label chosenDate;
     @FXML
-    Label chosenDateFormatForTxt;
-    @FXML
-    DatePicker datePicker;
+    Label chosenDateFormatForTxtFile;
     @FXML
     TextField dodajField2;
     @FXML
@@ -40,54 +48,44 @@ public class S04_taskListController {
     @FXML
     Button showTaskListButton;
 
-    private LinkedList<String> listaZadan = new LinkedList<>();
-    private String todaysDateForRefreshing;
-    private String chosenDateForRefreshing;
-    private String chosenDateForRefreshingForTxt;
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-    private  CommonMethods commonMethods = new CommonMethods();
-    LocalDate todaysDate = LocalDate.now();
-
+    //for S02_menuController menuTaskList()
     public void setTodaysDate(){
-       String df =  DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(todaysDate).toString();
-       date.setText(df);
+       String todaysDateFormat =  DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(todaysDate);
+       date.setText(todaysDateFormat);
     }
 
-    public void chosenDatePicker(ActionEvent event){
-        if(!datePicker.getValue().isBefore(todaysDate)) {
-            LocalDate dateForLabel = datePicker.getValue();
-            String dfl = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(dateForLabel).toString();
-            chosenDate.setText(dfl);
-            chosenDateFormatForTxt.setText(dateForLabel.toString());
-            chosenDateFormatForTxt.setVisible(false);
+    public void chooseDateFromDatePicker(ActionEvent event){
+        LocalDate dateForLabel = datePicker.getValue();
+        if(!dateForLabel.isBefore(todaysDate)) {
+            String chosenDateFormat = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(dateForLabel);
+            chosenDate.setText(chosenDateFormat);
+            chosenDateFormatForTxtFile.setText(dateForLabel.toString());
+            chosenDateFormatForTxtFile.setVisible(false);
         }
         else {
             CommonMethods.showAlert(Alert.AlertType.WARNING, "Warning", "Nie da się ustawić zadań na minione dni :)");
         }
-       //String a = String.valueOf(dateForLabel);
     }
 
-    public void dodajButton2(ActionEvent event) throws IOException { 
-        addElementToList2();
-        refreshList2(event);
+    public void addTask(ActionEvent event) throws IOException {
+        addTaskToList();
+        refreshTaskList(event);
     }
 
-    public void addElementToList2() {
-        if (!dodajField2.getText().isEmpty() && listaZadan.size() < 10) {
-            listaZadan.add(dodajField2.getText());
+    public void addTaskToList() {
+        if (!dodajField2.getText().isEmpty() && taskList.size() < 10) {
+            taskList.add(dodajField2.getText());
             chosenDateForRefreshing = chosenDate.getText();
-            chosenDateForRefreshingForTxt = chosenDateFormatForTxt.getText();
+            chosenDateForRefreshingForTxt = chosenDateFormatForTxtFile.getText();
             todaysDateForRefreshing = date.getText();
-            System.out.println("------lista zadan " + listaZadan);
+            System.out.println("------lista zadan " + taskList);
             System.out.println("lista daty " + chosenDateForRefreshing);
             dodajField2.clear();
         } else {
             if(dodajField2.getText().isEmpty()) {
                 CommonMethods.showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Trzeba coś wpisać :)");
                 chosenDateForRefreshing = chosenDate.getText();
-                chosenDateForRefreshingForTxt = chosenDateFormatForTxt.getText();
+                chosenDateForRefreshingForTxt = chosenDateFormatForTxtFile.getText();
                 todaysDateForRefreshing = date.getText();
             }
             else
@@ -100,8 +98,9 @@ public class S04_taskListController {
         int rowIndex = 0;
         for (String l : createdList) {
             Label listaLabela = new Label(rowIndex + 1 + ". " + l);
+            listaLabela.setStyle("-fx-text-fill: white;");
             Button usunElement = new Button("Usuń");
-            usunElement.setFont(Font.font(9));
+            usunElement.setStyle("-fx-font-size: 9;");
             usunElement.setOnAction(e -> {
                 createdList.remove(l);
                 //listaLabela.setOpacity(0.3);
@@ -117,25 +116,25 @@ public class S04_taskListController {
     }
 
     public void showList2(LinkedList<String> lista, String z, String y, String x) {
-        this.listaZadan.addAll(lista);
+        this.taskList.addAll(lista);
         this.todaysDateForRefreshing = y;
         this.chosenDateForRefreshing = z;
         this.chosenDateForRefreshingForTxt = x;
-        addListToGridPane(listaZadan);
+        addListToGridPane(taskList);
         chosenDate.setText(chosenDateForRefreshing);
-        chosenDateFormatForTxt.setText(chosenDateForRefreshingForTxt);
-        chosenDateFormatForTxt.setVisible(false);
+        chosenDateFormatForTxtFile.setText(chosenDateForRefreshingForTxt);
+        chosenDateFormatForTxtFile.setVisible(false);
         date.setText(todaysDateForRefreshing);
         datePicker.setDisable(true);
-        if (listaZadan.isEmpty())
+        if (taskList.isEmpty())
         saveTheListButton3.setDisable(true);
         else saveTheListButton3.setDisable(false);
         setDatesChoiceBox();
 
     }
 
-    public void refreshList2(ActionEvent event) throws IOException {
-        LinkedList<String> taskList = listaZadan;
+    public void refreshTaskList(ActionEvent event) throws IOException {
+        LinkedList<String> taskList = this.taskList;
         String z = chosenDateForRefreshing;
         String x = chosenDateForRefreshingForTxt;
         String y = todaysDateForRefreshing;
@@ -174,24 +173,24 @@ public class S04_taskListController {
     }
 
     public void saveTheListButton2(ActionEvent event) throws IOException {
-        String pathname = "Listy-zadan/lista-zadan-na-" + chosenDateFormatForTxt.getText() + "-" + chosenDate.getText() + ".txt";
+        String pathname = "Listy-zadan/lista-zadan-na-" + chosenDateFormatForTxtFile.getText() + "-" + chosenDate.getText() + ".txt";
         System.out.println("^^^^^^^^^" + pathname);
         if (pathname.equals("Listy-zadan/lista-zadan-na--<nie wybrałeś/aś daty>.txt") || pathname.equals("Listy-zadan/lista-zadan-na-.txt") || pathname.equals("") || chosenDate.equals(null) || chosenDate.equals("<nie wybrałeś/aś daty>"))
             CommonMethods.showAlert(Alert.AlertType.WARNING, "Nieustawiona data", "Kliknij -Ustaw nową datę- ");
         else
             commonMethods.checkIfFileExists(pathname);
         try {
-            if (!listaZadan.isEmpty()) {
+            if (!taskList.isEmpty()) {
                 FileWriter fw = new FileWriter(pathname, true);
                 BufferedWriter zapis = new BufferedWriter(fw);
-                for (String e : listaZadan) {
+                for (String e : taskList) {
                     zapis.write(e);
                     zapis.newLine();
                     System.out.println(pathname);
                    // zapis.println(e);
                 }
                 zapis.close();
-                listaZadan.clear();
+                taskList.clear();
                 siatka2.setVisible(false);
                 CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zadań");
             } else
