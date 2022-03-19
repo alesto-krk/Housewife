@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
@@ -71,7 +72,8 @@ public class SavedTaskListController {
         }
         for (String l : fileList) {
             CheckBox checkb = new CheckBox(l);
-            Label label = new Label("-");
+            //checkb.setPrefHeight(60.5);
+            Label label = new Label("(done)");
             label.setVisible(false);
             checkb.setOnAction(e -> {
                 if (checkb.isSelected()) {

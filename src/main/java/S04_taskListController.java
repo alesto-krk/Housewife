@@ -23,7 +23,7 @@ public class S04_taskListController {
     private LinkedList<String> taskList = new LinkedList<>();
     private String todaysDateForRefreshing;
     private String chosenDateForRefreshing;
-    private String chosenDateForRefreshingForTxt;
+    private String chosenDateForTxtFileForRefreshing;
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -38,9 +38,9 @@ public class S04_taskListController {
     @FXML
     Label chosenDateFormatForTxtFile;
     @FXML
-    TextField dodajField2;
+    TextField addTextField;
     @FXML
-    GridPane siatka2;
+    GridPane gridPaneForTaskList;
     @FXML
     ChoiceBox<String> datesChoiceBox;
     @FXML
@@ -72,59 +72,73 @@ public class S04_taskListController {
         refreshTaskList(event);
     }
 
+    public void forRefreshing(){
+        todaysDateForRefreshing = date.getText();
+        chosenDateForRefreshing = chosenDate.getText();
+        chosenDateForTxtFileForRefreshing = chosenDateFormatForTxtFile.getText();
+    }
+
     public void addTaskToList() {
-        if (!dodajField2.getText().isEmpty() && taskList.size() < 10) {
-            taskList.add(dodajField2.getText());
-            chosenDateForRefreshing = chosenDate.getText();
-            chosenDateForRefreshingForTxt = chosenDateFormatForTxtFile.getText();
-            todaysDateForRefreshing = date.getText();
-            System.out.println("------lista zadan " + taskList);
-            System.out.println("lista daty " + chosenDateForRefreshing);
-            dodajField2.clear();
+        if (!addTextField.getText().isEmpty() && taskList.size() < 10) {
+            taskList.add(addTextField.getText());
+            forRefreshing();
+            addTextField.clear();
         } else {
-            if(dodajField2.getText().isEmpty()) {
+            if(addTextField.getText().isEmpty()) {
                 CommonMethods.showAlert(Alert.AlertType.ERROR, "Coś poszło nie tak", "Trzeba coś wpisać :)");
-                chosenDateForRefreshing = chosenDate.getText();
-                chosenDateForRefreshingForTxt = chosenDateFormatForTxtFile.getText();
-                todaysDateForRefreshing = date.getText();
+                forRefreshing();
             }
-            else
-            { CommonMethods.showAlert(Alert.AlertType.ERROR, "Niestety...", "Więcej się nie zmieści :)");
-                }
+            else {
+             CommonMethods.showAlert(Alert.AlertType.ERROR, "Niestety...", "Więcej się nie zmieści :)");
+            }
         }
     }
 
-    public void addListToGridPane(LinkedList<String> createdList){
+    public void refreshTaskList(ActionEvent event) throws IOException {
+        LinkedList<String> taskListForRefreshing = this.taskList;
+        String y = chosenDateForRefreshing;
+        String z = chosenDateForTxtFileForRefreshing;
+        String x = todaysDateForRefreshing;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("s04_taskList.fxml"));
+        root = loader.load();
+        S04_taskListController refresh = loader.getController();
+        refresh.showList2(taskListForRefreshing, x, y,z);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void addListToGridPane(){ //wrapping text????
         int rowIndex = 0;
-        for (String l : createdList) {
-            Label listaLabela = new Label(rowIndex + 1 + ". " + l);
-            listaLabela.setStyle("-fx-text-fill: white;");
-            Button usunElement = new Button("Usuń");
-            usunElement.setStyle("-fx-font-size: 9;");
-            usunElement.setOnAction(e -> {
-                createdList.remove(l);
-                //listaLabela.setOpacity(0.3);
-                listaLabela.setVisible(false);
-                usunElement.setVisible(false);
+        for (String s : taskList) {
+            Label task = new Label(rowIndex + 1 + ". " + s);
+            task.setStyle("-fx-text-fill: white;");
+            Button deleteTaskButton = new Button("Usuń");
+            deleteTaskButton.setStyle("-fx-font-size: 9;");
+            deleteTaskButton.setOnAction(e -> {
+                taskList.remove(s);
+                task.setVisible(false);
+                deleteTaskButton.setVisible(false);
             });
-            siatka2.getChildren().add(listaLabela);
-            siatka2.getChildren().add(usunElement);
-            siatka2.setConstraints(listaLabela, 0, rowIndex);
-            siatka2.setConstraints(usunElement, 1, rowIndex);
+            gridPaneForTaskList.getChildren().addAll(task, deleteTaskButton);
+            gridPaneForTaskList.setConstraints(task, 0, rowIndex);
+            gridPaneForTaskList.setConstraints(deleteTaskButton, 1, rowIndex);
             rowIndex++;
         }
     }
 
-    public void showList2(LinkedList<String> lista, String z, String y, String x) {
-        this.taskList.addAll(lista);
-        this.todaysDateForRefreshing = y;
-        this.chosenDateForRefreshing = z;
-        this.chosenDateForRefreshingForTxt = x;
-        addListToGridPane(taskList);
-        chosenDate.setText(chosenDateForRefreshing);
-        chosenDateFormatForTxtFile.setText(chosenDateForRefreshingForTxt);
-        chosenDateFormatForTxtFile.setVisible(false);
+    //for refreshTaskList() method
+    public void showList2(LinkedList<String> list, String todaysDateForRefreshing, String chosenDateForRefreshing,  String chosenDateForTxtFileForRefreshing) {
+        this.taskList.addAll(list);
+        this.todaysDateForRefreshing = todaysDateForRefreshing;
+        this.chosenDateForRefreshing = chosenDateForRefreshing;
+        this.chosenDateForTxtFileForRefreshing = chosenDateForTxtFileForRefreshing;
+        addListToGridPane();
         date.setText(todaysDateForRefreshing);
+        chosenDate.setText(chosenDateForRefreshing);
+        chosenDateFormatForTxtFile.setText(this.chosenDateForTxtFileForRefreshing);
+        chosenDateFormatForTxtFile.setVisible(false);
         datePicker.setDisable(true);
         if (taskList.isEmpty())
         saveTheListButton3.setDisable(true);
@@ -133,20 +147,7 @@ public class S04_taskListController {
 
     }
 
-    public void refreshTaskList(ActionEvent event) throws IOException {
-        LinkedList<String> taskList = this.taskList;
-        String z = chosenDateForRefreshing;
-        String x = chosenDateForRefreshingForTxt;
-        String y = todaysDateForRefreshing;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("s04_taskList.fxml"));
-        root = loader.load();
-        S04_taskListController odswiez = loader.getController();
-        odswiez.showList2(taskList, z, y,x);
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+
 
     public void setAnotherDateOrTask(ActionEvent event) throws IOException{
         //listaZadan.clear();
@@ -191,7 +192,7 @@ public class S04_taskListController {
                 }
                 zapis.close();
                 taskList.clear();
-                siatka2.setVisible(false);
+                gridPaneForTaskList.setVisible(false);
                 CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zadań");
             } else
                 System.out.println("pusta lista");
