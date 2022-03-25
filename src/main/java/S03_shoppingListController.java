@@ -33,7 +33,7 @@ public class S03_shoppingListController {
     }
 
     public void addElementToList() {
-        if (!addField.getText().isEmpty() && shoppingList.size() < 10) {
+        if (!addField.getText().isEmpty() && shoppingList.size() < 10 && addField.getText().length()<=30) {
             shoppingList.add(addField.getText());
             addField.clear();
             System.out.println("current list: " + shoppingList);
@@ -63,8 +63,9 @@ public class S03_shoppingListController {
         int rowIndex = 0;
         for (String s : shoppingList) {
             Label article = new Label(rowIndex + 1 + ". " + s);
-            article.setStyle("-fx-text-fill: white;");
+            article.setStyle("-fx-text-fill: white; -fx-font-size: 12;");
             Button deleteArticleButton = new Button("Usuń");
+            deleteArticleButton.setStyle("-fx-font-size: 11;");
             deleteArticleButton.setOnAction(e -> {
                 shoppingList.remove(s);
                 article.setVisible(false);
@@ -115,7 +116,8 @@ public class S03_shoppingListController {
             savedShoppingListController.checkboxes();
             Image icon = new Image(getClass().getResourceAsStream("images/sh-list2.jpg"));
             stageForShList.getIcons().add(icon);
-            stageForShList.setScene(new Scene(rootForShList, 250, 400));
+            stageForShList.setScene(new Scene(rootForShList, 350, 400));
+            stageForShList.setResizable(false);
             stageForShList.show();
             disableButtons(true);
             stageForShList.setOnCloseRequest(e -> {
