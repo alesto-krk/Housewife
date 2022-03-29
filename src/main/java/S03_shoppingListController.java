@@ -1,4 +1,6 @@
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,7 +35,7 @@ public class S03_shoppingListController {
     }
 
     public void addElementToList() {
-        if (!addField.getText().isEmpty() && shoppingList.size() < 10 && addField.getText().length()<=30) {
+        if (!addField.getText().isEmpty() && shoppingList.size() < 10) {
             shoppingList.add(addField.getText());
             addField.clear();
             System.out.println("current list: " + shoppingList);
@@ -50,6 +52,7 @@ public class S03_shoppingListController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("s03_shoppingList.fxml"));
         root = loader.load();
         S03_shoppingListController refresh = loader.getController();
+        refresh.textFieldLimit();
         refresh.showList(shoppingListForRefreshing);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -57,7 +60,17 @@ public class S03_shoppingListController {
         stage.show();
     }
 
-    //for refreshList() method
+    //for refreshList() & menuShoppingList()
+    public void textFieldLimit(){
+        int limit = 30;
+        addField.setOnKeyTyped(e-> {
+            if(addField.getText().length()>limit){
+                addField.deleteText(limit, limit+1);
+            }
+        });
+    }
+
+    //for refreshList()
     public void showList(LinkedList<String> list) {
         this.shoppingList.addAll(list);
         int rowIndex = 0;
@@ -101,7 +114,7 @@ public class S03_shoppingListController {
             } else
                 CommonMethods.showAlert(Alert.AlertType.WARNING, "Lista", "Lista jest pusta");
         } catch (IOException ioe) {
-            System.out.println("Error!");
+            System.out.println("03_saveTheListError!");
         }
     }
 
@@ -125,7 +138,7 @@ public class S03_shoppingListController {
             });
         }
         catch (Exception e){
-            System.out.println("error!");
+            System.out.println("03_showTheListError!");
             e.printStackTrace();
         }
     }
