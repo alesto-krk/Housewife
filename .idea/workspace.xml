@@ -4,14 +4,18 @@
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lista-zakupow/my-shopping-list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lista-zakupow/my-shopping-list.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CommonMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommonMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-05-01-niedziela, 1 maja 2022.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-05-01-niedziela, 1 maja 2022.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S02_menuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S02_menuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/S03a_savedShoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03a_savedShoppingListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/s03a_savedShoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s03a_savedShoppingList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CommonMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommonMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/S04_taskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S04_taskListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SavedTaskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S04a_savedTaskListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/s04_taskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s04_taskList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s04a_savedTaskList.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S02_menuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S02_menuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/S03a_savedShoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03a_savedShoppingListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/S04_taskListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S04_taskListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/s04_taskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s04_taskList.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,30 +176,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="CSS styling i czyszczenie kodu dla opcji Lista Zadan" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="252" y="131" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1646942894373">
+    <state x="377" y="93" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1648635869140">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="252" y="131" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1360.728@0.0.1360.728" timestamp="1646942894373" />
+    <state x="377" y="93" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1360.728@0.0.1360.728" timestamp="1648635869140" />
     <state x="334" y="0" key="CommitChangelistDialog2" timestamp="1647544373439">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="334" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1647544373439" />
-    <state width="1361" height="117" key="GridCell.Tab.0.bottom" timestamp="1648561759001">
+    <state x="460" y="119" key="FileChooserDialogImpl" timestamp="1648632418337">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="117" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1648561759001" />
-    <state width="1361" height="117" key="GridCell.Tab.0.center" timestamp="1648561759001">
+    <state x="460" y="119" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1648632418337" />
+    <state width="1361" height="117" key="GridCell.Tab.0.bottom" timestamp="1648639877088">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="117" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1648561759001" />
-    <state width="1361" height="117" key="GridCell.Tab.0.left" timestamp="1648561759001">
+    <state width="1361" height="117" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1648639877088" />
+    <state width="1361" height="117" key="GridCell.Tab.0.center" timestamp="1648639877088">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="117" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1648561759001" />
-    <state width="1361" height="117" key="GridCell.Tab.0.right" timestamp="1648561759001">
+    <state width="1361" height="117" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1648639877088" />
+    <state width="1361" height="117" key="GridCell.Tab.0.left" timestamp="1648639877088">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1361" height="117" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1648561759001" />
+    <state width="1361" height="117" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1648639877088" />
+    <state width="1361" height="117" key="GridCell.Tab.0.right" timestamp="1648639877088">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1361" height="117" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1648639877088" />
     <state width="1361" height="231" key="GridCell.Tab.1.bottom" timestamp="1647691499912">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

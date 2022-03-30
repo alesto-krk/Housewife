@@ -20,20 +20,21 @@ public class S02_menuController {
         loadStage(event);
     }
 
+    public void menuTaskList(ActionEvent event) throws IOException {
+        loadFxml("s04_taskList.fxml");
+        S04_taskListController taskList = loader.getController();
+        taskList.setTodaysDate();
+        taskList.setDatesChoiceBox();
+        taskList.textFieldLimit();
+        taskList.saveTheListButton3.setDisable(true);
+        loadStage(event);
+    }
+
     public void menuLunchIdeas(ActionEvent event) throws IOException {
         loadFxml("coNaObiad.fxml");
         loadStage(event);
     }
 
-    public void menuTaskList(ActionEvent event) throws IOException {
-        loadFxml("s04_taskList.fxml");
-        S04_taskListController date = loader.getController();
-        date.setTodaysDate();
-        date.setDatesChoiceBox();
-        date.saveTheListButton3.setDisable(true);
-        loadStage(event);
-    }
-    
     public void loadFxml(String fxmlFile) throws IOException {
         loader = new FXMLLoader(getClass().getResource(fxmlFile));
         root = loader.load();

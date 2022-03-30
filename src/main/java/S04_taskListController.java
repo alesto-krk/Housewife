@@ -8,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -102,6 +101,7 @@ public class S04_taskListController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("s04_taskList.fxml"));
         root = loader.load();
         S04_taskListController refresh = loader.getController();
+        refresh.textFieldLimit();
         refresh.showList2(taskListForRefreshing, x, y,z);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -109,7 +109,17 @@ public class S04_taskListController {
         stage.show();
     }
 
-    public void addListToGridPane(){ //wrapping text????
+    //for refreshTaskList() & menuTaskList()
+    public void textFieldLimit(){
+        int limit = 40;
+        addTextField.setOnKeyTyped(e-> {
+            if(addTextField.getText().length()>limit){
+                addTextField.deleteText(limit, limit+1);
+            }
+        });
+    }
+
+    public void addListToGridPane(){
         int rowIndex = 0;
         for (String s : taskList) {
             Label task = new Label(rowIndex + 1 + ". " + s);
@@ -234,15 +244,15 @@ public class S04_taskListController {
     public void showTaskList(ActionEvent event) throws IOException {    
         if(!(datesChoiceBox.getValue()==null)) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("savedTaskList.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("s04a_savedTaskList.fxml"));
                 Parent root3 = (Parent) loader.load();
                 Stage stage3 = new Stage();
                 stage3.setTitle("Twoja lista zadań");
-                SavedTaskListController savedTaskListController = loader.getController();
+                S04a_savedTaskListController savedTaskListController = loader.getController();
                 savedTaskListController.addTocheckbox(datesChoiceBox);
                 Image icon = new Image(getClass().getResourceAsStream("images/zadanie-na-dzis.jpg"));
                 stage3.getIcons().add(icon);
-                stage3.setScene(new Scene(root3, 450, 450));
+                stage3.setScene(new Scene(root3, 485, 455));
                 stage3.show();
             /*disableButtons(true);
             stage2.setOnCloseRequest(e -> {

@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class SavedTaskListController {
+public class S04a_savedTaskListController {
     List<String> fileList = new LinkedList<>();
     LinkedList<String> selected = new LinkedList<>();
     LinkedList<String> notselected = new LinkedList<>();
@@ -72,14 +72,16 @@ public class SavedTaskListController {
         }
         for (String l : fileList) {
             CheckBox checkb = new CheckBox(l);
+            checkb.setStyle("-fx-text-fill: white;");
             //checkb.setPrefHeight(60.5);
-            Label label = new Label("(done)");
-            label.setVisible(false);
+            Label task = new Label("(done)");
+            task.setStyle("-fx-text-fill: white;");
+            task.setVisible(false);
             checkb.setOnAction(e -> {
                 if (checkb.isSelected()) {
                     checkb.setOpacity(0.3);
-                    label.setText("done");
-                    label.setVisible(true);
+                    task.setText("done");
+                    task.setVisible(true);
                     j++;
                     selected.add(l);
                     notselected.remove(l);
@@ -87,16 +89,16 @@ public class SavedTaskListController {
                 } else {
                     checkb.setOpacity(1);
                     // label.setText("--");
-                    label.setVisible(false);
+                    task.setVisible(false);
                     j--;
                     //selected.remove(l);
                     notselected.add(l);
                 }
             });
 
-            siatka3.getChildren().addAll(checkb, label);
+            siatka3.getChildren().addAll(checkb, task);
             siatka3.setConstraints(checkb, 1, rowIndex);
-            siatka3.setConstraints(label, 0, rowIndex);
+            siatka3.setConstraints(task, 0, rowIndex);
             rowIndex++;
         }
     }

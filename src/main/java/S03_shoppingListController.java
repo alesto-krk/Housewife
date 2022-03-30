@@ -1,6 +1,4 @@
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -53,7 +51,7 @@ public class S03_shoppingListController {
         root = loader.load();
         S03_shoppingListController refresh = loader.getController();
         refresh.textFieldLimit();
-        refresh.showList(shoppingListForRefreshing);
+        refresh.showShoppingList(shoppingListForRefreshing);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -71,7 +69,7 @@ public class S03_shoppingListController {
     }
 
     //for refreshList()
-    public void showList(LinkedList<String> list) {
+    public void showShoppingList(LinkedList<String> list) {
         this.shoppingList.addAll(list);
         int rowIndex = 0;
         for (String s : shoppingList) {
