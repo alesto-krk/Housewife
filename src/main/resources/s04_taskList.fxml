@@ -52,27 +52,21 @@
             <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
-      <Button fx:id="saveTheListButton3" layoutX="287.0" layoutY="365.0" mnemonicParsing="false" onAction="#saveTheListButton2" text="Zapisz listę" />
-      <Button fx:id="addTaskButton" layoutX="80.0" layoutY="240.0" mnemonicParsing="false" onAction="#addTask" text="Dodaj" />
+      <Button fx:id="saveTaskListButton" layoutX="265.0" layoutY="366.0" mnemonicParsing="false" onAction="#saveTaskList" text="Zapisz listę" />
+      <Button fx:id="addTaskButton" layoutX="81.0" layoutY="228.0" mnemonicParsing="false" onAction="#addTask" text="Dodaj" />
       <Button fx:id="showTaskListButton" layoutX="80.0" layoutY="325.0" mnemonicParsing="false" onAction="#showTaskList" text="Pokaż" />
-      <Button fx:id="menuButtonTL" layoutX="5.0" layoutY="370.0" mnemonicParsing="false" onAction="#goToMenuButton" text="&lt; Menu">
+      <Button fx:id="menuButton" layoutX="5.0" layoutY="370.0" mnemonicParsing="false" onAction="#goToMenuButton" text="&lt; Menu">
          <font>
             <Font size="11.0" />
          </font>
       </Button>
-      <Button layoutX="449.0" layoutY="69.0" mnemonicParsing="false" onAction="#setAnotherDateOrTask" prefHeight="46.0" prefWidth="128.0" text="Ustaw nową datę/ nowe zadania" wrapText="true" />
+      <Button fx:id="setAnotherDateOrTaskButton" layoutX="449.0" layoutY="69.0" mnemonicParsing="false" onAction="#setAnotherDateOrTask" prefHeight="46.0" prefWidth="128.0" text="Ustaw nową datę/ nowe zadania" wrapText="true" />
       <Label fx:id="chosenDateFormatForTxtFile" layoutX="261.0" layoutY="107.0" />
-      <Button layoutX="237.0" layoutY="365.0" mnemonicParsing="false" onAction="#refreshTaskList" prefHeight="17.0" prefWidth="31.0" />
-      <Button fx:id="exitButtonTL" layoutX="524.0" layoutY="367.0" mnemonicParsing="false" onAction="#exitButton" text="Zakończ">
+      <Button fx:id="exitButton" layoutX="524.0" layoutY="367.0" mnemonicParsing="false" onAction="#exitButton" text="Zakończ">
          <font>
             <Font size="11.0" />
          </font>
       </Button>
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="240.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/refresh-icon.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="545.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/document_add.png" />

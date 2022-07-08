@@ -4,6 +4,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -48,6 +49,8 @@ public class CommonMethods {
     public static LinkedList<File> dolistOfSavedTaskLists(){       //sciezka u kogos na komputerze?
         LinkedList<File> listOfSavedTaskLists = new LinkedList<>();
         String directory = "C:\\Users\\Ola\\IdeaProjects\\KuraDomowa\\Listy-zadan";
+        //String directory = "Listy-zadan";
+
         File file = new File(directory);
         File[] files = file.listFiles();
         for (File e : files) {
@@ -55,6 +58,11 @@ public class CommonMethods {
             //System.out.println(e);
         }
         return listOfSavedTaskLists;
+    }
+
+    public static void disableButtons(boolean t, Button...buttons){
+        for(int i=0; i<buttons.length; i++)
+            buttons[i].setDisable(t);
     }
 
 }

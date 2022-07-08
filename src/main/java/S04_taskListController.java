@@ -43,9 +43,7 @@ public class S04_taskListController {
     @FXML
     ChoiceBox<String> datesChoiceBox;
     @FXML
-    Button saveTheListButton3;
-    @FXML
-    Button showTaskListButton;
+    Button addTaskButton, showTaskListButton, menuButtonTL, saveTaskListButton, setAnotherDateOrTaskButton;
 
     //for S02_menuController menuTaskList()
     public void setTodaysDate(){
@@ -95,14 +93,14 @@ public class S04_taskListController {
 
     public void refreshTaskList(ActionEvent event) throws IOException {
         LinkedList<String> taskListForRefreshing = this.taskList;
-        String y = chosenDateForRefreshing;
-        String z = chosenDateForTxtFileForRefreshing;
-        String x = todaysDateForRefreshing;
+        String todaysDateForRefreshing1 = this.todaysDateForRefreshing;
+        String chosenDateForRefreshing1 = this.chosenDateForRefreshing;
+        String chosenDateForTxtFileForRefreshing1 = this.chosenDateForTxtFileForRefreshing;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("s04_taskList.fxml"));
         root = loader.load();
         S04_taskListController refresh = loader.getController();
         refresh.textFieldLimit();
-        refresh.showList2(taskListForRefreshing, x, y,z);
+        refresh.showTaskListForRefresh(taskListForRefreshing, todaysDateForRefreshing1, chosenDateForRefreshing1,chosenDateForTxtFileForRefreshing1);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -119,6 +117,7 @@ public class S04_taskListController {
         });
     }
 
+    //for showTaskList()
     public void addListToGridPane(){
         int rowIndex = 0;
         for (String s : taskList) {
@@ -138,80 +137,54 @@ public class S04_taskListController {
         }
     }
 
-    //for refreshTaskList() method
-    public void showList2(LinkedList<String> list, String todaysDateForRefreshing, String chosenDateForRefreshing,  String chosenDateForTxtFileForRefreshing) {
+    //for refreshTaskList()
+    public void showTaskListForRefresh(LinkedList<String> list, String todaysDateForRefreshing1, String chosenDateForRefreshing1, String chosenDateForTxtFileForRefreshing1) {
         this.taskList.addAll(list);
-        this.todaysDateForRefreshing = todaysDateForRefreshing;
-        this.chosenDateForRefreshing = chosenDateForRefreshing;
-        this.chosenDateForTxtFileForRefreshing = chosenDateForTxtFileForRefreshing;
+        this.todaysDateForRefreshing = todaysDateForRefreshing1;
+        this.chosenDateForRefreshing = chosenDateForRefreshing1;
+        this.chosenDateForTxtFileForRefreshing = chosenDateForTxtFileForRefreshing1;
         addListToGridPane();
-        date.setText(todaysDateForRefreshing);
-        chosenDate.setText(chosenDateForRefreshing);
-        chosenDateFormatForTxtFile.setText(this.chosenDateForTxtFileForRefreshing);
+        date.setText(todaysDateForRefreshing1);
+        chosenDate.setText(chosenDateForRefreshing1);
+        chosenDateFormatForTxtFile.setText(chosenDateForTxtFileForRefreshing1);
         chosenDateFormatForTxtFile.setVisible(false);
         datePicker.setDisable(true);
         if (taskList.isEmpty())
-        saveTheListButton3.setDisable(true);
-        else saveTheListButton3.setDisable(false);
+        saveTaskListButton.setDisable(true);
+        else saveTaskListButton.setDisable(false);
         setDatesChoiceBox();
-
     }
-
-
 
     public void setAnotherDateOrTask(ActionEvent event) throws IOException{
-        //listaZadan.clear();
-        //siatka2.setVisible(false);
         datePicker.setDisable(false);
-        /*Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirmation");
-        alert.setHeaderText("Czy skasować obecną listę?");
-        alert.setContentText(null);
-        ButtonType yesButton = new ButtonType("Yes", ButtonBar.ButtonData.YES);
-        ButtonType noButton = new ButtonType("No", ButtonBar.ButtonData.NO);
-        ButtonType cancelButton = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
-        alert.getButtonTypes().setAll(yesButton, noButton, cancelButton);
-        alert.showAndWait().ifPresent(type -> {
-            if (type == yesButton) {
-                listaZadan.clear();
-                siatka2.setVisible(false);
-                datePicker.setDisable(false);
-            }
-            else if (type == noButton) {
-                datePicker.setDisable(false);
-            }
-        });*/
     }
 
-    public void saveTheListButton2(ActionEvent event) throws IOException {
+    public void saveTaskList(ActionEvent event) throws IOException {
         String pathname = "Listy-zadan/lista-zadan-na-" + chosenDateFormatForTxtFile.getText() + "-" + chosenDate.getText() + ".txt";
-        System.out.println("^^^^^^^^^" + pathname);
-        if (pathname.equals("Listy-zadan/lista-zadan-na--<nie wybrałeś/aś daty>.txt") || pathname.equals("Listy-zadan/lista-zadan-na-.txt") || pathname.equals("") || chosenDate.equals(null) || chosenDate.equals("<nie wybrałeś/aś daty>"))
+        if (pathname.equals("Listy-zadan/lista-zadan-na--<nie wybrałeś/aś daty>.txt") || pathname.equals("Listy-zadan/lista-zadan-na--.txt") || pathname.equals("") || chosenDate.equals(null) || chosenDate.equals("<nie wybrałeś/aś daty>"))
             CommonMethods.showAlert(Alert.AlertType.WARNING, "Nieustawiona data", "Kliknij -Ustaw nową datę- ");
         else
             commonMethods.checkIfFileExists(pathname);
         try {
             if (!taskList.isEmpty()) {
                 FileWriter fw = new FileWriter(pathname, true);
-                BufferedWriter zapis = new BufferedWriter(fw);
-                for (String e : taskList) {
-                    zapis.write(e);
-                    zapis.newLine();
-                    System.out.println(pathname);
-                   // zapis.println(e);
+                BufferedWriter saveTaskListToFile = new BufferedWriter(fw);
+                for (String s : taskList) {
+                    saveTaskListToFile.write(s);
+                    saveTaskListToFile.newLine();
                 }
-                zapis.close();
+                saveTaskListToFile.close();
                 taskList.clear();
-                gridPaneForTaskList.setVisible(false);
                 CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zadań");
             } else
-                System.out.println("pusta lista");
+                CommonMethods.showAlert(Alert.AlertType.WARNING, "Lista", "Lista jest pusta");
         } catch (IOException ioe) {
-            System.out.println("Error!");
+            System.out.println("04_saveTaskListError!");
         }
         setDatesChoiceBox();
     }
 
+    //for saveTaskList() & menuTaskList()
     public void setDatesChoiceBox() {
         /*LinkedList<File> listOfSavedTaskLists = new LinkedList<>();
         String directory = "C:\\Users\\Ola\\IdeaProjects\\KuraDomowa\\Listy-zadan";     //jak u kogos na kompie to sprawdzic, u kazdego ta sciezka bedzie inna
@@ -221,13 +194,13 @@ public class S04_taskListController {
             listOfSavedTaskLists.add(e);
             System.out.println(e);
         }*/
-
         String fileItemForChoiceBox;
         LinkedList<File> listOfSavedTaskLists = CommonMethods.dolistOfSavedTaskLists();
         if (!listOfSavedTaskLists.isEmpty()) {
             Collections.sort(listOfSavedTaskLists);
             for (int i = 0; i < listOfSavedTaskLists.size(); i++) {
                 String fileItem = listOfSavedTaskLists.get(i).toString();
+                System.out.println(fileItem);
                 LocalDate txtDate = LocalDate.parse(fileItem.substring(64, 74));
                 if (!txtDate.isBefore(todaysDate)) {
                     String fileItemShortened = fileItem.substring(75, fileItem.length() - 4); //to co w choiceboxie
@@ -241,28 +214,26 @@ public class S04_taskListController {
         } else System.out.println("ppp888");
     }
 
-    public void showTaskList(ActionEvent event) throws IOException {    
+    public void showTaskList(ActionEvent event) throws IOException {
         if(!(datesChoiceBox.getValue()==null)) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("s04a_savedTaskList.fxml"));
-                Parent root3 = (Parent) loader.load();
-                Stage stage3 = new Stage();
-                stage3.setTitle("Twoja lista zadań");
+                Parent rootForTaskList = (Parent) loader.load();
+                Stage stageForTaskList = new Stage();
                 S04a_savedTaskListController savedTaskListController = loader.getController();
                 savedTaskListController.addTocheckbox(datesChoiceBox);
+                stageForTaskList.setTitle("Twoja lista zadań na: " + savedTaskListController.hiddenLabelForTitleDate.getText());
                 Image icon = new Image(getClass().getResourceAsStream("images/zadanie-na-dzis.jpg"));
-                stage3.getIcons().add(icon);
-                stage3.setScene(new Scene(root3, 485, 455));
-                stage3.show();
-            /*disableButtons(true);
-            stage2.setOnCloseRequest(e -> {
-                disableButtons(false);
-            });*/
+                stageForTaskList.getIcons().add(icon);
+                stageForTaskList.setScene(new Scene(rootForTaskList, 485, 455));
+                stageForTaskList.setResizable(false);
+                stageForTaskList.show();
+                CommonMethods.disableButtons(true, addTaskButton,showTaskListButton,saveTaskListButton,menuButtonTL,setAnotherDateOrTaskButton);
+                stageForTaskList.setOnCloseRequest(e -> { CommonMethods.disableButtons(false, addTaskButton,showTaskListButton,saveTaskListButton,menuButtonTL,setAnotherDateOrTaskButton); });
             } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println("error!");
+                System.out.println("04_showTheListError!");
             }
-        } else System.out.println("nic nie wybrane");
+        } else CommonMethods.showAlert(Alert.AlertType.WARNING, "Lista", "Wybierz datę z listy lub stwórz nową listę");
     }
 
     public void goToMenuButton(ActionEvent event) throws IOException {

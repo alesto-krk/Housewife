@@ -1,16 +1,7 @@
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.stage.Stage;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,10 +12,8 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 public class S04a_savedTaskListController {
@@ -41,7 +30,9 @@ public class S04a_savedTaskListController {
     @FXML
     Button saveForNowButton;
     @FXML
-    Label labelDate;
+    Label hiddenLabelForTxtFile;
+    @FXML
+    Label hiddenLabelForTitleDate;
 
     public LinkedList<File> doListOfCurrentSavedFiles(){
         LinkedList<File> listOfCurrentSavedLists = new LinkedList<>();
@@ -60,10 +51,13 @@ public class S04a_savedTaskListController {
         System.out.println(pathname);
         String dfl = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(todaysDate).toString();
         if (choicebox.getValue().equals("dziś"))
-            labelDate.setText("C:\\Users\\Ola\\IdeaProjects\\KuraDomowa\\Listy-zadan\\lista-zadan-na-"+ todaysDate + "-" + dfl + ".txt");
-        else
-        labelDate.setText(pathname);
-        labelDate.setVisible(false);
+            hiddenLabelForTxtFile.setText("C:\\Users\\Ola\\IdeaProjects\\KuraDomowa\\Listy-zadan\\lista-zadan-na-"+ todaysDate + "-" + dfl + ".txt");
+        else{
+        hiddenLabelForTxtFile.setText(pathname);
+        hiddenLabelForTxtFile.setVisible(false);
+        hiddenLabelForTitleDate.setText(pathname.substring(75,pathname.length()-4));
+        hiddenLabelForTitleDate.setVisible(false);
+        }
         try (BufferedReader br = Files.newBufferedReader(Paths.get(fileItem))) {
             fileList = br.lines().collect(Collectors.toList());
             System.out.println(fileList);
@@ -80,7 +74,8 @@ public class S04a_savedTaskListController {
             checkb.setOnAction(e -> {
                 if (checkb.isSelected()) {
                     checkb.setOpacity(0.3);
-                    task.setText("done");
+                    task.setText("done!");
+                    task.setStyle("-fx-text-fill: white; -fx-effect: dropshadow(gaussian, lightpink, 10, 0.07, 2, 2);");
                     task.setVisible(true);
                     j++;
                     selected.add(l);
@@ -138,9 +133,9 @@ public class S04a_savedTaskListController {
         }*/
         System.out.println("ta liste chcemy przeniesc  " + fileList); //ta liste chcemy przeniesc
         //System.out.println("---**----" + pathname);         //nie dziala pathname!!!!!!!!
-        System.out.println("0o0o0o0o0" + labelDate.getText());
+        System.out.println("0o0o0o0o0" + hiddenLabelForTxtFile.getText());
 
-        PrintWriter zapis = new PrintWriter(labelDate.getText());
+        PrintWriter zapis = new PrintWriter(hiddenLabelForTxtFile.getText());
             for (String e : fileList) {
                 zapis.println(e);
             }

@@ -3,6 +3,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -26,12 +27,13 @@ public class S02_menuController {
         taskList.setTodaysDate();
         taskList.setDatesChoiceBox();
         taskList.textFieldLimit();
-        taskList.saveTheListButton3.setDisable(true);
+        taskList.saveTaskListButton.setDisable(true);
         loadStage(event);
     }
 
     public void menuLunchIdeas(ActionEvent event) throws IOException {
-        loadFxml("coNaObiad.fxml");
+        CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Loading", "Otwarcie biblioteki przepisów może chwilkę zająć :)");
+        loadFxml("s05_lunchIdeas.fxml");
         loadStage(event);
     }
 

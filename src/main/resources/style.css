@@ -16,6 +16,9 @@
  -fx-font-family: "Bookman Old Style", Arial;
  -fx-font-weight: bold;
 }
+#menuButton,#exitButton{
+  -fx-font-size: 11;
+}
 //s01
 #titleBackground{
 -fx-background-image: url("images/title.jpg");
@@ -38,18 +41,16 @@
 #shoppingListBackground{
    -fx-background-color: radial-gradient(radius 70%, darkseagreen, black);
 }
-#menuButtonSL,#exitButtonSL{
-  -fx-font-size: 11;
-}
-//s03a
-#savedListBackground{
+//s03a,s04a,s05a
+#savedListBackground, #savedTaskListBackground, #dishBackground{
   -fx-border-color: darkolivegreen;
   -fx-border-style: ridge;
 }
 //s04
-#menuButtonTL,#exitButtonTL{
-  -fx-font-size: 11;
-}
 #date{
   -fx-effect: dropshadow(gaussian, lightpink, 10, 0.07, 2, 2);
+}
+//s05
+#lunchIdeasBackground{
+   -fx-background-color: linear-gradient(from 60% 25% to 100% 100%, black, darkseagreen);
 }

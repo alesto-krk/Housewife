@@ -4,18 +4,40 @@
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lista-zakupow/my-shopping-list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lista-zakupow/my-shopping-list.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-04-08-piątek, 8 kwietnia 2022.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-04-08-piątek, 8 kwietnia 2022.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-05-01-niedziela, 1 maja 2022.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-05-01-niedziela, 1 maja 2022.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CoNaObiadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CoNaObiadControllerRev1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S05_lunchIdeasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CommonMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommonMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Danie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S05a_dishController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S02_menuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S02_menuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S04_taskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S04_taskListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SavedTaskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S04a_savedTaskListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/S04a_savedTaskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S04a_savedTaskListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/coNaObiad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s05_lunchIdeas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dish.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s05a_dish.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/zupa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/zupa.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/s03_shoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s03_shoppingList.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/s04_taskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s04_taskList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s04a_savedTaskList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/s04a_savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s04a_savedTaskList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CoNaObiadController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CoNaObiadControllerRev1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CommonMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommonMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Danie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DishController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S02_menuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S02_menuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/S03a_savedShoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03a_savedShoppingListController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S04_taskListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S04_taskListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/S04a_savedTaskListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S04a_savedTaskListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/coNaObiad.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dish.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/zupa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/images/zupa.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/s03_shoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s03_shoppingList.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/s04_taskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s04_taskList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/s04a_savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s04a_savedTaskList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,65 +198,33 @@
     <option name="LAST_COMMIT_MESSAGE" value="CSS styling i czyszczenie kodu dla opcji Lista Zadan" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="377" y="93" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1648635869140">
+    <state x="377" y="93" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1648726655808">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="377" y="93" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1360.728@0.0.1360.728" timestamp="1648635869140" />
-    <state x="334" y="0" key="CommitChangelistDialog2" timestamp="1647544373439">
-      <screen x="0" y="0" width="1360" height="728" />
+    <state x="377" y="93" width="855" height="597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1360.728@0.0.1360.728" timestamp="1648726655808" />
+    <state width="1281" height="129" key="GridCell.Tab.0.bottom" timestamp="1657297866422">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="334" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1647544373439" />
-    <state x="460" y="119" key="FileChooserDialogImpl" timestamp="1648632418337">
-      <screen x="0" y="0" width="1360" height="728" />
+    <state width="1281" height="129" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1657297866422" />
+    <state width="1361" height="117" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1648735875038" />
+    <state width="1281" height="129" key="GridCell.Tab.0.center" timestamp="1657297866422">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="460" y="119" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1648632418337" />
-    <state width="1361" height="117" key="GridCell.Tab.0.bottom" timestamp="1648639877088">
-      <screen x="0" y="0" width="1360" height="728" />
+    <state width="1281" height="129" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1657297866422" />
+    <state width="1361" height="117" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1648735875038" />
+    <state width="1281" height="129" key="GridCell.Tab.0.left" timestamp="1657297866422">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1361" height="117" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1648639877088" />
-    <state width="1361" height="117" key="GridCell.Tab.0.center" timestamp="1648639877088">
-      <screen x="0" y="0" width="1360" height="728" />
+    <state width="1281" height="129" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1657297866422" />
+    <state width="1361" height="117" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1648735875038" />
+    <state width="1281" height="129" key="GridCell.Tab.0.right" timestamp="1657297866422">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1361" height="117" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1648639877088" />
-    <state width="1361" height="117" key="GridCell.Tab.0.left" timestamp="1648639877088">
-      <screen x="0" y="0" width="1360" height="728" />
+    <state width="1281" height="129" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1657297866422" />
+    <state width="1361" height="117" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1648735875038" />
+    <state x="91" y="2" key="new project wizard" timestamp="1657114670528">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1361" height="117" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1648639877088" />
-    <state width="1361" height="117" key="GridCell.Tab.0.right" timestamp="1648639877088">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state width="1361" height="117" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1648639877088" />
-    <state width="1361" height="231" key="GridCell.Tab.1.bottom" timestamp="1647691499912">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state width="1361" height="231" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1647691499912" />
-    <state width="1361" height="231" key="GridCell.Tab.1.center" timestamp="1647691499912">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state width="1361" height="231" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1647691499912" />
-    <state width="1361" height="231" key="GridCell.Tab.1.left" timestamp="1647691499912">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state width="1361" height="231" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1647691499912" />
-    <state width="1361" height="231" key="GridCell.Tab.1.right" timestamp="1647691499912">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state width="1361" height="231" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1647691499912" />
-    <state x="162" y="0" key="SettingsEditor" timestamp="1643204787889">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="162" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1643204787889" />
-    <state x="272" y="85" key="Vcs.Push.Dialog.v2" timestamp="1647544384540">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="272" y="85" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1647544384540" />
-    <state x="65" y="0" key="new project wizard" timestamp="1645104055970">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="65" y="0" key="new project wizard/0.0.1360.728@0.0.1360.728" timestamp="1645104055970" />
-    <state x="386" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1646914735689">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="386" y="0" key="refactoring.ChangeSignatureDialog/0.0.1360.728@0.0.1360.728" timestamp="1646914735689" />
+    <state x="91" y="2" key="new project wizard/0.0.1280.760@0.0.1280.760" timestamp="1657114670528" />
   </component>
 </project>
