@@ -37,15 +37,19 @@ public class S04_taskListController {
     @FXML
     Label chosenDateFormatForTxtFile;
     @FXML
-    TextField addTextField;
+    private TextField addTextField;
     @FXML
     GridPane gridPaneForTaskList;
     @FXML
     ChoiceBox<String> datesChoiceBox;
     @FXML
-    Button addTaskButton, showTaskListButton, menuButtonTL, saveTaskListButton, setAnotherDateOrTaskButton;
+    Button addTaskButton, showTaskListButton, menuButton, saveTaskListButton, setAnotherDateOrTaskButton;
 
-    //for S02_menuController menuTaskList()
+    public TextField getAddTextField() {
+        return addTextField;
+    }
+
+    //for S02_menuController: menuTaskList()
     public void setTodaysDate(){
        String todaysDateFormat =  DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(todaysDate);
        date.setText(todaysDateFormat);
@@ -99,22 +103,12 @@ public class S04_taskListController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("s04_taskList.fxml"));
         root = loader.load();
         S04_taskListController refresh = loader.getController();
-        refresh.textFieldLimit();
+        CommonMethods.textFieldLimit(40, refresh.getAddTextField());
         refresh.showTaskListForRefresh(taskListForRefreshing, todaysDateForRefreshing1, chosenDateForRefreshing1,chosenDateForTxtFileForRefreshing1);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
-
-    //for refreshTaskList() & menuTaskList()
-    public void textFieldLimit(){
-        int limit = 40;
-        addTextField.setOnKeyTyped(e-> {
-            if(addTextField.getText().length()>limit){
-                addTextField.deleteText(limit, limit+1);
-            }
-        });
     }
 
     //for showTaskList()
@@ -158,6 +152,9 @@ public class S04_taskListController {
     public void setAnotherDateOrTask(ActionEvent event) throws IOException{
         datePicker.setDisable(false);
     }
+
+ 
+
 
     public void saveTaskList(ActionEvent event) throws IOException {
         String pathname = "Listy-zadan/lista-zadan-na-" + chosenDateFormatForTxtFile.getText() + "-" + chosenDate.getText() + ".txt";
@@ -228,10 +225,14 @@ public class S04_taskListController {
                 stageForTaskList.setScene(new Scene(rootForTaskList, 485, 455));
                 stageForTaskList.setResizable(false);
                 stageForTaskList.show();
-                CommonMethods.disableButtons(true, addTaskButton,showTaskListButton,saveTaskListButton,menuButtonTL,setAnotherDateOrTaskButton);
-                stageForTaskList.setOnCloseRequest(e -> { CommonMethods.disableButtons(false, addTaskButton,showTaskListButton,saveTaskListButton,menuButtonTL,setAnotherDateOrTaskButton); });
+                CommonMethods.disableButtons(true, addTaskButton,showTaskListButton,saveTaskListButton,menuButton,setAnotherDateOrTaskButton);
+                stageForTaskList.setOnCloseRequest(e ->
+                {
+                    CommonMethods.disableButtons(false, addTaskButton,showTaskListButton,saveTaskListButton,menuButton,setAnotherDateOrTaskButton);
+                });
             } catch (Exception e) {
                 System.out.println("04_showTheListError!");
+                e.printStackTrace();
             }
         } else CommonMethods.showAlert(Alert.AlertType.WARNING, "Lista", "Wybierz datę z listy lub stwórz nową listę");
     }

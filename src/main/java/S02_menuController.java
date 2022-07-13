@@ -5,7 +5,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class S02_menuController {
@@ -17,7 +16,7 @@ public class S02_menuController {
     public void menuShoppingList(ActionEvent event) throws IOException {
         loadFxml("s03_shoppingList.fxml");
         S03_shoppingListController textField = loader.getController();
-        textField.textFieldLimit();
+        CommonMethods.textFieldLimit(25, textField.getAddField());
         loadStage(event);
     }
 
@@ -26,7 +25,7 @@ public class S02_menuController {
         S04_taskListController taskList = loader.getController();
         taskList.setTodaysDate();
         taskList.setDatesChoiceBox();
-        taskList.textFieldLimit();
+        CommonMethods.textFieldLimit(40, taskList.getAddTextField());
         taskList.saveTaskListButton.setDisable(true);
         loadStage(event);
     }

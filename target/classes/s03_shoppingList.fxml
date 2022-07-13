@@ -53,10 +53,13 @@
             <Image url="@images/sh-list2.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="deleteAllButton" layoutX="458.0" layoutY="298.0" mnemonicParsing="false" onAction="#deleteAll" prefHeight="25.0" prefWidth="117.0" text="Usuń wszystko" />
-      <Button fx:id="refreshAllButton" layoutX="456.0" layoutY="268.0" mnemonicParsing="false" onAction="#refreshList" text="Odśwież listę">
+      <Button fx:id="deleteAllButton" layoutX="458.0" layoutY="298.0" mnemonicParsing="false" onAction="#deleteAll" prefHeight="25.0" prefWidth="117.0" text="Usuń wszystko">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+      <Button fx:id="refreshAllButton" layoutX="539.0" layoutY="266.0" mnemonicParsing="false" onAction="#refreshList">
          <graphic>
-            <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/refresh-icon.png" />
                </image>
@@ -78,7 +81,7 @@
             <Font size="11.0" />
          </font>
       </Button>
-      <Label layoutX="58.0" layoutY="101.0" text="(max 30 znaków)" textFill="#f2f2f2">
+      <Label layoutX="58.0" layoutY="101.0" text="(max 25 znaków)" textFill="#f2f2f2">
          <font>
             <Font size="10.0" />
          </font>

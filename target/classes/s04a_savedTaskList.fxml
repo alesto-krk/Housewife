@@ -37,7 +37,7 @@
         </rowConstraints>
       </GridPane>
       <Button fx:id="saveForNowButton" layoutX="180.0" layoutY="374.0" mnemonicParsing="false" onAction="#saveForNow" text="Zapisz na później" />
-      <Label layoutX="81.0" layoutY="407.0" prefHeight="34.0" prefWidth="323.0" text="Jeśli chcesz dodać nowe zadania wyjdź z listy, kliknij &quot;Ustaw nowe zadania&quot;       i dodaj . Upewnij się, że masz dobrą datę!" textFill="#f2f0f0" wrapText="true">
+      <Label layoutX="81.0" layoutY="407.0" prefHeight="46.0" prefWidth="323.0" text="Jeśli chcesz dodać nowe zadania wyjdź z listy, kliknij &quot;Ustaw nowe zadania&quot;       wybierz date i dodaj . Upewnij się, że masz dobrą datę!" textFill="#f2f0f0" wrapText="true">
          <font>
             <Font size="10.0" />
          </font>

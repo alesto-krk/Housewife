@@ -9,23 +9,27 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-
 import java.io.*;
 import java.util.LinkedList;
 
 public class S03_shoppingListController {
 
     private LinkedList<String> shoppingList = new LinkedList<>();
+    private String pathname = "Lista-zakupow/my-shopping-list.txt";
     private Stage stage;
     private Scene scene;
     private Parent root;
     private CommonMethods file = new CommonMethods();
     @FXML
-    TextField addField;
+    private TextField addField;
     @FXML
-    GridPane gridPaneForList;
+    private GridPane gridPaneForList;
     @FXML
-    Button showTheListButton, addButton, saveTheListButton, deleteAllButton, refreshAllButton;
+    private Button showTheListButton, addButton, saveTheListButton, deleteAllButton, refreshAllButton;
+
+    public TextField getAddField() {
+        return addField;
+    }
 
     public void addArticle(ActionEvent event) throws IOException {
         addElementToList();
@@ -50,22 +54,12 @@ public class S03_shoppingListController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("s03_shoppingList.fxml"));
         root = loader.load();
         S03_shoppingListController refresh = loader.getController();
-        refresh.textFieldLimit();
+        CommonMethods.textFieldLimit(25, refresh.getAddField());
         refresh.showShoppingList(shoppingListForRefreshing);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
-
-    //for refreshList() & menuShoppingList()
-    public void textFieldLimit(){
-        int limit = 30;
-        addField.setOnKeyTyped(e-> {
-            if(addField.getText().length()>limit){
-                addField.deleteText(limit, limit+1);
-            }
-        });
     }
 
     //for refreshList()
@@ -100,33 +94,31 @@ public class S03_shoppingListController {
     }
 
     public void saveTheList(ActionEvent event) throws IOException {
-        file.checkIfFileExists("Lista-zakupow/my-shopping-list.txt");
+        file.checkIfFileExists(pathname);
         try {
             if (!shoppingList.isEmpty()) {
-                PrintWriter savedList = new PrintWriter("Lista-zakupow/my-shopping-list.txt");
+                PrintWriter savedList = new PrintWriter(pathname);
                 for (String e : shoppingList) {
                     savedList.println(e);
                 }
                 savedList.close();
                 CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Lista", "Zapisano listę zakupów");
             } else
-                CommonMethods.showAlert(Alert.AlertType.WARNING, "Lista", "Lista jest pusta");
+                CommonMethods.showAlert(Alert.AlertType.WARNING, "Lista", "Lista jest pusta lub lista już istnieje");
         } catch (IOException ioe) {
             System.out.println("03_saveTheListError!");
         }
     }
 
     public void showSavedList(ActionEvent event) throws IOException {
-        file.checkIfFileExists("Lista-zakupow/my-shopping-list.txt");
+        file.checkIfFileExists(pathname);
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("s03a_savedShoppingList.fxml"));
             Parent rootForShList = (Parent) loader.load();
             S03a_savedShoppingListController savedShoppingListController = loader.getController();
             savedShoppingListController.checkboxes();
-
             Stage stageForShList = new Stage();
             stageForShList.setTitle("Twoje zakupy");
-
             Image icon = new Image(getClass().getResourceAsStream("images/sh-list2.jpg"));
             stageForShList.getIcons().add(icon);
             stageForShList.setScene(new Scene(rootForShList, 350, 400));

@@ -7,7 +7,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -63,6 +62,14 @@ public class CommonMethods {
     public static void disableButtons(boolean t, Button...buttons){
         for(int i=0; i<buttons.length; i++)
             buttons[i].setDisable(t);
+    }
+
+    public static void textFieldLimit(int limit, TextField textField){
+        textField.setOnKeyTyped(e-> {
+            if(textField.getText().length()>limit){
+                textField.deleteText(limit, limit+1);
+            }
+        });
     }
 
 }
