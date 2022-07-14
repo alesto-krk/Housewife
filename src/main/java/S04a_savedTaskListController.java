@@ -47,7 +47,7 @@ public class S04a_savedTaskListController {
         return listOfCurrentSavedLists;
     }
 
-    public void readTheFile(String fileItem, ChoiceBox<String> choicebox){
+    public void readTheFile(String fileItem, ChoiceBox<String> choicebox){  //sciezka!!!!!!!!
         System.out.println(pathname);
         String dfl = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(todaysDate).toString();
         if (choicebox.getValue().equals("dziś"))
@@ -67,7 +67,6 @@ public class S04a_savedTaskListController {
         for (String l : fileList) {
             CheckBox checkb = new CheckBox(l);
             checkb.setStyle("-fx-text-fill: white;");
-            //checkb.setPrefHeight(60.5);
             Label task = new Label("(done)");
             task.setStyle("-fx-text-fill: white;");
             task.setVisible(false);

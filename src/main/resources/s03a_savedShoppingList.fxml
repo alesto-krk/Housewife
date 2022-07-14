@@ -18,7 +18,7 @@
       </Label>
       <ImageView fitHeight="316.0" fitWidth="164.0" layoutX="97.0" layoutY="42.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/rysunek-listy.jpg" />
+            <Image url="@images/list-dwg.jpg" />
          </image>
       </ImageView>
       <GridPane fx:id="gridPaneForSavedList" layoutX="24.0" layoutY="43.0" prefHeight="301.0" prefWidth="316.0">

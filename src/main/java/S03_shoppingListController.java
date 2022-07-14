@@ -119,7 +119,7 @@ public class S03_shoppingListController {
             savedShoppingListController.checkboxes();
             Stage stageForShList = new Stage();
             stageForShList.setTitle("Twoje zakupy");
-            Image icon = new Image(getClass().getResourceAsStream("images/sh-list2.jpg"));
+            Image icon = new Image(getClass().getResourceAsStream("images/shopping-list.jpg"));
             stageForShList.getIcons().add(icon);
             stageForShList.setScene(new Scene(rootForShList, 350, 400));
             stageForShList.setResizable(false);

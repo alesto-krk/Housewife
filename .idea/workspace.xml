@@ -4,23 +4,48 @@
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lista-zakupow/my-shopping-list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lista-zakupow/my-shopping-list.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-01-29-sobota, 29 stycznia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-02-05-sobota, 5 lutego 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-02-26-sobota, 26 lutego 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-03-11-piątek, 11 marca 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-04-01-piątek, 1 kwietnia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-04-06-środa, 6 kwietnia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-04-08-piątek, 8 kwietnia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-04-09-sobota, 9 kwietnia 2022.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-07-16-sobota, 16 lipca 2022.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-07-16-sobota, 16 lipca 2022.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moja-lista-zakupow.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CommonMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommonMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S02_menuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S02_menuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/S03a_savedShoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03a_savedShoppingListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S04_taskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S04_taskListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/S04a_savedTaskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S04a_savedTaskListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/drugie-danie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/kura-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/mainDish1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/mainDish2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/mainDish3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/mainDish4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/qm1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/qm2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/rounded-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/rysunek-listy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/sh-list.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/sh-list2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/thinking-face.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/torba-z-zakupami.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/zadanie-na-dzis.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/zupa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/zupa1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/s02_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s02_menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/s03_shoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s03_shoppingList.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/s03a_savedShoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s03a_savedShoppingList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/s04a_savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s04a_savedTaskList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CommonMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommonMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/s05_lunchIdeas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s05_lunchIdeas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/soups.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/xxx.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S02_menuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S02_menuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S04_taskListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S04_taskListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/S05_lunchIdeasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S05_lunchIdeasController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/s03_shoppingList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s03_shoppingList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/s04a_savedTaskList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s04a_savedTaskList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/soups.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/xxx.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,22 +206,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="CSS styling i czyszczenie kodu dla opcji Lista Zadan" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1281" height="63" key="GridCell.Tab.0.bottom" timestamp="1657743683896">
+    <state width="1281" height="134" key="GridCell.Tab.0.bottom" timestamp="1657818230337">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1281" height="63" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1657743683896" />
-    <state width="1281" height="63" key="GridCell.Tab.0.center" timestamp="1657743683896">
+    <state width="1281" height="134" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1657818230337" />
+    <state width="1281" height="134" key="GridCell.Tab.0.center" timestamp="1657818230337">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1281" height="63" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1657743683896" />
-    <state width="1281" height="63" key="GridCell.Tab.0.left" timestamp="1657743683896">
+    <state width="1281" height="134" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1657818230337" />
+    <state width="1281" height="134" key="GridCell.Tab.0.left" timestamp="1657818230337">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1281" height="63" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1657743683896" />
-    <state width="1281" height="63" key="GridCell.Tab.0.right" timestamp="1657743683896">
+    <state width="1281" height="134" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1657818230337" />
+    <state width="1281" height="134" key="GridCell.Tab.0.right" timestamp="1657818230337">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1281" height="63" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1657743683896" />
+    <state width="1281" height="134" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1657818230337" />
     <state x="91" y="2" key="new project wizard" timestamp="1657114670528">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

@@ -12,12 +12,12 @@
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="87.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/zupa.jpg" />
+            <Image url="@images/soup.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="123.0" fitWidth="200.0" layoutX="326.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/drugie-danie.png" />
+            <Image url="@images/main-dish.png" />
          </image>
       </ImageView>
       <Label layoutX="142.0" layoutY="40.0" text="Zupa" textFill="#f5f3f3">

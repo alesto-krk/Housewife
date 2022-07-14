@@ -35,7 +35,7 @@
       </ImageView>
       <ImageView fitHeight="49.0" fitWidth="48.0" layoutX="482.0" layoutY="164.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/sh-list2.jpg" />
+            <Image url="@images/shopping-list.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="58.0" fitWidth="48.0" layoutX="340.0" layoutY="280.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
@@ -45,7 +45,7 @@
       </ImageView>
       <ImageView fitHeight="187.0" fitWidth="82.0" layoutX="290.0" layoutY="-10.0" opacity="0.8" pickOnBounds="true" preserveRatio="true" rotate="15.0">
          <image>
-            <Image url="@images/qm2.jpg" />
+            <Image url="@images/question-mark.jpg" />
          </image>
       </ImageView>
    </children>

@@ -26,7 +26,7 @@ public class S02_menuController {
         taskList.setTodaysDate();
         taskList.setDatesChoiceBox();
         CommonMethods.textFieldLimit(40, taskList.getAddTextField());
-        taskList.saveTaskListButton.setDisable(true);
+        taskList.getSaveTaskListButton().setDisable(true);
         loadStage(event);
     }
 
