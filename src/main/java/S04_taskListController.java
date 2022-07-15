@@ -160,6 +160,7 @@ public class S04_taskListController {
 
     // "Zapisz listę" button
     public void saveTaskList(ActionEvent event) throws IOException {
+        datesChoiceBox.getItems().clear();
         String pathname = "Listy-zadan/lista-zadan-na-" + chosenDateFormatForTxtFile.getText() + "-" + chosenDate.getText() + ".txt";
         if (pathname.equals("Listy-zadan/lista-zadan-na--<nie wybrałeś/aś daty>.txt") || pathname.equals("Listy-zadan/lista-zadan-na--.txt") || pathname.equals("") || chosenDate.equals(null) || chosenDate.equals("<nie wybrałeś/aś daty>"))
             CommonMethods.showAlert(Alert.AlertType.WARNING, "Nieustawiona data", "Kliknij -Ustaw nową datę- ");
@@ -192,9 +193,9 @@ public class S04_taskListController {
             Collections.sort(listOfSavedTaskLists);
             for (int i = 0; i < listOfSavedTaskLists.size(); i++) {
                 String fileItem = listOfSavedTaskLists.get(i).toString();
-                LocalDate txtDate = LocalDate.parse(fileItem.substring(64, 74));
+                LocalDate txtDate = LocalDate.parse(fileItem.substring(27, 37));
                 if (!txtDate.isBefore(todaysDate)) {
-                    String fileItemShortened = fileItem.substring(75, fileItem.length() - 4);
+                    String fileItemShortened = fileItem.substring(38, fileItem.length() - 4);
                     if (fileItemShortened.equals(date.getText())) {
                         fileItemForChoiceBox = "dziś";
                     } else fileItemForChoiceBox = fileItemShortened;
@@ -213,7 +214,7 @@ public class S04_taskListController {
                 Parent rootForTaskList = (Parent) loader.load();
                 Stage stageForTaskList = new Stage();
                 S04a_savedTaskListController savedTaskListController = loader.getController();
-                savedTaskListController.addTocheckbox(datesChoiceBox);
+                savedTaskListController.addToCheckbox(datesChoiceBox);
                 stageForTaskList.setTitle("Twoja lista zadań na: " + savedTaskListController.hiddenLabelForTitleDate.getText());
                 Image icon = new Image(getClass().getResourceAsStream("images/task-for-today.jpg"));
                 stageForTaskList.getIcons().add(icon);

@@ -42,19 +42,15 @@ public class CommonMethods {
             System.out.println("New file is created");
         else
             System.out.println("There is no file");
-        //System.out.println(f.getName());
     }
 
-    public static LinkedList<File> dolistOfSavedTaskLists(){       //sciezka u kogos na komputerze?
+    public static LinkedList<File> dolistOfSavedTaskLists(){
         LinkedList<File> listOfSavedTaskLists = new LinkedList<>();
-        String directory = "C:\\Users\\Ola\\IdeaProjects\\KuraDomowa\\Listy-zadan";
-        //String directory = "Listy-zadan";
-
+        String directory = "Listy-zadan";
         File file = new File(directory);
         File[] files = file.listFiles();
         for (File e : files) {
             listOfSavedTaskLists.add(e);
-            //System.out.println(e);
         }
         return listOfSavedTaskLists;
     }
