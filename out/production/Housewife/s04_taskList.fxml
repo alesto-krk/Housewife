@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="S04_taskListController">
+   <children>
+      <Label layoutX="78.0" layoutY="28.0" text="Dzisiaj jest" textFill="#eeeeee" />
+      <Label fx:id="date" layoutX="163.0" layoutY="23.0" prefHeight="27.0" prefWidth="410.0" text="date" textFill="#fcfafa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="72.0" text="Wybierz dzień:" textFill="#fcfcfc" />
+      <DatePicker fx:id="datePicker" layoutX="19.0" layoutY="92.0" onAction="#chooseDateFromDatePicker" />
+      <Label layoutX="17.0" layoutY="167.0" text="Dodaj zadanie do wykonania" textFill="#fcfcfc" />
+      <Label layoutX="42.0" layoutY="279.0" text="Pokaż listę zadań na" textFill="#f5f4f4" />
+      <ChoiceBox fx:id="datesChoiceBox" layoutX="31.0" layoutY="295.0" prefWidth="150.0" />
+      <ImageView fitHeight="245.0" fitWidth="226.0" layoutX="218.0" layoutY="117.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/do-list.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="261.0" layoutY="72.0" text="Lista zadań na:" textFill="#f8f8f8" />
+      <Label fx:id="chosenDate" layoutX="261.0" layoutY="90.0" text="&lt;nie wybrałeś/aś daty&gt;" textFill="#fcfcfc" underline="true" />
+      <GridPane fx:id="gridPaneForTaskList" layoutX="252.0" layoutY="118.0" prefHeight="241.0" prefWidth="287.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="233.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="45.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="23.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Button fx:id="saveTaskListButton" layoutX="265.0" layoutY="366.0" mnemonicParsing="false" onAction="#saveTaskList" text="Zapisz listę" />
+      <Button fx:id="addTaskButton" layoutX="81.0" layoutY="228.0" mnemonicParsing="false" onAction="#addTask" text="Dodaj" />
+      <Button fx:id="showTaskListButton" layoutX="80.0" layoutY="325.0" mnemonicParsing="false" onAction="#showTaskList" text="Pokaż" />
+      <Button fx:id="menuButton" layoutX="5.0" layoutY="370.0" mnemonicParsing="false" onAction="#goToMenuButton" text="&lt; Menu">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="setAnotherDateOrTaskButton" layoutX="449.0" layoutY="69.0" mnemonicParsing="false" onAction="#setAnotherDateOrTask" prefHeight="46.0" prefWidth="128.0" text="Ustaw nową datę/ nowe zadania" wrapText="true" />
+      <Label fx:id="chosenDateFormatForTxtFile" layoutX="261.0" layoutY="107.0" />
+      <Button fx:id="exitButton" layoutX="524.0" layoutY="367.0" mnemonicParsing="false" onAction="#exitButton" text="Zakończ">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="545.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/document_add.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="addTextField" layoutX="17.0" layoutY="188.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="69.0" layoutY="213.0" text="(max 40 znaków)" textFill="#f5f4f4">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

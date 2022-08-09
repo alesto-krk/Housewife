@@ -26,7 +26,7 @@ public class CommonMethods {
     }
 
     public void goToMenu (ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("s02_menu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("s02_menu_rev-1.fxml"));
         root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
