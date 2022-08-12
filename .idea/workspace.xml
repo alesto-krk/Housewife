@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Housewife.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="CSS styling i czyszczenie kodu dla opcji Lista Zadan">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KuraDomowa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Housewife.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CommonMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommonMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HousewifeMAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HousewifeMAIN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/s01_title.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s01_title_rev-0.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/s02_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s02_menu_rev-0.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CommonMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommonMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HousewifeMAIN.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HousewifeMAIN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/KuraDomowa.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/s01_title.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/s02_menu.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +30,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
@@ -51,19 +48,18 @@
   <component name="ProjectId" id="1unuaV9K1pXn8YqLiyKTBYBFAZ0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Ola/Desktop/Ola/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ola\IdeaProjects\Housewife\src\main\resources" />
@@ -77,6 +73,7 @@
     <configuration name="HousewifeMAIN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HousewifeMAIN" />
       <module name="Housewife" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\Ola\Desktop\Ola\openjfx-18.0.2_windows-x64_bin-sdk\javafx-sdk-18.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,6 +84,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -155,9 +153,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -172,63 +168,5 @@
     <MESSAGE value="Dodano ChoiceBox.&#10;Dziala rozwijanie listy, event jeszcze nie" />
     <MESSAGE value="CSS styling i czyszczenie kodu dla opcji Lista Zadan" />
     <option name="LAST_COMMIT_MESSAGE" value="CSS styling i czyszczenie kodu dla opcji Lista Zadan" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="233" y="39" key="#Project_Structure" timestamp="1658326652327">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="233" y="39" key="#Project_Structure/0.0.1280.760@0.0.1280.760" timestamp="1658326652327" />
-    <state x="96" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1658328005157">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="96" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1658328005157" />
-    <state x="407" y="135" key="FileChooserDialogImpl" timestamp="1658328909060">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="407" y="135" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1658328909060" />
-    <state width="1281" height="136" key="GridCell.Tab.0.bottom" timestamp="1660045761156">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1281" height="136" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1660045761156" />
-    <state width="1281" height="136" key="GridCell.Tab.0.center" timestamp="1660045761156">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1281" height="136" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1660045761156" />
-    <state width="1281" height="136" key="GridCell.Tab.0.left" timestamp="1660045761156">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1281" height="136" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1660045761156" />
-    <state width="1281" height="136" key="GridCell.Tab.0.right" timestamp="1660045761156">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1281" height="136" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1660045761156" />
-    <state width="1281" height="244" key="GridCell.Tab.1.bottom" timestamp="1658328013630">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1281" height="244" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1658328013630" />
-    <state width="1281" height="244" key="GridCell.Tab.1.center" timestamp="1658328013630">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1281" height="244" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1658328013630" />
-    <state width="1281" height="244" key="GridCell.Tab.1.left" timestamp="1658328013630">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1281" height="244" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1658328013630" />
-    <state width="1281" height="244" key="GridCell.Tab.1.right" timestamp="1658328013630">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1281" height="244" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1658328013630" />
-    <state x="107" y="0" key="SettingsEditor" timestamp="1658426862789">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="107" y="0" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1658426862789" />
-    <state x="91" y="2" key="new project wizard" timestamp="1658331010745">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="91" y="2" key="new project wizard/0.0.1280.760@0.0.1280.760" timestamp="1658331010745" />
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1658426878587">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1658426878587" />
   </component>
 </project>
