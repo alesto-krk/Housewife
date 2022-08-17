@@ -15,7 +15,8 @@ import java.util.LinkedList;
 public class S03_shoppingListController {
 
     private LinkedList<String> shoppingList = new LinkedList<>();
-    private String pathname = "Lista-zakupow/my-shopping-list.txt";
+    //private String pathname = "Lista-zakupow/my-shopping-list.txt";
+    private String pathname = "src/main/resources/my-shopping-list.txt";
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -111,7 +112,7 @@ public class S03_shoppingListController {
     }
 
     public void showSavedList(ActionEvent event) throws IOException {
-        file.checkIfFileExists(pathname);
+        //file.checkIfFileExists(pathname);
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("s03a_savedShoppingList.fxml"));
             Parent rootForShList = (Parent) loader.load();
