@@ -1,7 +1,6 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.GridPane;
-
 import java.io.*;
 import java.util.LinkedList;
 import java.util.List;
@@ -17,12 +16,14 @@ public class S03a_savedShoppingListController {
     }
 
     public void readFromFile() throws IOException {
-        InputStream file = getClass().getResourceAsStream("my-shopping-list.txt");
+        //InputStream file = getClass().getResourceAsStream("my-shopping-list.txt"); JEŚLI PLIK BYŁBY TYLKO DO ODCZYTU I WTEDY W FOLDERZE "RESOURCES"
+        FileInputStream file = new FileInputStream(new S03_shoppingListController().getPathname());
         try (BufferedReader br =  new BufferedReader(new InputStreamReader(file))){
-        //try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/my-shopping-list.txt"))){
             String line;
             while ((line = br.readLine()) != null)
                 savedList.add(line);
+            br.close(); //to doszlo po zamianie na JAR
+            file.close(); // -||-
         }
         catch (Exception e){
             e.printStackTrace();

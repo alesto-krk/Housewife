@@ -34,6 +34,13 @@ public class CommonMethods {
         stage.show();
     }
 
+   public void createDirectoryForList(String directory){
+       File f = new File(directory);
+       if(f.mkdirs())
+           System.out.println("Folder created");
+       else System.out.println("Creating folder got wrong or the folder exists");
+   }
+
     public void checkIfFileExists(String pathname) throws IOException {
         File f = new File(pathname);
         if (f.exists()) {

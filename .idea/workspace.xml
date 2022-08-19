@@ -10,10 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="CSS styling i czyszczenie kodu dla opcji Lista Zadan">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MainForJAR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Housewife_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CommonMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommonMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S03a_savedShoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03a_savedShoppingListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/my-shopping-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CommonMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommonMethods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S03a_savedShoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03a_savedShoppingListController.class" afterDir="false" />
     </list>
@@ -62,7 +66,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Ola/Desktop/Ola/openjfx-18.0.2_windows-x64_bin-sdk/javafx-sdk-18.0.2/bin/vcruntime140_1.dll",
+    "last_opened_file_path": "C:/Users/Ola/Desktop",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
