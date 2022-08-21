@@ -161,11 +161,12 @@ public class S04_taskListController {
     // "Zapisz listę" button
     public void saveTaskList(ActionEvent event) throws IOException {
         datesChoiceBox.getItems().clear();
-        String pathname = "Listy-zadan/lista-zadan-na-" + chosenDateFormatForTxtFile.getText() + "-" + chosenDate.getText() + ".txt";
-        if (pathname.equals("Listy-zadan/lista-zadan-na--<nie wybrałeś/aś daty>.txt") || pathname.equals("Listy-zadan/lista-zadan-na--.txt") || pathname.equals("") || chosenDate.equals(null) || chosenDate.equals("<nie wybrałeś/aś daty>"))
+        String pathname = CommonMethods.getDirectoryForTaskList() + "lista-zadan-na-" + chosenDateFormatForTxtFile.getText() + "-" + chosenDate.getText() + ".txt";
+        if (pathname.equals(CommonMethods.getDirectoryForTaskList() + "lista-zadan-na--<nie wybrałeś/aś daty>.txt") || pathname.equals(CommonMethods.getDirectoryForTaskList() + "lista-zadan-na--.txt") || pathname.equals("") || chosenDate.equals(null) || chosenDate.equals("<nie wybrałeś/aś daty>"))
             CommonMethods.showAlert(Alert.AlertType.WARNING, "Nieustawiona data", "Kliknij -Ustaw nową datę- ");
-        else
-            commonMethods.checkIfFileExists(pathname);
+        else{
+            commonMethods.createDirectoryForList(CommonMethods.getDirectoryForTaskList());
+            commonMethods.checkIfFileExists(pathname);}
         try {
             if (!taskList.isEmpty()) {
                 FileWriter fw = new FileWriter(pathname, true);
@@ -193,9 +194,9 @@ public class S04_taskListController {
             Collections.sort(listOfSavedTaskLists);
             for (int i = 0; i < listOfSavedTaskLists.size(); i++) {
                 String fileItem = listOfSavedTaskLists.get(i).toString();
-                LocalDate txtDate = LocalDate.parse(fileItem.substring(27, 37));
+                LocalDate txtDate = LocalDate.parse(fileItem.substring(CommonMethods.getUserHomeLength() + 42, CommonMethods.getUserHomeLength() + 42 + 10));
                 if (!txtDate.isBefore(todaysDate)) {
-                    String fileItemShortened = fileItem.substring(38, fileItem.length() - 4);
+                    String fileItemShortened = fileItem.substring(CommonMethods.getUserHomeLength() + 42 + 11, fileItem.length() - 4);
                     if (fileItemShortened.equals(date.getText())) {
                         fileItemForChoiceBox = "dziś";
                     } else fileItemForChoiceBox = fileItemShortened;

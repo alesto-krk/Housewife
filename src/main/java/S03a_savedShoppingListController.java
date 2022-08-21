@@ -22,8 +22,8 @@ public class S03a_savedShoppingListController {
             String line;
             while ((line = br.readLine()) != null)
                 savedList.add(line);
-            br.close(); //to doszlo po zamianie na JAR
-            file.close(); // -||-
+            br.close();
+            file.close();
         }
         catch (Exception e){
             e.printStackTrace();

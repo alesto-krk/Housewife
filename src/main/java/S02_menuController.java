@@ -31,7 +31,7 @@ public class S02_menuController {
     }
 
     public void menuLunchIdeas(ActionEvent event) throws IOException {
-        CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Loading", "Otwarcie biblioteki przepisów może chwilkę zająć :)");
+        CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Otwarcie biblioteki przepisów może chwilkę zająć :)", "Loading");
         loadFxml("s05_lunchIdeas.fxml");
         loadStage(event);
     }

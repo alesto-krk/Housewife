@@ -38,7 +38,7 @@ public class S04a_savedTaskListController {
             for (int i = 0; i < listOfCurrentSavedFiles.size(); i++) {
                 String fileItem = listOfCurrentSavedFiles.get(i).toString();
                 pathname = fileItem;
-                String fileItemShortened = fileItem.substring(38, fileItem.length() - 4);
+                String fileItemShortened = fileItem.substring(CommonMethods.getUserHomeLength() + 42 + 11, fileItem.length() - 4);
                 if (choiceboxDate.equals(fileItemShortened))
                     readTheFile(fileItem, choicebox);
             }
@@ -55,7 +55,7 @@ public class S04a_savedTaskListController {
         LinkedList<File> listOfAllSavedTaskLists = CommonMethods.dolistOfSavedTaskLists();
         for (int i = 0; i < listOfAllSavedTaskLists.size(); i++) {
             String fileItem = listOfAllSavedTaskLists.get(i).toString();
-            LocalDate txtDate = LocalDate.parse(fileItem.substring(27, 37));
+            LocalDate txtDate = LocalDate.parse(fileItem.substring(CommonMethods.getUserHomeLength() + 42, CommonMethods.getUserHomeLength() + 42 + 10));
             if (!txtDate.isBefore(todaysDate)) {
                 listOfCURRENTSavedLists.add(listOfAllSavedTaskLists.get(i));
             }
@@ -86,7 +86,7 @@ public class S04a_savedTaskListController {
         else{
             hiddenLabelForTxtFile.setText(pathname);
             hiddenLabelForTxtFile.setVisible(false);
-            hiddenLabelForTitleDate.setText(pathname.substring(38,pathname.length()-4));
+            hiddenLabelForTitleDate.setText(pathname.substring(CommonMethods.getUserHomeLength() + 42 + 11, pathname.length()-4));
             hiddenLabelForTitleDate.setVisible(false);
         }
     }

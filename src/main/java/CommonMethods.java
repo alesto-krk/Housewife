@@ -9,13 +9,27 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.LinkedList;
 
 public class CommonMethods {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private static final String directoryForShoppingList = System.getProperty("user.home") + "\\Desktop\\Listy\\Lista-zakupow\\";
+    private static final String directoryForTaskList = System.getProperty("user.home") + "\\Desktop\\Listy\\Listy-zadan\\";
+    private static final int userHomeLength = System.getProperty("user.home").length();
+
+    public static String getDirectoryForShoppingList() {
+        return directoryForShoppingList;
+    }
+
+    public static String getDirectoryForTaskList() {
+        return directoryForTaskList;
+    }
+
+    public static int getUserHomeLength() {
+        return userHomeLength;
+    }
 
     public static void showAlert(Alert.AlertType alertType, String alertTitle, String alertMsg) {
         Alert alert = new Alert(alertType);
@@ -53,7 +67,8 @@ public class CommonMethods {
 
     public static LinkedList<File> dolistOfSavedTaskLists(){
         LinkedList<File> listOfSavedTaskLists = new LinkedList<>();
-        String directory = "Listy-zadan";
+        //String directory = "Listy-zadan";
+        String directory = System.getProperty("user.home") + "\\Desktop\\Listy\\Listy-zadan\\";
         File file = new File(directory);
         File[] files = file.listFiles();
         for (File e : files) {

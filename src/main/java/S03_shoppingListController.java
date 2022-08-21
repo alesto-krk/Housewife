@@ -15,8 +15,7 @@ import java.util.LinkedList;
 public class S03_shoppingListController {
 
     private LinkedList<String> shoppingList = new LinkedList<>();
-    private String directory = System.getProperty("user.home") + "\\Desktop\\Listy\\Lista-zakupow\\";
-    private String pathname = directory + "lista-zakupow.txt";
+    private String pathname = CommonMethods.getDirectoryForShoppingList() + "lista-zakupow.txt";
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -99,9 +98,9 @@ public class S03_shoppingListController {
     }
 
     public void saveTheList(ActionEvent event) throws IOException {
-        file.createDirectoryForList(directory);
+        file.createDirectoryForList(CommonMethods.getDirectoryForShoppingList());
         file.checkIfFileExists(pathname);
-        System.out.println(pathname);
+        System.out.println(pathname); //
         try {
             if (!shoppingList.isEmpty()) {
                 PrintWriter savedList = new PrintWriter(pathname);
@@ -118,7 +117,7 @@ public class S03_shoppingListController {
     }
 
     public void showSavedList(ActionEvent event) throws IOException {
-        file.createDirectoryForList(directory);
+        file.createDirectoryForList(CommonMethods.getDirectoryForShoppingList());
         file.checkIfFileExists(pathname);
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("s03a_savedShoppingList.fxml"));

@@ -10,16 +10,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="CSS styling i czyszczenie kodu dla opcji Lista Zadan">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Housewife_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lista-zakupow/my-shopping-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-05-01-niedziela, 1 maja 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-07-15-piątek, 15 lipca 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-07-16-sobota, 16 lipca 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-07-29-piątek, 29 lipca 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-08-02-wtorek, 2 sierpnia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-08-04-czwartek, 4 sierpnia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-08-07-niedziela, 7 sierpnia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-08-21-niedziela, 21 sierpnia 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-10-01-sobota, 1 października 2022.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listy-zadan/lista-zadan-na-2022-12-10-sobota, 10 grudnia 2022.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CommonMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommonMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/S02_menuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S02_menuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S03a_savedShoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03a_savedShoppingListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/S04_taskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S04_taskListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/S04a_savedTaskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S04a_savedTaskListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/my-shopping-list.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CommonMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommonMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/S02_menuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S02_menuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/S03a_savedShoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03a_savedShoppingListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/S04_taskListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S04_taskListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/S04a_savedTaskListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S04a_savedTaskListController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +80,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/Ola/Desktop",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
