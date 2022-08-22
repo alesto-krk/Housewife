@@ -131,7 +131,7 @@ public class S04a_savedTaskListController {
                 zapis.println(e);
             }
             zapis.close();
-            CommonMethods.showAlert(Alert.AlertType.CONFIRMATION, "Lista", "Odhaczone zadania będą trwale usunięte z listy. Czy na pewno je zrobiłeś? :)");
+            CommonMethods.showAlert(Alert.AlertType.CONFIRMATION, "Lista", "Odhaczone zadania będą trwale usunięte z listy. Czy na pewno je zrobiłeś? :) \nJeśli tak, kliknij OK i wyjdz z listy");
     }
 
 }

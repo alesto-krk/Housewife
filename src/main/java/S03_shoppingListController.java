@@ -44,7 +44,6 @@ public class S03_shoppingListController {
         if (!addField.getText().isEmpty() && shoppingList.size() < 10) {
             shoppingList.add(addField.getText());
             addField.clear();
-            System.out.println("current list: " + shoppingList);
         } else {
             if(addField.getText().isEmpty())
                 CommonMethods.showAlert(Alert.AlertType.ERROR, "Puste pole", "Trzeba coś wpisać :)");
@@ -100,7 +99,6 @@ public class S03_shoppingListController {
     public void saveTheList(ActionEvent event) throws IOException {
         file.createDirectoryForList(CommonMethods.getDirectoryForShoppingList());
         file.checkIfFileExists(pathname);
-        System.out.println(pathname); //
         try {
             if (!shoppingList.isEmpty()) {
                 PrintWriter savedList = new PrintWriter(pathname);

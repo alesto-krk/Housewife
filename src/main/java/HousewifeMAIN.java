@@ -9,12 +9,13 @@ public class HousewifeMAIN extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("s01_title_rev-1.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("s01_title.fxml"));
         primaryStage.setTitle("Housewife");
         Image icon = new Image(getClass().getResourceAsStream("images/icon.jpg"));
         primaryStage.getIcons().add(icon);
         Scene scene = new Scene(root, 400, 400);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

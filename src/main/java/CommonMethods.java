@@ -40,7 +40,7 @@ public class CommonMethods {
     }
 
     public void goToMenu (ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("s02_menu_rev-1.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("s02_menu.fxml"));
         root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -67,8 +67,7 @@ public class CommonMethods {
 
     public static LinkedList<File> dolistOfSavedTaskLists(){
         LinkedList<File> listOfSavedTaskLists = new LinkedList<>();
-        //String directory = "Listy-zadan";
-        String directory = System.getProperty("user.home") + "\\Desktop\\Listy\\Listy-zadan\\";
+        String directory = getDirectoryForTaskList();
         File file = new File(directory);
         File[] files = file.listFiles();
         for (File e : files) {

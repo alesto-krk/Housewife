@@ -41,7 +41,7 @@ public class S02_menuController {
         root = loader.load();
     }
 
-    public void loadStage(ActionEvent event) throws IOException{
+    public void loadStage(ActionEvent event) {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
