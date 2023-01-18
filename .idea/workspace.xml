@@ -10,29 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="CSS styling i czyszczenie kodu dla opcji Lista Zadan">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Housewife_jar.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/S05_lunchIdeasController_ALT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CommonMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommonMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HousewifeMAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HousewifeMAIN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/S01_titleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S01_titleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S02_menuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S02_menuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S03_shoppingListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/S04a_savedTaskListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S04a_savedTaskListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/s01_title_rev-0.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s01_title.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/s01_title_rev-1.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/s02_menu_rev-0.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/s02_menu_rev-1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s02_menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CommonMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommonMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HousewifeMAIN.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HousewifeMAIN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/S01_titleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S01_titleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S02_menuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S02_menuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S03_shoppingListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/S04a_savedTaskListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S04a_savedTaskListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/s01_title_rev-0.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/s01_title_rev-1.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/s02_menu_rev-0.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/s02_menu_rev-1.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
