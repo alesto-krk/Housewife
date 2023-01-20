@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 public class S02_menuController {
     private Stage stage;
@@ -33,8 +35,10 @@ public class S02_menuController {
     public void menuLunchIdeas(ActionEvent event) throws IOException {
         CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Otwarcie biblioteki przepisów może chwilkę zająć :)", "Loading");
         //generate dish database
-        System.out.println(DishDatabase.getAll_soups());
-        System.out.println(DishDatabase.getAll_mainDishes());
+        //System.out.println(DishDatabase.getAll_soups().size());
+        //System.out.println(DishDatabase.getAll_mainDishes());
+        //Map<Integer, List<String>> map = DishDatabase.getAll_soups();
+        //System.out.println(map.size());
         loadFxml("s05_lunchIdeas.fxml");
         loadStage(event);
     }

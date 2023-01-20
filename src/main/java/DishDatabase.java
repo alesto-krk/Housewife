@@ -38,8 +38,8 @@ public class DishDatabase {
     }
 
     public static Map<Integer, List<String>> getAll_soups() {
+        createAllSoups();
         if (soupName.size() == all_soups.size() && soupPath.size() == all_soups.size()){
-            createAllSoups();
             return all_soups;
         }
         else {
@@ -58,8 +58,8 @@ public class DishDatabase {
     }
 
     public static Map<Integer, List<String>> getAll_mainDishes() {
+        createAllMainDishes();
         if (mainDishName.size() == all_mainDishes.size() && mainDishPath.size() == all_mainDishes.size()){
-            createAllMainDishes();
             return all_mainDishes;
         }
         else {

@@ -3,7 +3,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -17,8 +16,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.Random;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class S05_lunchIdeasController_ALT implements Initializable{
     private final String URL = "jdbc:mysql://localhost:3306/lunch";
@@ -30,6 +28,8 @@ public class S05_lunchIdeasController_ALT implements Initializable{
     private String mainDishStatementForGenerated = "select main_dish_path from all_main_dishes where id=";
     private String soupResult = "soup_path";
     private String mainDishResult = "main_dish_path";
+    private static Map<Integer, List<String>> all_soups = DishDatabase.getAll_soups();
+    private static Map<Integer, List<String>> all_mainDishes = DishDatabase.getAll_mainDishes();
     @FXML
     ChoiceBox<String> soupChoiceBox;
     @FXML
@@ -84,37 +84,28 @@ public class S05_lunchIdeasController_ALT implements Initializable{
         actionForChosen(event, soupChoiceBox, soupStatementForChosen, soupResult);
     }
 
-    public int generate(String tableNameMySql) {
+    public int generate(Map<Integer,List<String>> dishMap) {
         Random r = new Random();
-        int countId=0;
-        try {
-            Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
-            Statement statement = conn.createStatement();
-            ResultSet resultSet = statement.executeQuery("select id from " + tableNameMySql);
-            while (resultSet.next()) {
-                countId++;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        int dishNumber = r.nextInt(countId)+1;
+        int dishNumber = r.nextInt(dishMap.size());
         return dishNumber;
     }
 
-    public void actionForGenerated(ActionEvent event, int dishNumber, String statement, String result) throws IOException {
+    public void actionForGenerated(ActionEvent event, int dishNumber, Map<Integer, List<String>> dishDatabase) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("s05a_dish.fxml"));
         Parent rootForDish = (Parent) loader.load();
-        S05a_dishController dish = loader.getController();
-        dish.showGeneratedImage(dishNumber, statement, result);
+        S05a_dishController_ALT dish = loader.getController();
+        dish.showGeneratedImage(dishNumber, dishDatabase);
         setStageForDish(rootForDish);
     }
 
     public void generateSoupButton(ActionEvent event) throws IOException {
-        actionForGenerated(event, generate("all_soups"), soupStatementForGenerated, soupResult);
+        actionForGenerated(event, generate(all_soups), all_soups);
+        System.out.println(all_soups.size());
     }
 
     public void generateMainDishButton(ActionEvent event) throws IOException {
-        actionForGenerated(event, generate("all_main_dishes"), mainDishStatementForGenerated, mainDishResult);
+        actionForGenerated(event, generate(all_mainDishes), all_mainDishes);
+        System.out.println(all_mainDishes.size());
     }
 
     public void goToMenuButton(ActionEvent event) throws IOException {
