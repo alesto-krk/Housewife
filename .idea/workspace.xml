@@ -14,15 +14,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/DishDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DishDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S02_menuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S02_menuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/S05_lunchIdeasController_ALT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S05_lunchIdeasController_ALT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/S05a_dishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S05a_dishController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/s05_lunchIdeas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s05_lunchIdeas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/s05a_dish.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s05a_dish.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/S05a_dishController_ALT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S05a_dishController_ALT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DishDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DishDatabase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S02_menuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S02_menuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/S05_lunchIdeasController_ALT.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S05_lunchIdeasController_ALT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/S05a_dishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S05a_dishController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/s05_lunchIdeas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s05_lunchIdeas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/s05a_dish.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s05a_dish.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/S05a_dishController_ALT.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S05a_dishController_ALT.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

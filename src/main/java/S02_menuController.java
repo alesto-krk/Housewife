@@ -34,12 +34,9 @@ public class S02_menuController {
 
     public void menuLunchIdeas(ActionEvent event) throws IOException {
         CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Otwarcie biblioteki przepisów może chwilkę zająć :)", "Loading");
-        //generate dish database
-        //System.out.println(DishDatabase.getAll_soups().size());
-        //System.out.println(DishDatabase.getAll_mainDishes());
-        //Map<Integer, List<String>> map = DishDatabase.getAll_soups();
-        //System.out.println(map.size());
         loadFxml("s05_lunchIdeas.fxml");
+        S05_lunchIdeasController_ALT dishChoiceBox = loader.getController();
+        dishChoiceBox.setDishChoiceBox();
         loadStage(event);
     }
 

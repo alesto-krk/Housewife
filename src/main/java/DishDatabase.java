@@ -24,7 +24,7 @@ public class DishDatabase {
         soupName.add(0,"Pomidorowa"); soupPath.add(0,"images/soups/pomidorowa.jpg");
         soupName.add(1,"Barszcz"); soupPath.add(1,"images/soups/barszcz.jpg");
         soupName.add(2,"Pieczarkowa"); soupPath.add(2,"images/soups/pieczarkowa.jpg");
-        soupName.add(3,"Koperkowa"); soupPath.add(2,"images/soups/koperkowa.jpg");
+        soupName.add(3,"Koperkowa"); soupPath.add(3,"images/soups/koperkowa.jpg");
         addToDishDatabase(0, soupList0, soupName, soupPath, all_soups);
         addToDishDatabase(1, soupList1, soupName, soupPath, all_soups);
         addToDishDatabase(2, soupList2, soupName, soupPath, all_soups);

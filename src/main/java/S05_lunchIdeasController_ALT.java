@@ -18,7 +18,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
 
-public class S05_lunchIdeasController_ALT implements Initializable{
+public class S05_lunchIdeasController_ALT {
     private final String URL = "jdbc:mysql://localhost:3306/lunch";
     private final String USER = "root";
     private final String PASSWORD = "MYSQLmonica3#";
@@ -37,7 +37,7 @@ public class S05_lunchIdeasController_ALT implements Initializable{
     @FXML
     Button chooseSoupButton, chooseMainDishButton, generateSoupButton, generateMainDishButton;
     @FXML
-    public void initialize(URL arg0, ResourceBundle arg1) {
+    /*public void initialize(URL arg0, ResourceBundle arg1) {
         try {
             Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
             Statement statement = conn.createStatement();
@@ -52,6 +52,12 @@ public class S05_lunchIdeasController_ALT implements Initializable{
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }*/
+    public void setDishChoiceBox(){
+        for (int i=0; i<all_soups.size(); i++)
+            soupChoiceBox.getItems().add(all_soups.get(i).get(0));
+        for (int i=0; i<all_mainDishes.size(); i++)
+            mainDishChoiceBox.getItems().add(all_mainDishes.get(i).get(0));
     }
 
     public void setStageForDish(Parent rootForDish) {
@@ -68,20 +74,20 @@ public class S05_lunchIdeasController_ALT implements Initializable{
         });
     }
 
-    public void actionForChosen(ActionEvent event, ChoiceBox<String> choicebox, String statement, String result) throws IOException {
+    public void actionForChosen(ActionEvent event, ChoiceBox<String> choicebox, Map<Integer, List<String>> dishDatabase) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("s05a_dish.fxml"));
         Parent rootForDish = (Parent) loader.load();
-        S05a_dishController dish = loader.getController();
-        dish.showChosenImage(choicebox, statement, result);
+        S05a_dishController_ALT dish = loader.getController();
+        dish.showChosenImage(choicebox, dishDatabase);
         setStageForDish(rootForDish);
     }
 
     public void chooseMainDishButton(ActionEvent event) throws IOException {
-        actionForChosen(event, mainDishChoiceBox, mainDishStatementForChosen, mainDishResult);
+        actionForChosen(event, mainDishChoiceBox, all_mainDishes);
     }
 
     public void chooseSoupButton(ActionEvent event) throws IOException {
-        actionForChosen(event, soupChoiceBox, soupStatementForChosen, soupResult);
+        actionForChosen(event, soupChoiceBox, all_soups);
     }
 
     public int generate(Map<Integer,List<String>> dishMap) {
