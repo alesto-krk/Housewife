@@ -6,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 public class S02_menuController {
     private Stage stage;
@@ -33,10 +31,10 @@ public class S02_menuController {
     }
 
     public void menuLunchIdeas(ActionEvent event) throws IOException {
-        CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Otwarcie biblioteki przepisów może chwilkę zająć :)", "Loading");
+        CommonMethods.showAlert(Alert.AlertType.INFORMATION, "Loading", "Otwarcie biblioteki przepisów może chwilkę zająć :)");
         loadFxml("s05_lunchIdeas.fxml");
-        S05_lunchIdeasController_ALT dishChoiceBox = loader.getController();
-        dishChoiceBox.setDishChoiceBox();
+        S05_lunchIdeasController dishChoiceBox = loader.getController(); //no @ S05_ALT
+        dishChoiceBox.setDishChoiceBox(); //no @ S05_ALT
         loadStage(event);
     }
 
