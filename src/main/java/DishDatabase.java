@@ -15,9 +15,12 @@ public class DishDatabase {
     private static List<String> soupList1 = new ArrayList<>();
     private static List<String> soupList2 = new ArrayList<>();
     private static List<String> soupList3 = new ArrayList<>();
+    private static List<String> soupList4 = new ArrayList<>();
     private static List<String> mainDishList0 = new ArrayList<>();
     private static List<String> mainDishList1 = new ArrayList<>();
     private static List<String> mainDishList2 = new ArrayList<>();
+    private static List<String> mainDishList3 = new ArrayList<>();
+    private static List<String> mainDishList4 = new ArrayList<>();
 
 
     public static void createAllSoups(){
@@ -25,10 +28,12 @@ public class DishDatabase {
         soupName.add(1,"Barszcz"); soupPath.add(1,"images/soups/barszcz.jpg");
         soupName.add(2,"Pieczarkowa"); soupPath.add(2,"images/soups/pieczarkowa.jpg");
         soupName.add(3,"Koperkowa"); soupPath.add(3,"images/soups/koperkowa.jpg");
+        soupName.add(4,"Żurek"); soupPath.add(4,"images/soups/zurek.jpg");
         addToDishDatabase(0, soupList0, soupName, soupPath, all_soups);
         addToDishDatabase(1, soupList1, soupName, soupPath, all_soups);
         addToDishDatabase(2, soupList2, soupName, soupPath, all_soups);
         addToDishDatabase(3, soupList3, soupName, soupPath, all_soups);
+        addToDishDatabase(4, soupList4, soupName, soupPath, all_soups);
     }
 
     public static void addToDishDatabase(int dishNumber, List<String> listNumber, List<String> dishName, List<String> dishPath, Map<Integer, List<String>> allSoupOrMainDish){
@@ -51,10 +56,14 @@ public class DishDatabase {
     public static void createAllMainDishes(){
         mainDishName.add(0,"Spaghetti"); mainDishPath.add(0,"images/main_dishes/spaghetti.jpg");
         mainDishName.add(1,"Ryba"); mainDishPath.add(1,"images/main_dishes/ryba.jpg");
-        mainDishName.add(2,"Schabowy"); mainDishPath.add(2,"images/main_dishes/schabowy.jpg");
+        mainDishName.add(2,"Schabowy z ziemniakami i surówką"); mainDishPath.add(2,"images/main_dishes/schabowy.jpg");
+        mainDishName.add(3,"Gulasz wieprzowy"); mainDishPath.add(3,"images/main_dishes/gulasz.jpg");
+        mainDishName.add(4,"Naleśniki z warzywami"); mainDishPath.add(4,"images/main_dishes/nalesniki.jpg");
         addToDishDatabase(0, mainDishList0, mainDishName, mainDishPath, all_mainDishes);
         addToDishDatabase(1, mainDishList1, mainDishName, mainDishPath, all_mainDishes);
         addToDishDatabase(2, mainDishList2, mainDishName, mainDishPath, all_mainDishes);
+        addToDishDatabase(3, mainDishList3, mainDishName, mainDishPath, all_mainDishes);
+        addToDishDatabase(4, mainDishList4, mainDishName, mainDishPath, all_mainDishes);
     }
 
     public static Map<Integer, List<String>> getAll_mainDishes() {

@@ -36,7 +36,7 @@ public class S05_lunchIdeasController {
         stageForDish.setTitle("Przepis");
         Image icon = new Image(getClass().getResourceAsStream("images/food-emoji.png"));
         stageForDish.getIcons().add(icon);
-        stageForDish.setScene(new Scene(rootForDish, 350, 400));
+        stageForDish.setScene(new Scene(rootForDish, 600, 340));
         stageForDish.setResizable(false);
         stageForDish.show();
         CommonMethods.disableButtons(true, chooseSoupButton, chooseMainDishButton, generateSoupButton, generateMainDishButton);
