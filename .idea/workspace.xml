@@ -11,23 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="623fc819-3fb0-4e1e-aae6-1497f420e05b" name="Default Changelist" comment="CSS styling i czyszczenie kodu dla opcji Lista Zadan">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DishDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DishDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/S05_lunchIdeasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/S05_lunchIdeasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/main_dishes/ryba.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/main_dishes/ryba.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/main_dishes/schabowy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/main_dishes/schabowy.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/main_dishes/spaghetti.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/main_dishes/spaghetti.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/soups/barszcz.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/soups/barszcz.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/soups/koperkowa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/soups/koperkowa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/soups/pieczarkowa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/soups/pieczarkowa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/soups/pomidorowa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/soups/pomidorowa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/s05a_dish.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s05a_dish.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/s05_lunchIdeas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/s05_lunchIdeas.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DishDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DishDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/S05_lunchIdeasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/S05_lunchIdeasController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/images/soups/barszcz.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/images/soups/barszcz.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/images/soups/koperkowa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/images/soups/koperkowa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/images/soups/pieczarkowa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/images/soups/pieczarkowa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/images/soups/pomidorowa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/images/soups/pomidorowa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/s05a_dish.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s05a_dish.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/s05_lunchIdeas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/s05_lunchIdeas.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +37,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -70,18 +59,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ola/Desktop&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Ola/Desktop",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ola\IdeaProjects\Housewife\src\main\resources" />
@@ -91,7 +80,7 @@
       <recent name="C:\Users\Ola\IdeaProjects\KuraDomowa\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainForJAR">
+  <component name="RunManager" selected="Application.HousewifeMAIN">
     <configuration name="HousewifeMAIN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HousewifeMAIN" />
       <module name="Housewife" />
@@ -107,10 +96,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DishDatabaseTest.directoryForSoupImagesShouldBeCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Housewife" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DishDatabaseTest" />
+      <option name="METHOD_NAME" value="directoryForSoupImagesShouldBeCorrect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DishDatabaseTest.soupDatabaseShouldntBeEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Housewife" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DishDatabaseTest" />
+      <option name="METHOD_NAME" value="soupDatabaseShouldntBeEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainForJAR" />
         <item itemvalue="Application.HousewifeMAIN" />
+        <item itemvalue="JUnit.DishDatabaseTest.directoryForSoupImagesShouldBeCorrect" />
+        <item itemvalue="JUnit.DishDatabaseTest.soupDatabaseShouldntBeEmpty" />
+        <item itemvalue="Application.MainForJAR" />
       </list>
     </recent_temporary>
   </component>

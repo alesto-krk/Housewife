@@ -53,6 +53,10 @@ public class DishDatabase {
         }
     }
 
+    public static List<String> getSoupPath() {
+        return soupPath;
+    }
+
     public static void createAllMainDishes(){
         mainDishName.add(0,"Spaghetti"); mainDishPath.add(0,"images/main_dishes/spaghetti.jpg");
         mainDishName.add(1,"Ryba"); mainDishPath.add(1,"images/main_dishes/ryba.jpg");
